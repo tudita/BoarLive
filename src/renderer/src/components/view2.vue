@@ -1,11 +1,13 @@
-<!-- View1.vue -->
 <template>
-  <div>
-    <h1>View 1</h1>
-    <p>This is the content for View 1.</p>
-  </div>
+  <div>这是内容2</div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  name: 'View2'
+}
+</script>
 
-<style></style>
+<style scoped>
+/* 你的样式 */
+</style>
