@@ -5,22 +5,20 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    showContent(componentName) {
-      this.$emit('update-content', componentName)
-    }
-  }
+<script setup>
+import { defineEmits } from 'vue'
+
+const emit = defineEmits(['update-content'])
+
+function showContent(componentName) {
+  emit('update-content', componentName)
 }
 </script>
 
 <style scoped>
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
   background-color: #1e1e1e;
   color: #ffffff;
