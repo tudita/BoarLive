@@ -1,36 +1,73 @@
 <template>
-    <div class="welcome-container">
-      <h1>这个地方放一个网站2</h1>
-      <p>现在什么都没做。</p>
+    <div>
+      <h1>Live Rooms</h1>
+      <ul>
+        <li v-for="room in rooms" :key="room.RoomID">
+          <img :src="room.Cover" alt="Cover" />
+          <h2>{{ room.Title }}</h2>
+          <p>{{ room.UserName }}</p>
+          <p>Online: {{ room.Online }}</p>
+        </li>
+      </ul>
+      <button @click="loadMoreRooms" :disabled="!hasMore">Load More</button>
     </div>
   </template>
-
-<script>
-export default {
-  name: 'view2'
-}
-</script>
-
-
-<style>
-.welcome-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* 使容器高度占满视口高度 */
-  width: 100vw; /* 使容器宽度占满视口宽度 */
-  background-color: #f0f8ff; /* 柔和的背景色 */
-  color: #333; /* 高级的文本颜色 */
-  text-align: center;
-}
-
-.welcome-container h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.welcome-container p {
-  font-size: 1.2em;
-}
-</style>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    data() {
+      return {
+        category: {
+          ID: 1,
+        }, // 你需要根据实际情况定义这个对象
+        page: 1,
+        rooms: [],
+        hasMore: true,
+      };
+    },
+    methods: {
+      async fetchRooms() {
+        try {
+          const response = await axios.get(`/api/cache.php`, {
+            params: {
+              m: 'LiveList',
+              do: 'getLiveListByPage',
+              tagAll: 0,
+              // gameId: this.category.ID,
+              page: this.page,
+            }
+          });
+          const data = response.data;
+          console.log(response);
+          
+          this.rooms.push(...this.parseData(data));
+          this.hasMore = data.data.page < data.data.totalPage;
+        } catch (error) {
+          // console.error('Error fetching rooms:', error);
+        }
+      },
+      parseData(data) {
+        return data.data.datas.map(item => ({
+          Cover: item.screenshot.includes('?') ? item.screenshot : `${item.screenshot}?x-oss-process=style/w338_h190&`,
+          Online: parseInt(item.totalCount),
+          RoomID: item.profileRoom,
+          Title: item.introduction || item.roomName || '',
+          UserName: item.nick,
+        }));
+      },
+      loadMoreRooms() {
+        this.page++;
+        this.fetchRooms();
+      },
+    },
+    mounted() {
+      this.fetchRooms();
+    },
+  };
+  </script>
+  
+  <style>
+  /* Add your styles here */
+  </style>
