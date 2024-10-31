@@ -1,6 +1,6 @@
 <template>
     <div class="welcome-container">
-      <h1>这个地方放一个网站1</h1>
+      <h1>这个地方放一个网站3</h1>
       <p>现在什么都没做。</p>
     </div>
   </template>
