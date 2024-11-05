@@ -18,10 +18,15 @@ export default defineConfig({
     plugins: [vue()],
     server: {
       proxy: {
-        '/api': {
+        '/api1': {
           target: 'https://www.huya.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
+          rewrite: (path) => path.replace(/^\/api1/, '')
+        },
+        '/api2': {
+          target: 'https://search.cdn.huya.com',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api2/, '')
         }
       }
     }
