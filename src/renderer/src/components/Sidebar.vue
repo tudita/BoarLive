@@ -2,6 +2,7 @@
   <div class="sidebar">
     <button @click="showContent('view2')">推荐直播</button>
     <button @click="showContent('view1')">搜索直播</button>
+    <button @click="showContent('view3')">test</button>
   </div>
 </template>
 

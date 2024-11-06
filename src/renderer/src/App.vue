@@ -7,6 +7,7 @@
       <div class="main-content">
         <view1 v-if="currentComponent === 'view1'" />
         <view2 v-if="currentComponent === 'view2'" />
+        <view3 v-if="currentComponent === 'view3'" />
         <component :is=""></component>
       </div>
     </div>
@@ -18,6 +19,7 @@ import { ref } from 'vue'
 import Sidebar from './components/Sidebar.vue'
 import view1 from './components/view1.vue'
 import view2 from './components/view2.vue'
+import view3 from './components/view3.vue'
 
 const currentComponent = ref('view1')
 
@@ -29,7 +31,8 @@ function updateContent(componentName) {
 const components = {
   Sidebar,
   view1,
-  view2
+  view2,
+  view3
 }
 </script>
 
@@ -56,7 +59,7 @@ const components = {
   flex-grow: 1;
   height: 100%;
   padding: 0px;
-  background-color: #e0e3da; /* 柔和且高级的背景色 */
+  background-color: #fafafa; /* 柔和且高级的背景色 */
   display: flex;
   justify-content: center;
   align-items: center;
