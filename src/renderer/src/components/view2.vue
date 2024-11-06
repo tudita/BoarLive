@@ -2,7 +2,12 @@
   <div class="live-search">
     <h1 class="page-title">Live Rooms</h1>
     <div class="rooms-container">
-      <div v-for="room in rooms" :key="room.RoomID" class="room-item">
+      <div
+        v-for="room in rooms"
+        :key="room.RoomID"
+        class="room-item"
+        @click="openVideoPlayer(room)"
+      >
         <div class="room-card">
           <div class="room-cover">
             <img :src="room.Cover" alt="封面" />
@@ -16,13 +21,22 @@
       </div>
     </div>
     <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">Load More</button>
+    <video-player
+      v-if="selectedRoom"
+      :cover="selectedRoom.Cover"
+      :video-src="selectedRoom.VideoSrc"
+    ></video-player>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import VideoPlayer from './videoPlayer.vue'
 
 export default {
+  components: {
+    VideoPlayer
+  },
   data() {
     return {
       category: {
@@ -30,7 +44,8 @@ export default {
       }, // 根据实际情况定义这个对象
       page: 1,
       rooms: [],
-      hasMore: true
+      hasMore: true,
+      selectedRoom: null
     }
   },
   mounted() {
@@ -48,6 +63,7 @@ export default {
           }
         })
         const data = response.data
+        console.log('API响应数据:', data) // 打印完整的响应数据
 
         this.rooms.push(...this.parseData(data))
         this.hasMore = data.data.page < data.data.totalPage
@@ -56,6 +72,19 @@ export default {
       }
     },
     parseData(data) {
+      console.log(
+        '解析后的数据:',
+        data.data.datas.map((item) => ({
+          Cover: item.screenshot.includes('?')
+            ? item.screenshot
+            : `${item.screenshot}?x-oss-process=style/w338_h190&`,
+          Online: parseInt(item.totalCount),
+          RoomID: item.profileRoom,
+          Title: item.introduction || item.roomName || '',
+          UserName: item.nick,
+          VideoSrc: item.liveStreamUrl || item.videoUrl || item.streamUrl // 确保这里正确提取了视频流地址
+        }))
+      )
       return data.data.datas.map((item) => ({
         Cover: item.screenshot.includes('?')
           ? item.screenshot
@@ -63,8 +92,63 @@ export default {
         Online: parseInt(item.totalCount),
         RoomID: item.profileRoom,
         Title: item.introduction || item.roomName || '',
-        UserName: item.nick
+        UserName: item.nick,
+        VideoSrc: item.liveStreamUrl || item.videoUrl || item.streamUrl || item.url || item.playUrl // 确保这里正确提取了视频流地址
       }))
+    },
+    async getRoomDetail(roomId) {
+      // **添加这个方法**
+      try {
+        //const headers = {
+        //  'user-agent':
+        //     'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
+        // }
+        //const result = await axios.get(`/api3/${roomId}`, { headers })
+        const result = await axios.get(`/api3/${roomId}`)
+        const jsonStr = result.data.match(
+          /window\.HNF_GLOBAL_INIT.=.\{[\s\S]*?\}[\s\S]*?<\/script>/
+        )[0]
+        const jsonObj = JSON.parse(jsonStr.replace(/window\.HNF_GLOBAL_INIT.=.|<\/script>/g, ''))
+
+        const lines = jsonObj['roomInfo']['tLiveInfo']['tLiveStreamInfo']['vStreamInfo']['value']
+        const huyaLines = lines.map((item) => ({
+          line: item['sFlvUrl'],
+          lineType: item['sFlvUrl'] ? 'FLV' : 'HLS',
+          flvAntiCode: item['sFlvAntiCode'],
+          hlsAntiCode: item['sHlsAntiCode'],
+          streamName: item['sStreamName']
+        }))
+
+        // 优先选择FLV线路
+        const videoSrc = huyaLines.find((line) => line.lineType === 'FLV')?.line
+
+        return {
+          VideoSrc: videoSrc
+        }
+      } catch (error) {
+        console.error('获取直播间详情失败:', error)
+        return { VideoSrc: undefined }
+      }
+    },
+    // openVideoPlayer(room) {
+    //   console.log('打开视频播放器，传递的数据:', room)
+    //   this.selectedRoom = room
+    // },
+    async openVideoPlayer(room) {
+      // **修改这个方法**
+      try {
+        const roomDetail = await this.getRoomDetail(room.RoomID)
+        if (roomDetail.VideoSrc) {
+          this.selectedRoom = {
+            ...room,
+            VideoSrc: roomDetail.VideoSrc
+          }
+        } else {
+          console.error('无法获取视频流地址')
+        }
+      } catch (error) {
+        console.error('获取直播间详情失败:', error)
+      }
     },
     loadMoreRooms() {
       this.page += 1

@@ -21,8 +21,8 @@ import FlvPlayer from 'xgplayer-flv' // flv格式
 //import HlsJsPlayer from 'xgplayer-hls.js' // M3U8格式
 export default {
   props: {
-    cover: '', // 直播封面图
-    videoSrc: ''
+    cover: String, // 直播封面图
+    videoSrc: String
   },
   data() {
     return {
@@ -36,9 +36,10 @@ export default {
   methods: {
     getVideo() {
       this.$nextTick(() => {
-        console.log(this.videoSrc)
+        console.log('视频源:', this.videoSrc) // 打印视频源地址
+        console.log('封面图:', this.cover) // 打印封面图地址
         this.videoPlayer = new FlvPlayer({
-          el: document.querySelector('#mmid'),
+          el: this.$refs.video,
           url: this.videoSrc,
           width: '100%',
           height: '714px',
