@@ -1,6 +1,18 @@
 <template>
   <div class="live-search">
-    <h1 class="page-title">Live Rooms</h1>
+    <!-- 分类标签 -->
+    <div class="category-tabs">
+      <button
+        v-for="category in categories"
+        :key="category.id"
+        :class="{ active: category.id === selectedCategory }"
+        @click="changeCategory(category.id)"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+
+    <!-- 房间列表 -->
     <div class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
         <div class="room-card">
@@ -15,47 +27,87 @@
         </div>
       </div>
     </div>
-    <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">Load More</button>
+
+    <!-- 加载更多按钮 -->
+    <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">加载更多</button>
   </div>
 </template>
 
 <script>
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 export default {
-  data() {
-    return {
-      category: {
-        ID: 1
-      }, // 根据实际情况定义这个对象
-      page: 1,
-      rooms: [],
-      hasMore: true
-    }
-  },
-  mounted() {
-    this.fetchRooms()
-  },
-  methods: {
-    async fetchRooms() {
-      try {
-        const response = await axios.get(`/api1/cache.php`, {
-          params: {
-            m: 'LiveList',
-            do: 'getLiveListByPage',
-            tagAll: 0,
-            page: this.page
-          }
-        })
-        const data = response.data
+  setup() {
+    const categories = ref([
+      { id: 'huya', name: '虎牙' },
+      { id: 'douyu', name: '斗鱼' },
+      { id: 'bilibili', name: 'bilibili' },
+      { id: 'douyin', name: '抖音' }
+    ])
 
-        this.rooms.push(...this.parseData(data))
-        this.hasMore = data.data.page < data.data.totalPage
+    const selectedCategory = ref('huya') // 默认选中虎牙
+    const page = ref(1)
+    const rooms = ref([])
+    const hasMore = ref(true)
+
+    // 初始化时获取房间数据
+    onMounted(() => {
+      fetchRooms()
+    })
+
+    // 更新分类并加载新数据
+    function changeCategory(categoryId) {
+      selectedCategory.value = categoryId
+      page.value = 1 // 重置页面为第一页
+      rooms.value = [] // 清空当前房间列表
+      fetchRooms()
+    }
+
+    // 获取房间数据
+    async function fetchRooms() {
+      try {
+        console.log(selectedCategory)
+        if (selectedCategory.value === 'huya') {
+          const response = await axios.get(`/api1/cache.php`, {
+            params: {
+              m: 'LiveList',
+              do: 'getLiveListByPage',
+              tagAll: 0,
+              page: page.value,
+              category: selectedCategory.value // 按照选中的分类加载数据
+            }
+          })
+          const data = response.data
+          // 解析数据并推送到房间列表
+          rooms.value.push(...parseData(data))
+          hasMore.value = data.data.page < data.data.totalPage
+        } else if (selectedCategory.value === 'douyu') {
+          const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
+          const data = result.data
+          console.log(data)
+          rooms.value = data.data.rl.map((item) => ({
+            Cover: item.rs16,
+            Online: parseInt(item.ol, 10),
+            RoomID: item.rid,
+            Title: item.rn,
+            UserName: item.nn
+          }))
+        }
+
+        //    else if(selectedCategory.value === 'douyin'){
+
+        //   }
+        //   else if(selectedCategory.value === 'bilibili'){
+
+        //  }
       } catch (error) {
-        // 处理错误
+        console.error('获取房间数据失败', error)
       }
-    },
-    parseData(data) {
+    }
+
+    // 解析房间数据
+    function parseData(data) {
       return data.data.datas.map((item) => ({
         Cover: item.screenshot.includes('?')
           ? item.screenshot
@@ -65,10 +117,21 @@ export default {
         Title: item.introduction || item.roomName || '',
         UserName: item.nick
       }))
-    },
-    loadMoreRooms() {
-      this.page += 1
-      this.fetchRooms()
+    }
+
+    // 加载更多房间
+    function loadMoreRooms() {
+      page.value += 1
+      fetchRooms()
+    }
+
+    return {
+      categories,
+      selectedCategory,
+      rooms,
+      hasMore,
+      changeCategory,
+      loadMoreRooms
     }
   }
 }
@@ -87,13 +150,30 @@ export default {
   box-sizing: border-box;
 }
 
-/* 页面标题 */
-.page-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #2c3e50;
+/* 分类标签 */
+.category-tabs {
+  display: flex;
+  gap: 20px;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-tabs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-tabs button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.category-tabs button:hover {
+  background-color: #ddd;
 }
 
 /* 房间列表容器 */
@@ -101,7 +181,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 每行最多显示适应宽度的卡片 */
   gap: 20px;
-  width: 100%;
   max-width: 100%; /* 充满宽度 */
   margin-top: 20px;
   height: 500px;
