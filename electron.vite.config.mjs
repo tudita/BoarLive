@@ -31,7 +31,20 @@ export default defineConfig({
         '/api3': {
           target: 'https://m.huya.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api3/, '')
+          rewrite: (path) => path.replace(/^\/api3/, ''),
+          headers: {
+            'user-agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+          }
+        },
+        '/api4': {
+          target: 'https://udblgn.huya.com/web/anonymousLogin',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api4/, ''),
+          headers: {
+            'user-agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+          }
         }
       }
     }

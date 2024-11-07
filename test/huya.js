@@ -1,6 +1,6 @@
-import axios from 'axios'
-import crypto from 'crypto'
-import LiveSite from './live.js' // 假设 LiveSite 类在 live.js 文件中
+const axios = require('axios');
+const crypto = require('crypto');
+const LiveSite = require('./live.js'); // 假设 LiveSite 类在 live.js 文件中
 
 class Huya extends LiveSite {
   constructor() {
@@ -50,7 +50,7 @@ class Huya extends LiveSite {
   async getCategoryRooms(category, page = 1) {
     const categoryResult = { Rooms: [] }
     const result = await axios.get(
-      `https://api1/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&gameId=${category.ID}&page=${page}`
+      `https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&gameId=${category.ID}&page=${page}`
     )
     const obj = result.data
     for (const item of obj.data.datas) {
@@ -74,7 +74,7 @@ class Huya extends LiveSite {
   async getRecommendRooms(page = 1) {
     const categoryResult = { Rooms: [] }
     const result = await axios.get(
-      `https://api1/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=${page}`
+      `https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=${page}`
     )
     const obj = result.data
     for (const item of obj.data.datas) {
@@ -157,22 +157,20 @@ class Huya extends LiveSite {
         TopSid: topSid,
         SubSid: subSid
       },
-      Url: `api1/${roomId}`
+      Url: `https://www.huya.com/${roomId}`
     }
   }
 
   async getRoomInfo(roomId) {
-    //const headers = {
-    //  'user-agent':
-    //    'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
-    //}
-    const result = await axios.get(`/api3/${roomId}`)
-    console.log(result)
-    //const result = await axios.get(`https://api3/${roomId}`, { headers })
+    const headers = {
+      'user-agent':
+        'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
+    }
+    const result = await axios.get(`https://m.huya.com/${roomId}`, { headers })
     let jsonStr = result.data.match(/window\.HNF_GLOBAL_INIT.=.\{[\s\S]*?\}[\s\S]*?<\/script>/)[0]
     jsonStr = jsonStr.replace(/window\.HNF_GLOBAL_INIT.=./, '').replace('</script>', '')
     jsonStr = jsonStr.replace(/function.*?\(.*?\).\{[\s\S]*?\}/, '""')
-
+    console.log(jsonStr)
     const jsonObj = JSON.parse(jsonStr)
 
     const topSid = parseInt(result.data.match(/lChannelId"":([0-9]+)/)[1])
@@ -194,7 +192,7 @@ class Huya extends LiveSite {
 
   async getUid() {
     const data = JSON.stringify({ appId: 5002, byPass: 3, context: '', version: '2.4', data: {} })
-    const result = await axios.post('api4', data)
+    const result = await axios.post('https://udblgn.huya.com/web/anonymousLogin', data)
     const obj = result.data
     return obj.data.uid
   }
@@ -202,7 +200,7 @@ class Huya extends LiveSite {
   async search(keyword, page = 1) {
     const searchResult = { Rooms: [] }
     const result = await axios.get(
-      `api2/?m=Search&do=getSearchContent&q=${encodeURIComponent(
+      `https://search.cdn.huya.com/?m=Search&do=getSearchContent&q=${encodeURIComponent(
         keyword
       )}&uid=0&v=4&typ=-5&livestate=0&rows=20&start=${(page - 1) * 20}`
     )
@@ -314,4 +312,4 @@ class Huya extends LiveSite {
     return []
   }
 }
-export default Huya
+module.exports = Huya;

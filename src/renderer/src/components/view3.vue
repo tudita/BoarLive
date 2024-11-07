@@ -15,15 +15,17 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import Huya from '../lib/huya.js'
-
+import axios from 'axios'
 const roomDetail = ref(null)
 const error = ref(null)
 
 onMounted(async () => {
   try {
     const huya = new Huya()
-    const roomId = '863214' // 替换为有效的房间 ID
-    roomDetail.value = await huya.getRoomDetail(roomId)
+    const roomId = '117736' // 替换为有效的房间 ID
+    //roomDetail.value = await huya.getRoomDetail(roomId)
+    const result = await axios.get(`/api3/${roomId}`)
+    console.log(result)
   } catch (err) {
     error.value = err.message
     console.error('Error fetching room detail:', err)
