@@ -73,6 +73,18 @@ app.whenReady().then(() => {
       event.reply('huya-getPlayQuality-reply', qn)
     })
   })
+  //虎牙搜索
+  ipcMain.on('huya-search', (event, keyword, page = 1) => {
+    huya.search(keyword, page).then((res) => {
+      event.reply('huya-search-reply', res)
+    })
+  })
+  //虎牙推荐房间
+  ipcMain.on('huya-getRecommendRooms', (event, page = 1) => {
+    huya.search(page).then((res) => {
+      event.reply('huya-getRecommendRooms-reply', res)
+    })
+  })
   createWindow()
 
   app.on('activate', function () {
