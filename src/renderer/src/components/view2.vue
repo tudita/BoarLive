@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="live-search">
     <h1 class="page-title">Live Rooms</h1>
     <div class="rooms-container">
@@ -296,4 +296,27 @@ export default {
   text-align: center;
   margin-top: 10px;
 }
-</style>
+</style> -->
+
+<template>
+  <div>
+    <video-player :video-src="videoSrc" :cover="cover"> </video-player>
+  </div>
+</template>
+
+<script>
+import VideoPlayer from './videoPlayer.vue'
+
+export default {
+  components: {
+    VideoPlayer
+  },
+  data() {
+    return {
+      // 从videosrc.txt中选择一个视频源地址
+      videoSrc:
+        'https://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2403982770&t=102&sv=2401310322&ratio=500'
+    }
+  }
+}
+</script>
