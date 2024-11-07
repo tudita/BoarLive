@@ -23,6 +23,7 @@
     <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">Load More</button>
     <video-player
       v-if="selectedRoom"
+      :key="selectedRoom ? selectedRoom.RoomID : ''"
       :cover="selectedRoom.Cover"
       :video-src="selectedRoom.VideoSrc"
     ></video-player>
@@ -99,17 +100,23 @@ export default {
     async getRoomDetail(roomId) {
       // **添加这个方法**
       try {
-        //const headers = {
-        //  'user-agent':
-        //     'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
-        // }
-        //const result = await axios.get(`/api3/${roomId}`, { headers })
-        const result = await axios.get(`/api3/${roomId}`)
-        const jsonStr = result.data.match(
+        const headers = {
+          'user-agent':
+            'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
+        }
+        const result = await axios.get(`/api3/${roomId}`, { headers })
+
+        // const result = await axios.get(`/api3/${roomId}`)
+        let jsonStr = result.data.match(
           /window\.HNF_GLOBAL_INIT.=.\{[\s\S]*?\}[\s\S]*?<\/script>/
         )[0]
-        const jsonObj = JSON.parse(jsonStr.replace(/window\.HNF_GLOBAL_INIT.=.|<\/script>/g, ''))
+        // const jsonObj = JSON.parse(jsonStr.replace(/window\.HNF_GLOBAL_INIT.=.|<\/script>/g, ''))
+        //jsonStr = jsonStr.replace(/window\.HNF_GLOBAL_INIT.=.|<\/script>/g, '')
+        jsonStr = jsonStr.replace(/window\.HNF_GLOBAL_INIT.=./, '')
+        jsonStr = jsonStr.replace('<//script>', '')
+        jsonStr = jsonStr.replace(/function.*?\(.*?\).\{[\s\S]*?\}/g, '""')
 
+        const jsonObj = JSON.parse(jsonStr)
         const lines = jsonObj['roomInfo']['tLiveInfo']['tLiveStreamInfo']['vStreamInfo']['value']
         const huyaLines = lines.map((item) => ({
           line: item['sFlvUrl'],
@@ -130,10 +137,6 @@ export default {
         return { VideoSrc: undefined }
       }
     },
-    // openVideoPlayer(room) {
-    //   console.log('打开视频播放器，传递的数据:', room)
-    //   this.selectedRoom = room
-    // },
     async openVideoPlayer(room) {
       // **修改这个方法**
       try {
@@ -143,6 +146,7 @@ export default {
             ...room,
             VideoSrc: roomDetail.VideoSrc
           }
+          // this.selectedRoom = roomDetail // 更新 selectedRoom 对象
         } else {
           console.error('无法获取视频流地址')
         }

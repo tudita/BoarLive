@@ -23,7 +23,8 @@
     "@electron-toolkit/utils": "^3.0.0",
     "axios": "^1.7.7",
     "element-plus": "^2.8.6",
-    "xgplayer-flv": "^3.0.20"
+    "xgplayer-flv": "^3.0.20",
+    "xgplayer-hls.js": "^3.0.20"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.2",

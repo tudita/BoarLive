@@ -16,8 +16,8 @@
 </template>
 
 <script>
-//import Player from 'xgplayer'
-import FlvPlayer from 'xgplayer-flv' // flv格式
+import Player from 'xgplayer'
+//import FlvPlayer from 'xgplayer-flv' // flv格式
 //import HlsJsPlayer from 'xgplayer-hls.js' // M3U8格式
 export default {
   props: {
@@ -30,15 +30,28 @@ export default {
       barrageValue: ''
     }
   },
+  // watch: {
+  //   videoSrc(newSrc) {
+  //     if (newSrc) {
+  //       this.destroyPlayer()
+  //       this.getVideo()
+  //     }
+  //   }
+  // },
   mounted() {
     this.getVideo()
+  },
+  beforeUnmount() {
+    this.destroyPlayer()
   },
   methods: {
     getVideo() {
       this.$nextTick(() => {
         console.log('视频源:', this.videoSrc) // 打印视频源地址
         console.log('封面图:', this.cover) // 打印封面图地址
-        this.videoPlayer = new FlvPlayer({
+        console.log('播放器容器:', this.$refs.video)
+
+        this.videoPlayer = new Player({
           el: this.$refs.video,
           url: this.videoSrc,
           width: '100%',
@@ -75,6 +88,18 @@ export default {
           }
         })
       })
+    },
+    destroyPlayer() {
+      if (this.videoPlayer) {
+        // 停止播放
+        if (typeof this.videoPlayer.stop === 'function') {
+          this.videoPlayer.stop()
+        }
+        // 卸载播放器
+        this.videoPlayer = null
+        // 清空视频容器
+        this.$refs.video.innerHTML = ''
+      }
     },
     // 发送弹幕
     save() {
