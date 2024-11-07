@@ -98,7 +98,6 @@ class Huya extends LiveSite {
   async getRoomDetail(roomId) {
     const jsonObj = await this.getRoomInfo(roomId)
 
-    console.log(jsonObj)
     const topSid = parseInt(jsonObj.topSid)
     const subSid = parseInt(jsonObj.subSid)
 
@@ -172,21 +171,18 @@ class Huya extends LiveSite {
     jsonStr = jsonStr.replace(/window\.HNF_GLOBAL_INIT.=./, '').replace('</script>', '')
     jsonStr = jsonStr.replace(/function.*?\(.*?\).\{[\s\S]*?\}/g, '""')
     const jsonObj = JSON.parse(jsonStr)
-    console.log('成功解析')
-    const jsonString = JSON.stringify(jsonObj, null, 2)
-    fs.writeFile('output.json', jsonString, (err) => {
-      if (err) {
-        console.error('写入文件时出错:', err)
-      } else {
-        console.log('JSON 对象已成功写入文件')
-      }
-    })
-    const topSid = parseInt(result.data.match(/lChannelId"":([0-9]+)/)[1])
-    const subSid = parseInt(result.data.match(/lSubChannelId"":([0-9]+)/)[1])
+    const topSid = parseInt(
+      result.data.match(/lChannelId":([0-9]+)/)[0].replace('lChannelId":', '')
+    )
+    const subSid = parseInt(
+      result.data.match(/lSubChannelId":([0-9]+)/)[0].replace('lSubChannelId":', '')
+    )
+    //const topSid = parseInt(result.data.match(/lChannelId":([0-9]+)/))
+    //const subSid = parseInt(result.data.match(/lSubChannelId":([0-9]+)/)[1])
 
     jsonObj.topSid = topSid
     jsonObj.subSid = subSid
-
+    //console.log(jsonObj)
     return jsonObj
   }
 
@@ -199,9 +195,11 @@ class Huya extends LiveSite {
   }
 
   async getUid() {
-    const data = JSON.stringify({ appId: 5002, byPass: 3, context: '', version: '2.4', data: {} })
+    const data = { appId: 5002, byPass: 3, context: '', version: '2.4', data: {} }
+    //console.log(data)
     const result = await axios.post('https://udblgn.huya.com/web/anonymousLogin', data)
     const obj = result.data
+    //console.log(obj)
     return obj.data.uid
   }
 
