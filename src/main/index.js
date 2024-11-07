@@ -2,7 +2,9 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import Huya from './huya'
 
+const huya = new Huya()
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -13,7 +15,8 @@ function createWindow() {
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
+      sandbox: false,
+      nodeIntegration: true
     }
   })
 
@@ -52,6 +55,24 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
+  //虎牙获取直播流
+  ipcMain.on('huya-get-play-url', (event, roomdetail, qn) => {
+    huya.getPlayUrls(roomdetail, qn).then((playurl) => {
+      event.reply('huya-get-play-url-reply', playurl)
+    })
+  })
+  //虎牙获取roomdetail
+  ipcMain.on('huya-getroomDetail', (event, roomid) => {
+    huya.getRoomDetail(roomid).then((roomdetail) => {
+      event.reply('huya-getroomDetail-reply', roomdetail)
+    })
+  })
+  //虎牙获取qn
+  ipcMain.on('huya-getPlayQuality', (event, roomDetail) => {
+    huya.getPlayQuality(roomDetail).then((qn) => {
+      event.reply('huya-getPlayQuality-reply', qn)
+    })
+  })
   createWindow()
 
   app.on('activate', function () {
