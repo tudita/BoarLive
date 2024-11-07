@@ -299,8 +299,9 @@ export default {
 </style> -->
 
 <template>
-  <div>
-    <video-player :video-src="videoSrc" :cover="cover"> </video-player>
+  <div class="view-container">
+    <video-player v-if="showPlayer" :url="videoUrl" @close="showPlayer = false" />
+    <button v-if="!showPlayer" @click="startLiveStream">开始直播</button>
   </div>
 </template>
 
@@ -308,15 +309,35 @@ export default {
 import VideoPlayer from './videoPlayer.vue'
 
 export default {
+  name: 'LiveView',
   components: {
     VideoPlayer
   },
   data() {
     return {
-      // 从videosrc.txt中选择一个视频源地址
-      videoSrc:
-        'https://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2403982770&t=102&sv=2401310322&ratio=500'
+      showPlayer: false,
+      videoUrl:
+        'https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-360p.mp4'
+    }
+  },
+  methods: {
+    startLiveStream() {
+      console.log('Starting live stream...') // 确认点击事件
+      this.showPlayer = true
     }
   }
 }
 </script>
+
+<style scoped>
+.view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+</style>
