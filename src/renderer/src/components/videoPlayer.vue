@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Player from 'xgplayer'
-//import FlvPlayer from 'xgplayer-flv' // flv格式
+//import Player from 'xgplayer'
+import FlvPlayer from 'xgplayer-flv' // flv格式
 //import HlsJsPlayer from 'xgplayer-hls.js' // M3U8格式
 export default {
   props: {
@@ -51,7 +51,7 @@ export default {
         console.log('封面图:', this.cover) // 打印封面图地址
         console.log('播放器容器:', this.$refs.video)
 
-        this.videoPlayer = new Player({
+        this.videoPlayer = new FlvPlayer({
           el: this.$refs.video,
           url: this.videoSrc,
           width: '100%',
