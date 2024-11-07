@@ -1,7 +1,7 @@
-const axios = require('axios');
-const crypto = require('crypto');
-const LiveSite = require('./live.js'); // 假设 LiveSite 类在 live.js 文件中
-
+const axios = require('axios')
+const crypto = require('crypto')
+const LiveSite = require('./live.js') // 假设 LiveSite 类在 live.js 文件中
+const fs = require('fs')
 class Huya extends LiveSite {
   constructor() {
     super()
@@ -97,6 +97,7 @@ class Huya extends LiveSite {
 
   async getRoomDetail(roomId) {
     const jsonObj = await this.getRoomInfo(roomId)
+
     console.log(jsonObj)
     const topSid = parseInt(jsonObj.topSid)
     const subSid = parseInt(jsonObj.subSid)
@@ -169,10 +170,17 @@ class Huya extends LiveSite {
     const result = await axios.get(`https://m.huya.com/${roomId}`, { headers })
     let jsonStr = result.data.match(/window\.HNF_GLOBAL_INIT.=.\{[\s\S]*?\}[\s\S]*?<\/script>/)[0]
     jsonStr = jsonStr.replace(/window\.HNF_GLOBAL_INIT.=./, '').replace('</script>', '')
-    jsonStr = jsonStr.replace(/function.*?\(.*?\).\{[\s\S]*?\}/, '""')
-    console.log(jsonStr)
+    jsonStr = jsonStr.replace(/function.*?\(.*?\).\{[\s\S]*?\}/g, '""')
     const jsonObj = JSON.parse(jsonStr)
-
+    console.log('成功解析')
+    const jsonString = JSON.stringify(jsonObj, null, 2)
+    fs.writeFile('output.json', jsonString, (err) => {
+      if (err) {
+        console.error('写入文件时出错:', err)
+      } else {
+        console.log('JSON 对象已成功写入文件')
+      }
+    })
     const topSid = parseInt(result.data.match(/lChannelId"":([0-9]+)/)[1])
     const subSid = parseInt(result.data.match(/lSubChannelId"":([0-9]+)/)[1])
 
@@ -312,4 +320,4 @@ class Huya extends LiveSite {
     return []
   }
 }
-module.exports = Huya;
+module.exports = Huya
