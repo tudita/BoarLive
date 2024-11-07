@@ -28,22 +28,50 @@ export default defineConfig({
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api2/, '')
         },
-        '/api3': {
-          target: 'https://m.huya.com',
+        '/douyu': {
+          target: 'https://www.douyu.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api3/, ''),
+          rewrite: (path) => path.replace(/^\/douyu/, '')
+        },
+        '/bilibili1': {
+          target: 'https://api.live.bilibili.com',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/bilibili1/, ''),
           headers: {
-            'user-agent':
-              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+            'User-Agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0',
+            Referer: 'https://api.live.bilibili.com'
           }
         },
-        '/api4': {
-          target: 'https://udblgn.huya.com/web/anonymousLogin',
+        '/bilibili2': {
+          target: 'https://api.bilibili.com',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api4/, ''),
+          rewrite: (path) => path.replace(/^\/bilibili2/, ''),
           headers: {
-            'user-agent':
-              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+            'User-Agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0',
+            Referer: 'https://api.bilibili.com',
+            cookie: 'buvid3=infoc'
+          }
+        },
+        '/douyin1': {
+          target: 'https://live.douyin.com',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/douyin1/, ''),
+          headers: {
+            Authority: 'https://live.douyin.com',
+            'User-Agent':
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0',
+            Referer: 'https://live.douyin.com',
+            'Content-Type': 'text/plain',
+            accept: 'application/json, text/plain, */*',
+            'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'sec-ch-ua': '"Microsoft Edge";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin'
           }
         }
       }
