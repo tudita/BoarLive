@@ -1,0 +1,93 @@
+[
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2601699138&t=102&sv=2401310322&ratio=14100',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3545658295&t=102&sv=2401310322&ratio=14100',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1859534920&t=102&sv=2401310322&ratio=14100',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2191364142&t=102&sv=2401310322&ratio=14100',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=614185118&t=102&sv=2401310322&ratio=14100',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2256465405&t=102&sv=2401310322&ratio=14100',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2112803848&t=102&sv=2401310322&ratio=14100',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1528217924&t=102&sv=2401310322&ratio=14100'
+    ],
+    Quality: '2K HDR'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3894315400&t=102&sv=2401310322&ratio=14000',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=106028188&t=102&sv=2401310322&ratio=14000',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=574578156&t=102&sv=2401310322&ratio=14000',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3410536877&t=102&sv=2401310322&ratio=14000',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1643145759&t=102&sv=2401310322&ratio=14000',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=50832280&t=102&sv=2401310322&ratio=14000',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3932120622&t=102&sv=2401310322&ratio=14000',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3964329888&t=102&sv=2401310322&ratio=14000'
+    ],
+    Quality: '2K'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=754197994&t=102&sv=2401310322&ratio=4200',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1271357071&t=102&sv=2401310322&ratio=4200',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=bf57c85460e493c9c277df3bf4821e14&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1939772967&t=102&sv=2401310322&ratio=4200',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=0b99e76d7fdf9dec8d317aacaffeade1&wsTime=672cead8&seqid=3199233234371&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2233829003&t=102&sv=2401310322&ratio=4200',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=222786514&t=102&sv=2401310322&ratio=4200',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2738785295&t=102&sv=2401310322&ratio=4200',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3525543498&t=102&sv=2401310322&ratio=4200',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2696902079&t=102&sv=2401310322&ratio=4200'
+    ],
+    Quality: 'HDR(10M)'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2088999567&t=102&sv=2401310322',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=4142718430&t=102&sv=2401310322',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2978671714&t=102&sv=2401310322',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=959264148&t=102&sv=2401310322',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1650386123&t=102&sv=2401310322',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3513800891&t=102&sv=2401310322',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2185536079&t=102&sv=2401310322',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1626123533&t=102&sv=2401310322'
+    ],
+    Quality: '蓝光10M'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2564546456&t=102&sv=2401310322&ratio=4000',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2948888999&t=102&sv=2401310322&ratio=4000',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3995010921&t=102&sv=2401310322&ratio=4000',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3204063537&t=102&sv=2401310322&ratio=4000',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1710010398&t=102&sv=2401310322&ratio=4000',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1148034939&t=102&sv=2401310322&ratio=4000',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2357090710&t=102&sv=2401310322&ratio=4000',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3619280097&t=102&sv=2401310322&ratio=4000'
+    ],
+    Quality: '蓝光4M'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2262682899&t=102&sv=2401310322&ratio=2000',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=355866456&t=102&sv=2401310322&ratio=2000',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1297810849&t=102&sv=2401310322&ratio=2000',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3967232234&t=102&sv=2401310322&ratio=2000',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1813233498&t=102&sv=2401310322&ratio=2000',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3207891693&t=102&sv=2401310322&ratio=2000',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=1738098100&t=102&sv=2401310322&ratio=2000',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=501733712&t=102&sv=2401310322&ratio=2000'
+    ],
+    Quality: '超清'
+  },
+  {
+    Data: [
+      'http://qvodlive-va.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2560841052&t=102&sv=2401310322&ratio=500',
+      'http://hw-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=245685785&t=102&sv=2401310322&ratio=500',
+      'http://tx.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=984608042&t=102&sv=2401310322&ratio=500',
+      'http://hs.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=4173650387&t=102&sv=2401310322&ratio=500',
+      'http://al-game.flv.huya.com/src/78941969-2601386338-11172869245971202048-3120471182-10057-A-0-1-imgplus.flv?wsSecret=b44ba6e74ad4cbcc9a39e7f9f2bd3282&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2597915825&t=102&sv=2401310322&ratio=500',
+      'http://hw-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2403982770&t=102&sv=2401310322&ratio=500',
+      'http://tx.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=2373346542&t=102&sv=2401310322&ratio=500',
+      'http://al-game.flv.huya.com/src/78941969-2559461593-10992803837303062528-2693342886-10057-A-0-1-imgplus.flv?wsSecret=db27e57ff412ae5b5a4121566baa7d07&wsTime=672cead8&seqid=3199233234372&ctype=tars_mp&ver=1&fs=bgct&sphdcdn=&sphdDC=&sphd=&exsphd=&uid=1468257881387&uuid=3142635709&t=102&sv=2401310322&ratio=500'
+    ],
+    Quality: '流畅'
+  }
+]

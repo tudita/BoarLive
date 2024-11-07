@@ -11,10 +11,10 @@ http
         'user-agent':
           'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
       }
-      const roomId = '1995' // 需要定义 roomId
+      const roomId = '660000' // 需要定义 roomId
       const roomDetail = await huya.getRoomDetail(roomId)
       const qn = await huya.getPlayQuality(roomDetail)
-      const playurl = await huya.getPlayUrls(roomDetail, qn)
+      const playurl = await huya.getPlayUrls(roomDetail, qn[1])
       console.log(qn)
       console.log(playurl)
       response.end('Hello World\n')
