@@ -5,9 +5,10 @@
         <Sidebar @update-content="updateContent" />
       </div>
       <div class="main-content">
-        <view1 v-if="currentComponent === 'view1'" />
-        <view2 v-if="currentComponent === 'view2'" />
-        <view3 v-if="currentComponent === 'view3'" />
+        <view1 v-if="currentComponent === 'Recommand'" />
+        <view2 v-if="currentComponent === 'Search'" />
+        <view3 v-if="currentComponent === 'Test'" />
+        <view4 v-if="currentComponent === 'Live'" />
         <component :is=""></component>
       </div>
     </div>
@@ -17,11 +18,12 @@
 <script setup>
 import { ref } from 'vue'
 import Sidebar from './components/Sidebar.vue'
-import view1 from './components/view1.vue'
-import view2 from './components/view2.vue'
-import view3 from './components/view3.vue'
+import view1 from './components/Recommand.vue'
+import view2 from './components/Search.vue'
+import view3 from './components/view_test.vue'
+import view4 from './components/Live.vue'
 
-const currentComponent = ref('view1')
+const currentComponent = ref('Recommend')
 
 function updateContent(componentName) {
   currentComponent.value = componentName
@@ -32,7 +34,8 @@ const components = {
   Sidebar,
   view1,
   view2,
-  view3
+  view3,
+  view4
 }
 </script>
 

@@ -206,28 +206,34 @@ class Huya extends LiveSite {
 
   async search(keyword, page = 1) {
     const searchResult = { Rooms: [] }
-    const result = await axios.get(
-      `https://search.cdn.huya.com/?m=Search&do=getSearchContent&q=${encodeURIComponent(
-        keyword
-      )}&uid=0&v=4&typ=-5&livestate=0&rows=20&start=${(page - 1) * 20}`
-    )
-    const obj = result.data
-    for (const item of obj.response['3'].docs) {
-      let cover = item.game_screenshot
-      if (!cover.includes('?')) {
-        cover += '?x-oss-process=style/w338_h190&'
-      }
-      searchResult.Rooms.push({
-        Cover: cover,
-        Online: parseInt(item.game_total_count),
-        RoomID: item.room_id,
-        Title: item.game_roomName,
-        UserName: item.game_nick
-      })
+    try {
+        const result = await axios.get(
+            `https://search.cdn.huya.com/?m=Search&do=getSearchContent&q=${encodeURIComponent(
+                keyword
+            )}&uid=0&v=4&typ=-5&livestate=0&rows=20&start=${(page - 1) * 20}`
+        )
+        console.log(result)
+        const obj = result.data
+        for (const item of obj.response['3'].docs) {
+            let cover = item.game_screenshot
+            if (!cover.includes('?')) {
+                cover += '?x-oss-process=style/w338_h190&'
+            }
+            searchResult.Rooms.push({
+                Cover: cover,
+                Online: parseInt(item.game_total_count),
+                RoomID: item.room_id,
+                Title: item.game_roomName,
+                UserName: item.game_nick
+            })
+        }
+        searchResult.HasMore = parseInt(obj.response['3'].numFound) > page * 20
+    } catch (error) {
+        console.error("搜索请求失败:", error)
+        throw new Error("搜索请求失败，请稍后重试")
     }
-    searchResult.HasMore = parseInt(obj.response['3'].numFound) > page * 20
     return searchResult
-  }
+}
 
   async getPlayQuality(roomDetail) {
     const qualities = []
