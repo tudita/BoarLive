@@ -69,20 +69,28 @@ export default {
       try {
         console.log(selectedCategory.value)
         if (selectedCategory.value === 'huya') {
-          const response = await axios.get(`/api1/cache.php`, {
-            params: {
-              m: 'LiveList',
-              do: 'getLiveListByPage',
-              tagAll: 0,
-              page: page.value,
-              category: selectedCategory.value // 按照选中的分类加载数据
-            }
-          })
-          const data = response.data
-          // 解析数据并推送到房间列表
-          rooms.value.push(...parseData(data))
-          hasMore.value = data.data.page < data.data.totalPage
-        } else if (selectedCategory.value === 'douyu') {
+          // const response = await axios.get(`/api1/cache.php`, {
+          //   params: {
+          //     m: 'LiveList',
+          //     do: 'getLiveListByPage',
+          //     tagAll: 0,
+          //     page: page.value,
+          //     category: selectedCategory.value // 按照选中的分类加载数据
+          //   }
+          // })
+          // const data = response.data
+          // // 解析数据并推送到房间列表
+          // rooms.value.push(...parseData(data))
+          // hasMore.value = data.data.page < data.data.totalPage
+          const dataToProcess = 1
+          window.electronAPI.huya_getRecommendRooms(dataToProcess)
+          console.log('Data sent to main process for processing')
+          window.electronAPI.huya_receiveRecommendRooms((result) => {
+            console.log(result)
+            this.rooms = result
+          }) 
+        } 
+        else if (selectedCategory.value === 'douyu') {
           const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
           const data = result.data
           console.log(data)
@@ -93,7 +101,8 @@ export default {
             Title: item.rn,
             UserName: item.nn
           }))
-        } else if (selectedCategory.value === 'bilibili') {
+        } 
+        else if (selectedCategory.value === 'bilibili') {
           const response = await axios.get(`/bilibili1/room/v1/Area/getListByAreaID`, {
             params: {
               areaId: 0,
