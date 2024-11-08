@@ -81,7 +81,7 @@ app.whenReady().then(() => {
   })
   //虎牙推荐房间
   ipcMain.on('huya-getRecommendRooms', (event, page = 1) => {
-    huya.search(page).then((res) => {
+    huya.getRecommendRooms(page).then((res) => {
       event.reply('huya-getRecommendRooms-reply', res)
     })
   })
