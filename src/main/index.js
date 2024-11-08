@@ -74,7 +74,7 @@ app.whenReady().then(() => {
     })
   })
   //虎牙搜索
-  ipcMain.on('huya-search', (event, keyword, page = 1) => {
+  ipcMain.on('huya-search', (event, keyword, page) => {
     huya.search(keyword, page).then((res) => {
       event.reply('huya-search-reply', res)
     })
