@@ -3,7 +3,7 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import Huya from './huya'
-import { Douyin } from './douyin'
+import  Douyin  from './douyin'
 
 const huya = new Huya()
 const douyin = new Douyin()

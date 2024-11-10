@@ -345,7 +345,7 @@ function loadMoreRooms() {
 }
 
 .load-more-button:disabled {
-  background-color: #ddd;
+  background-color: #ffffff;
   cursor: not-allowed;
 }
 
