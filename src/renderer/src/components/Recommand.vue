@@ -133,28 +133,22 @@ async function fetchRooms() {
       }))
       console.log('封面', rooms.value)
     } else if (selectedCategory.value === 'douyin') {
-      const response = await axios.get('/douyin1/webcast/web/partition/detail/room/', {
-        params: {
-          aid: 6383,
-          app_name: 'douyin_web',
-          live_id: 1,
-          device_platform: 'web',
-          count: 15,
-          offset: (page.value - 1) * 15,
-          partition: 720,
-          partition_type: 1
-        }
+      window.electronAPI.douyin_getRecommendRooms(page.value)
+      console.log('Data sent to main process for processing')
+      window.electronAPI.douyin_receiveRecommendRooms(async (response) => {
+        console.log('get douyin_recommand', response)
+        ans.value = response
+        console.log('ansrooms:', ans.value)
+        rooms.value = ans.value.Rooms.map(item => ({
+          Cover: item.Cover,
+          Online: item.Online,
+          RoomID: item.RoomID,
+          Title: item.Title,
+          UserName: item.UserName,
+          Platform: '抖音直播'
+        }))
+        hasMore.value = ans.value.HasMore
       })
-      const data = response.data
-      console.log('API 调用成功:', data)
-      hasMore.value = data.data.length > 0
-      rooms.value = data.data.map((item) => ({
-        Cover: item.room.cover.url_list[0],
-        Online: item.room.room_view_stats?.display_value || 0,
-        RoomID: item.web_rid,
-        Title: item.room.title,
-        UserName: item.room.owner.nickname
-      }))
     }
   } catch (error) {
     console.error('获取房间数据失败', error)
@@ -292,7 +286,7 @@ function loadMoreRooms() {
 .room-title {
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #b22727;
   margin-bottom: 6px;
   white-space: nowrap;
   text-overflow: ellipsis;

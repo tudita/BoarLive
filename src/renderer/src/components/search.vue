@@ -145,6 +145,22 @@ async function search() {
         Platform: '哔哩哔哩'
       }))
       hasMore.value = rooms.value.length > 0
+    } else if(selectedPlatform.value === 'douyin'){
+      window.electronAPI.douyin_getSearch(keyword.value, page.value)
+      console.log('Data sent to main process for processing')
+      window.electronAPI.douyin_receiveSearch((response) => {
+        console.log('get research:', response)
+        ans.value = response
+        rooms.value = ans.value.Rooms.map(item => ({
+          Cover: item.Cover,
+          Online: item.Online,
+          RoomID: item.RoomID,
+          Title: item.Title,
+          UserName: item.UserName,
+          Platform: '虎牙直播'
+        }))
+        hasMore.value = ans.value.HasMore
+      })
     }
   } catch (err) {
     error.value = '搜索失败，请稍后重试'
