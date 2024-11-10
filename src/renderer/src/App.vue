@@ -7,7 +7,7 @@
       <div class="main-content">
         <view1 v-if="currentComponent === 'Recommand'" />
         <view2 v-if="currentComponent === 'Search'" />
-        <view3 v-if="currentComponent === 'Test'" />
+        <view3 @update-content="updateContent" v-if="currentComponent === 'Test'" />
         <view4 v-if="currentComponent === 'Live'" />
         <component :is=""></component>
       </div>

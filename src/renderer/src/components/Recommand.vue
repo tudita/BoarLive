@@ -15,7 +15,7 @@
     <!-- 房间列表 -->
     <div class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
-        <div class="room-card">
+        <div class="room-card" @click="showContent('Live')">
           <div class="room-cover">
             <img :src="room.Cover" alt="room.cover" />
             <div class="room-online">在线人数: {{ room.Online }}</div>
@@ -36,6 +36,7 @@
 <script>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import { defineEmits } from 'vue'
 
 export default {
   setup() {
@@ -46,15 +47,20 @@ export default {
       { id: 'douyin', name: '抖音' }
     ])
 
+
+    const emit = defineEmits(['update-content'])
+
     const selectedCategory = ref('huya') // 默认选中虎牙
     const page = ref(1)
     const rooms = ref([])
     const hasMore = ref(true)
+    const ans = ref(null)
 
     // 初始化时获取房间数据
     onMounted(() => {
       fetchRooms()
     })
+
 
     // 更新分类并加载新数据
     function changeCategory(categoryId) {
@@ -64,31 +70,31 @@ export default {
       fetchRooms()
     }
 
+    function showContent(componentName) {
+      console.log('showContent:', componentName)
+      emit('update-content', componentName)
+    }
+
     // 获取房间数据
     async function fetchRooms() {
       try {
         console.log(selectedCategory.value)
         if (selectedCategory.value === 'huya') {
-          // const response = await axios.get(`/api1/cache.php`, {
-          //   params: {
-          //     m: 'LiveList',
-          //     do: 'getLiveListByPage',
-          //     tagAll: 0,
-          //     page: page.value,
-          //     category: selectedCategory.value // 按照选中的分类加载数据
-          //   }
-          // })
-          // const data = response.data
-          // // 解析数据并推送到房间列表
-          // rooms.value.push(...parseData(data))
-          // hasMore.value = data.data.page < data.data.totalPage
-          const dataToProcess = 1
-          window.electronAPI.huya_getRecommendRooms(dataToProcess)
+          window.electronAPI.huya_getRecommendRooms(page.value)
           console.log('Data sent to main process for processing')
-          window.electronAPI.huya_receiveRecommendRooms((result) => {
-            console.log(result)
-            this.rooms = result
-          }) 
+          window.electronAPI.huya_receiveRecommendRooms(async (response) => {
+            console.log('get recommand', response)
+            ans.value = response
+            console.log('ansrooms:', ans.value)
+            rooms.value = ans.value.Rooms.map(item => ({
+              Cover: item.Cover,
+              Online: item.Online,
+              RoomID: item.RoomID,
+              Title: item.Title,
+              UserName: item.UserName,
+              Platform: '虎牙直播'
+            }))
+          })
         } 
         else if (selectedCategory.value === 'douyu') {
           const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
@@ -179,7 +185,8 @@ export default {
       rooms,
       hasMore,
       changeCategory,
-      loadMoreRooms
+      loadMoreRooms,
+      ans
     }
   }
 }

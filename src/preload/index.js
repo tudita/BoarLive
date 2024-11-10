@@ -22,7 +22,7 @@ if (process.contextIsolated) {
 contextBridge.exposeInMainWorld('electronAPI', {
   huya_getRoomDetail: (roomid) => ipcRenderer.send('huya-getroomDetail', roomid),
   huya_receiveRoomDetail: (callback) =>
-    ipcRenderer.on('huya-getroomDetail-reply', (event, ...args) => callback(...args)),
+    ipcRenderer.once('huya-getroomDetail-reply', (event, ...args) => callback(...args)),
 
   huya_getPlayUrl: (roomDetail, qn) => ipcRenderer.send('huya-get-play-url', roomDetail, qn),
   huya_receivePlayUrl: (callback) =>
@@ -30,7 +30,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
   huya_getPlayQuality: (roomDetail) => ipcRenderer.send('huya-getPlayQuality', roomDetail),
   huya_receivePlayQuality: (callback) =>
-    ipcRenderer.on('huya-getPlayQuality-reply', (event, ...args) => callback(...args)),
+    ipcRenderer.once('huya-getPlayQuality-reply', (event, ...args) => callback(...args)),
 
   huya_getSearch: (keyword, page) => ipcRenderer.send('huya-search', keyword, page),
   huya_receiveSearch: (callback) => ipcRenderer.on('huya-search-reply', (event, ...args) => callback(...args)),

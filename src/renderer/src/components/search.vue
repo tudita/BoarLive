@@ -73,41 +73,17 @@ export default {
       this.loading = true
       this.error = null
       try {
-        // 根据选择的平台来进行不同的API请求
-        //    let apiUrl = ''
         let response
         console.log(this.selectedPlatform)
         if (this.selectedPlatform === 'huya') {
           // 使用虎牙的搜索API
-          // response = await axios.get(
-          //   `/api2/?m=Search&do=getSearchContent&q=${encodeURIComponent(this.keyword)}&uid=0&v=4&typ=-5&livestate=0&rows=40&start=${(this.page - 1) * 20}`
-          // )
-          // const data = response.data
-          // console.log(data)
-          // if (data.responseHeader.status === 0 && data.response['3']) {
-          //   const newRooms = data.response['3'].docs.map((item) => ({
-          //     Cover: item.game_screenshot
-          //       ? item.game_screenshot.includes('?')
-          //         ? item.game_screenshot
-          //         : `${item.game_screenshot}?x-oss-process=style/w338_h190&`
-          //       : '',
-          //     Online: parseInt(item.game_total_count, 10),
-          //     RoomID: item.room_id,
-          //     Title: item.game_roomName,
-          //     UserName: item.game_nick,
-          //     Platform: '虎牙直播'
-          //   }))
-          //   this.rooms = newRooms
-          //   this.hasMore = newRooms.length === 40 // 如果返回的房间数少于40，则表示没有更多数据
-          // }
-
           window.electronAPI.huya_getSearch(this.keyword, this.page)
           console.log('Data sent to main process for processing')
-          window.electronAPI.huya_receiveSearch((ans) => {
-            console.log('get research:', ans)
-            this.ans = ans
+          window.electronAPI.huya_receiveSearch((response) => {
+            console.log('get research:', response)
+            this.ans = response
           })
-          console.log('rooms:', this.ans)
+          
           this.rooms = this.ans.Rooms.map(item => ({
             Cover: item.Cover,
             Online: item.Online,
@@ -396,3 +372,4 @@ export default {
   }
 }
 </style>
+console.log('rooms:', this.ans)
