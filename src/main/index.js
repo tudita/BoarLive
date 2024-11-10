@@ -3,8 +3,10 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import Huya from './huya'
+import { Douyin } from './douyin'
 
 const huya = new Huya()
+const douyin = new Douyin()
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -55,6 +57,36 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
+  //抖音获取直播流
+  ipcMain.on('douyin-get-play-url', (event, roomdetail, qn) => {
+    douyin.getPlayUrls(roomdetail, qn).then((playurl) => {
+      event.reply('douyin-get-play-url-reply', playurl)
+    })
+  })
+  //抖音获取roomdetail
+  ipcMain.on('douyin-getroomDetail', (event, roomid) => {
+    douyin.getRoomDetail(roomid).then((roomdetail) => {
+      event.reply('douyin-getroomDetail-reply', roomdetail)
+    })
+  })
+  //抖音获取qn
+  ipcMain.on('douyin-getPlayQuality', (event, roomDetail) => {
+    douyin.getPlayQuality(roomDetail).then((qn) => {
+      event.reply('douyin-getPlayQuality-reply', qn)
+    })
+  })
+  //抖音搜索
+  ipcMain.on('douyin-search', (event, keyword, page) => {
+    douyin.search(keyword, page).then((res) => {
+      event.reply('douyin-search-reply', res)
+    })
+  })
+  //抖音推荐房间
+  ipcMain.on('douyin-getRecommendRooms', (event, page = 1) => {
+    douyin.getRecommendRooms(page).then((res) => {
+      event.reply('douyin-getRecommendRooms-reply', res)
+    })
+  })
   //虎牙获取直播流
   ipcMain.on('huya-get-play-url', (event, roomdetail, qn) => {
     huya.getPlayUrls(roomdetail, qn).then((playurl) => {
