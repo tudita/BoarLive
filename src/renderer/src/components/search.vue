@@ -32,7 +32,7 @@
     <!-- 房间列表 -->
     <div class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
-        <div class="room-cover">
+        <div class="room-cover" @click="showContent('Live', room.RoomID)">
           <img :src="room.Cover" alt="封面" />
           <div class="room-online">在线人数: {{ room.Online }}</div>
         </div>
@@ -40,6 +40,14 @@
           <div class="room-title">{{ room.Title }}</div>
           <div class="room-user">{{ room.UserName }}</div>
         </div>
+        <!-- 关注按钮 -->
+        <button
+          class="follow-button"
+          :class="{ followed: isFollowed(room.RoomID) }"
+          @click="toggleFollow(room.RoomID)"
+        >
+          {{ isFollowed(room.RoomID) ? '已关注' : '关注' }}
+        </button>
       </div>
     </div>
 
@@ -52,137 +60,141 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, inject } from 'vue'
 import axios from 'axios'
+import { defineEmits } from 'vue'
 
-export default {
-  data() {
-    return {
-      selectedPlatform: 'huya', // 默认选择虎牙
-      keyword: '',
-      rooms: [],
-      loading: false,
-      error: null,
-      ans:null,
-      hasMore: true,
-      page: 1
-    }
-  },
-  methods: {
-    async search() {
-      this.loading = true
-      this.error = null
-      try {
-        let response
-        console.log(this.selectedPlatform)
-        if (this.selectedPlatform === 'huya') {
-          // 使用虎牙的搜索API
-          window.electronAPI.huya_getSearch(this.keyword, this.page)
-          console.log('Data sent to main process for processing')
-          window.electronAPI.huya_receiveSearch((response) => {
-            console.log('get research:', response)
-            this.ans = response
-          })
-          
-          this.rooms = this.ans.Rooms.map(item => ({
-            Cover: item.Cover,
-            Online: item.Online,
-            RoomID: item.RoomID,
-            Title: item.Title,
-            UserName: item.UserName,
-            Platform: '虎牙直播'
-          }))
-          this.hasMore = this.ans.HasMore
-        } else if (this.selectedPlatform === 'douyu') {
-          // 斗鱼的搜索API逻辑
-          const result = await axios.get(`/douyu/japi/search/api/searchShow`, {
-            params: {
-              kw: encodeURIComponent(this.keyword),
-              page: this.page,
-              pageSize: 20
-            }
-          })
-          const data = result.data
-          this.rooms = data.data.relateShow.map((item) => ({
-            Cover: item.roomSrc,
-            Online: this.parseHotNum(item.hot),
-            RoomID: item.rid,
-            Title: item.roomName,
-            UserName: item.nickName,
-            Platform: '斗鱼直播'
-          }))
-          this.hasMore = data.data.relateShow.length > 0
-        } else if (this.selectedPlatform === 'bilibili') {
-          // Bilibili的搜索API逻辑
-          const result = await axios.get(`/bilibili2/x/web-interface/search/type`, {
-            params: {
-              context: '',
-              search_type: 'live',
-              cover_type: 'user_cover',
-              page: this.page,
-              order: '',
-              keyword: encodeURIComponent(this.keyword),
-              category_id: '',
-              __refresh__: 'true',
-              _extra: '',
-              highlight: 0,
-              single_column: 0
-            }
-          })
-          const data = result.data
-          console.log('API 调用成功:', data)
-          this.rooms = data.data.result.live_room.map((item) => ({
-            // Cover: `https:${item.cover}@300w.jpg`,
-            Cover: this.getImageUrl(item.cover),
-            Online: parseInt(item.online, 10),
-            RoomID: item.roomid,
-            Title: item.title.replace(/<em.*?\/em>/g, ''),
-            UserName: item.uname,
-            Platform: '哔哩哔哩'
-          }))
-          this.hasMore = this.rooms.length > 0
-        } else if (this.selectedPlatform === 'douyin') {
-          // 抖音的搜索API逻辑（待编写）
-          response = { data: { responseHeader: { status: 0 }, response: { 3: { docs: [] } } } }
+const selectedPlatform = ref('huya') // 默认选择虎牙
+const keyword = ref('')
+const rooms = ref([])
+const loading = ref(false)
+const error = ref(null)
+const ans = ref(null)
+const hasMore = ref(true)
+const page = ref(1)
+const followedRooms = ref([]) // 存储已关注的房间ID
+const emit = defineEmits(['update-content'])
+const sharedVariable = inject('sharedVariable')
+
+function showContent(componentName, roomid) {
+  sharedVariable.value = roomid
+  console.log('showContent:', componentName)
+  emit('update-content', componentName)
+}
+
+async function search() {
+  loading.value = true
+  error.value = null
+  try {
+    let response
+    console.log(selectedPlatform.value)
+    if (selectedPlatform.value === 'huya') {
+      // 使用虎牙的搜索API
+      window.electronAPI.huya_getSearch(keyword.value, page.value)
+      console.log('Data sent to main process for processing')
+      window.electronAPI.huya_receiveSearch((response) => {
+        console.log('get research:', response)
+        ans.value = response
+        rooms.value = ans.value.Rooms.map(item => ({
+          Cover: item.Cover,
+          Online: item.Online,
+          RoomID: item.RoomID,
+          Title: item.Title,
+          UserName: item.UserName,
+          Platform: '虎牙直播'
+        }))
+        hasMore.value = ans.value.HasMore
+      })
+    } else if (selectedPlatform.value === 'douyu') {
+      // 使用斗鱼的搜索API
+      response = await axios.get(`/douyu/api/search`, {
+        params: {
+          keyword: keyword.value,
+          page: page.value
         }
-        console.log('封面', this.rooms)
-      } catch (error) {
-        this.error = '搜索失败，请稍后再试'
-      } finally {
-        this.loading = false
-      }
-    },
-    nextPage() {
-      this.page += 1
-      this.search()
-    },
-    prevPage() {
-      if (this.page > 1) {
-        this.page -= 1
-        this.search()
-      }
-    },
-    parseHotNum(hn) {
-      try {
-        var num = parseFloat(hn.replace('万', ''))
-        if (hn.includes('万')) {
-          num = num * 10000
+      })
+      console.log('douyu:', response)
+      rooms.value = response.data.rooms.map(item => ({
+        Cover: item.Cover,
+        Online: item.Online,
+        RoomID: item.RoomID,
+        Title: item.Title,
+        UserName: item.UserName,
+        Platform: '斗鱼直播'
+      }))
+      hasMore.value = rooms.value.length > 0
+    } else if (selectedPlatform.value === 'bilibili') {
+      // 使用Bilibili的搜索API
+      response = await axios.get(`/bilibili/api/search`, {
+        params: {
+          keyword: keyword.value,
+          page: page.value
         }
-        return parseInt(num, 10)
-      } catch (error) {
-        return -999
-      }
-    },
-    getImageUrl(cover) {
-      // 检查URL是否已经包含协议，如果没有，则添加https协议
-      if (cover.startsWith('//')) {
-        return 'https:' + cover
-      }
-      return cover
+      })
+      rooms.value = response.data.rooms.map(item => ({
+        Cover: item.Cover,
+        Online: item.Online,
+        RoomID: item.RoomID,
+        Title: item.Title,
+        UserName: item.UserName,
+        Platform: '哔哩哔哩'
+      }))
+      hasMore.value = rooms.value.length > 0
     }
+  } catch (err) {
+    error.value = '搜索失败，请稍后重试'
+    console.error('Error searching:', err)
+  } finally {
+    loading.value = false
   }
 }
+
+function nextPage() {
+  page.value += 1
+  search()
+}
+
+function prevPage() {
+  if (page.value > 1) {
+    page.value -= 1
+    search()
+  }
+}
+
+function toggleFollow(roomId) {
+  if (isFollowed(roomId)) {
+    followedRooms.value = followedRooms.value.filter((id) => id !== roomId)
+  } else {
+    followedRooms.value.push(roomId)
+  }
+}
+
+function isFollowed(roomId) {
+  return followedRooms.value.includes(roomId)
+}
+
+function parseHotNum(hn) {
+  try {
+    var num = parseFloat(hn.replace('万', ''))
+    if (hn.includes('万')) {
+      num = num * 10000
+    }
+    return parseInt(num, 10)
+  } catch (error) {
+    return -999
+  }
+}
+
+function getImageUrl(cover) {
+  // 检查URL是否已经包含协议，如果没有，则添加https协议
+  if (cover.startsWith('//')) {
+    return 'https:' + cover
+  }
+  return cover
+}
 </script>
+
 <style scoped>
 .live-search {
   display: flex;
@@ -327,6 +339,25 @@ export default {
   font-size: 10px;
 }
 
+.follow-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  margin-top: 10px;
+}
+
+.follow-button.followed {
+  background-color: #007bff;
+  color: white;
+}
+
 .pagination {
   margin-top: 16px;
   display: flex;
@@ -372,4 +403,3 @@ export default {
   }
 }
 </style>
-console.log('rooms:', this.ans)
