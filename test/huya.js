@@ -97,7 +97,6 @@ class Huya extends LiveSite {
 
   async getRoomDetail(roomId) {
     const jsonObj = await this.getRoomInfo(roomId)
-
     const topSid = parseInt(jsonObj.topSid)
     const subSid = parseInt(jsonObj.subSid)
 

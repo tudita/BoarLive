@@ -12,8 +12,12 @@ http
           'Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36 Edg/117.0.0.0'
       }
       const roomId = '660000' // 需要定义 roomId
-      const search = await huya.getRecommendRooms()
-      console.log(search)
+      const search = await huya.getRoomDetail(roomId)
+      //console.log(search)
+      const qn = await huya.getPlayQuality(search)
+      console.log(qn)
+      const url = await huya.getPlayUrls(search, qn[6])
+      console.log(url)
       response.end('Hello World\n')
     } catch (error) {
       console.error(error)

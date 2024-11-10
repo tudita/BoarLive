@@ -30,38 +30,41 @@
     <div v-if="error" class="error">{{ error }}</div>
 
     <!-- 房间列表 -->
-    <div class="rooms-container">
+    <div ref="roomsContainer" class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
-        <div class="room-cover" @click="showContent('Live', room.RoomID)">
-          <img :src="room.Cover" alt="封面" />
-          <div class="room-online">在线人数: {{ room.Online }}</div>
+        <div class="room-card">
+          <div class="room-cover">
+            <img :src="room.Cover" alt="封面" />
+            <div class="room-online">在线人数: {{ room.Online }}</div>
+          </div>
+          <div class="room-info">
+            <div class="room-title" v-if="room.Title">{{ room.Title }}</div>
+            <div class="room-user">
+              <button
+                class="follow-button"
+                
+                @click="toggleFollow(room)"
+              >
+                {{ isFollowed(room) ? '已关注' : '关注' }}
+              </button>
+              {{ room.UserName }}
+            </div>
+          </div>          
         </div>
-        <div class="room-info">
-          <div class="room-title">{{ room.Title }}</div>
-          <div class="room-user">{{ room.UserName }}</div>
-        </div>
-        <!-- 关注按钮 -->
-        <button
-          class="follow-button"
-          :class="{ followed: isFollowed(room.RoomID) }"
-          @click="toggleFollow(room.RoomID)"
-        >
-          {{ isFollowed(room.RoomID) ? '已关注' : '关注' }}
-        </button>
       </div>
     </div>
 
     <!-- 分页 -->
     <div v-if="rooms.length > 0" class="pagination">
-      <button :disabled="page === 1" @click="prevPage">上一页</button>
+      <button class="paginationButton" :disabled="page.value === 1" @click="prevPage">上一页</button>
       <span>当前页: {{ page }}</span>
-      <button :disabled="!hasMore" @click="nextPage">下一页</button>
+      <button class="paginationButton" :disabled="!hasMore" @click="nextPage">下一页</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, inject } from 'vue'
+import { ref, inject } from 'vue'
 import axios from 'axios'
 import { defineEmits } from 'vue'
 
@@ -84,6 +87,7 @@ function showContent(componentName, roomid) {
 }
 
 async function search() {
+  console.log('page', page.value)
   loading.value = true
   error.value = null
   try {
@@ -162,16 +166,20 @@ function prevPage() {
   }
 }
 
-function toggleFollow(roomId) {
-  if (isFollowed(roomId)) {
-    followedRooms.value = followedRooms.value.filter((id) => id !== roomId)
+// 关注/取消关注
+function toggleFollow(room) {
+  const index = followedRooms.value.findIndex((r) => r.RoomID === room.RoomID)
+  if (index === -1) {
+    followedRooms.value.push(room) // 添加到已关注列表
   } else {
-    followedRooms.value.push(roomId)
+    followedRooms.value.splice(index, 1) // 从已关注列表中移除
   }
+  localStorage.setItem('followedRooms', JSON.stringify(followedRooms.value)) // 更新 localStorage
 }
 
-function isFollowed(roomId) {
-  return followedRooms.value.includes(roomId)
+// 检查是否已关注
+function isFollowed(room) {
+  return followedRooms.value.some((r) => r.RoomID === room.RoomID)
 }
 
 function parseHotNum(hn) {
@@ -197,10 +205,14 @@ function getImageUrl(cover) {
 
 <style scoped>
 .live-search {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  font-family: 'Nunito', sans-serif;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .search-bar {
@@ -209,19 +221,21 @@ function getImageUrl(cover) {
   justify-content: center;
   width: 100%;
   max-width: 800px;
-  margin-bottom: 20px;
-  padding: 0 10px; /* 防止超出边界 */
+  margin-bottom: 10px;
+  padding: 0 10px;
+  z-index: 10;
+  position: relative;
 }
 
 .search-range {
   display: flex;
   align-items: center;
-  margin-right: 10px; /* 为了让选择框和搜索框有间隔 */
+  margin-right: 10px;
 }
 
 .search-range-label {
-  font-size: 16px; /* 与输入框一致的字体大小 */
-  color: #333; /* 和输入框一致的颜色 */
+  font-size: 16px;
+  color: #333;
   margin-right: 8px;
 }
 
@@ -256,60 +270,71 @@ function getImageUrl(cover) {
 }
 
 .search-button {
-  padding: 12px 20px;
+  padding: 10px 18px;
   background-color: #007bff;
   color: white;
+  font-size: 16px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
   background-color: #0056b3;
 }
 
-.loading {
-  font-size: 16px;
-  color: #007bff;
-  margin-top: 10px;
-}
-
+.loading,
 .error {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
 }
 
 .rooms-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 15px;
   width: 100%;
-  height: 500px;
+  margin-top: 20px;
+  max-height: 80vh;
   overflow-y: auto;
 }
 
 .room-item {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #ddd;
-  padding: 4px;
-  border-radius: 4px;
+}
+
+.room-card {
   background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 220;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .room-cover {
   position: relative;
   width: 100%;
-  margin-bottom: 4px;
+  height: 140px; 
+  overflow: hidden;
 }
 
-.room-item img {
-  max-width: 100%;
-  border-radius: 4px;
+.room-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .room-online {
@@ -317,89 +342,97 @@ function getImageUrl(cover) {
   bottom: 8px;
   right: 8px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 2px 4px;
-  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .room-info {
+  padding: 6px;
   text-align: center;
-  margin-top: 4px;
 }
 
 .room-title {
-  color: #666;
+  font-size: 14px;
   font-weight: bold;
-  font-size: 12px;
+  color: #b22727;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .room-user {
-  color: #666;
-  font-size: 10px;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .follow-button {
-  padding: 8px 16px;
-  font-size: 14px;
-  color: #007bff;
-  background-color: #fff;
-  border: 1px solid #007bff;
-  border-radius: 25px;
-  cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-  margin-top: 10px;
-}
-
-.follow-button.followed {
+  padding: 4px 8px; /* 缩小关注按钮 */
   background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.follow-button:hover {
+  background-color: #0056b3;
+}
+
+.follow-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
 }
 
 .pagination {
-  margin-top: 16px;
+  color: rgb(21, 20, 20);
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+
+.paginationButton {
+  padding: 4 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .pagination button {
-  margin: 0 8px;
+  padding: 4px 8px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.pagination span {
-  margin: 0 8px;
+.pagination button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的背景色 */
 }
 
-/* 媒体查询：小屏幕优化 */
-@media (max-width: 768px) {
-  .search-bar {
-    flex-direction: column; /* 在小屏幕上垂直排列 */
-    align-items: stretch; /* 使其占满整个宽度 */
-  }
-
-  .search-range {
-    margin-right: 0;
-    margin-bottom: 10px; /* 增加底部间隔 */
-  }
-
-  .search-input {
-    width: 100%; /* 输入框宽度适应屏幕 */
-    max-width: none;
-    margin-right: 0;
-    margin-bottom: 10px; /* 增加底部间隔 */
-  }
-
-  .search-button {
-    width: 100%; /* 按钮宽度适应屏幕 */
-  }
+.pagination button:active {
+  background-color: #0056b3; /* 鼠标点击时的背景色 */
+  transform: scale(0.98); /* 点击时的缩放效果，使按钮看起来被按下 */
 }
 
-/* 媒体查询：超小屏幕（如手机）优化 */
-@media (max-width: 480px) {
-  .rooms-container {
-    height: auto; /* 当屏幕宽度更小的时候，房间列表高度自动调整 */
-  }
+.pagination button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
 }
 </style>

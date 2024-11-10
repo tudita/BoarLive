@@ -15,25 +15,24 @@
     <!-- 房间列表 -->
     <div class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
-        <div class="room-card" >
+        <div class="room-card">
           <div class="room-cover" @click="showContent('Live', room.RoomID)">
             <img :src="room.Cover" alt="room.cover" />
             <div class="room-online">在线人数: {{ room.Online }}</div>
           </div>
           <div class="room-info">
             <div class="room-title">{{ room.Title }}</div>
-            <div class="room-user">{{ room.UserName }}</div>
-            <!-- 关注按钮 -->
-            <button class="follow-button" @click="toggleFollow(room)">
-              {{ isFollowed(room) ? '已关注' : '关注' }}
-            </button>
+            <div class="room-user">
+              <button class="follow-button" @click="toggleFollow(room)">
+                {{ isFollowed(room) ? '已关注' : '关注' }}
+              </button>
+              {{ room.UserName }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 加载更多按钮 -->
-    <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">加载更多</button>
+      <button :disabled="!hasMore" class="load-more-button" @click="loadMoreRooms">加载更多</button>
+    </div>    
   </div>
 </template>
 
@@ -55,7 +54,7 @@ const sharedVariable = inject('sharedVariable')
 const selectedCategory = ref('huya') // 默认选中虎牙
 const page = ref(1)
 const rooms = ref([])
-const hasMore = ref(true)
+const hasMore = ref(false)
 const ans = ref(null)
 const followedRooms = ref(JSON.parse(localStorage.getItem('followedRooms')) || []) // 已关注房间列表
 
@@ -97,6 +96,7 @@ async function fetchRooms() {
           UserName: item.UserName,
           Platform: '虎牙直播'
         }))
+        hasMore.value = ans.value.HasMore
       })
     } else if (selectedCategory.value === 'douyu') {
       const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
@@ -175,6 +175,7 @@ function toggleFollow(room) {
 function isFollowed(room) {
   return followedRooms.value.some((r) => r.RoomID === room.RoomID)
 }
+
 // 加载更多房间
 function loadMoreRooms() {
   page.value += 1
@@ -199,7 +200,7 @@ function loadMoreRooms() {
 .category-tabs {
   display: flex;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* 确保分类标签和房间列表之间有间距 */
 }
 
 .category-tabs button {
@@ -224,12 +225,12 @@ function loadMoreRooms() {
 /* 房间列表容器 */
 .rooms-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 每行最多显示适应宽度的卡片 */
-  gap: 20px;
-  max-width: 100%; /* 充满宽度 */
-  margin-top: 20px;
-  height: 500px;
-  overflow-y: auto; /* 添加滚动条 */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  width: 100%;
+  height: 90vh;
+  place-items: center;
+  overflow-y: auto;
 }
 
 /* 每个房间项的卡片设计 */
@@ -284,7 +285,7 @@ function loadMoreRooms() {
 
 /* 房间信息区域 */
 .room-info {
-  padding: 12px;
+  padding: 6px;
   text-align: center;
 }
 
@@ -299,24 +300,26 @@ function loadMoreRooms() {
 }
 
 .room-user {
-  font-size: 12px;
+  font-size: 16px; /* 增大主播名字的字体 */
   color: #888;
   margin-bottom: 6px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 关注按钮 */
 .follow-button {
-  padding: 6px 12px;
+  padding: 4px 8px; /* 缩小关注按钮 */
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-right: 8px;
 }
 
 .follow-button:hover {

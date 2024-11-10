@@ -12,9 +12,11 @@
             </div>
             <div class="room-info">
               <div class="room-title">{{ room.Title }}</div>
-              <div class="room-user">{{ room.UserName }}</div>
+              <div class="room-user">
+                <button class="unfollow-button" @click="unfollowRoom(room)">取消关注</button>
+                {{ room.UserName }}
+              </div>
               <!-- 取消关注按钮 -->
-              <button class="unfollow-button" @click="unfollowRoom(room)">取消关注</button>
             </div>
           </div>
         </div>
@@ -64,7 +66,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     font-family: 'Nunito', sans-serif;
     width: 100%;
     box-sizing: border-box;
@@ -81,10 +83,10 @@
   .rooms-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 15;
     width: 100%;
-    margin-top: 20px;
-    max-height: 500px; /* 设置最大高度 */
+    margin-top: 15px;
+    max-height: 90vh; /* 设置最大高度 */
     overflow-y: auto; /* 启用垂直滚动条 */
   }
   
@@ -101,6 +103,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 100%;
+    margin-bottom: 30px;
     max-width: 220px;
     transition:
       transform 0.3s ease,
@@ -140,7 +143,7 @@
   
   /* 房间信息区域 */
   .room-info {
-    padding: 12px;
+    padding: 6px;
     text-align: center;
   }
   
@@ -148,31 +151,33 @@
     font-size: 14px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
   
   .room-user {
-    font-size: 12px;
+    font-size: 16px;
     color: #888;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
   
   /* 取消关注按钮 */
   .unfollow-button {
-    padding: 6px 12px;
+    padding: 4px 8px;
     background-color: #f44336;
     color: white;
     border: none;
     border-radius: 20px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 8px;
   }
   
   .unfollow-button:hover {
