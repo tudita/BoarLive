@@ -4,9 +4,12 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import Huya from './huya'
 import  Douyin  from './douyin'
+import Bili from './bilibili'
+
 
 const huya = new Huya()
 const douyin = new Douyin()
+const bili = new Bili()
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -57,6 +60,36 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
+  // B站获取url
+  ipcMain.on('bili-get-play-url', (event, roomdetail, qn) => {
+    bili.getPlayUrls(roomdetail, qn).then((playurl) => {
+      event.reply('bili-get-play-url-reply', playurl)
+    })
+  })
+  //B站获取roomdetail
+  ipcMain.on('bili-getroomDetail', (event, roomid) => {
+    bili.getRoomDetail(roomid).then((roomdetail) => {
+      event.reply('bili-getroomDetail-reply', roomdetail)
+    })
+  })
+  //B站获取qn
+  ipcMain.on('bili-getPlayQuality', (event, roomDetail) => {
+    bili.getPlayQuality(roomDetail).then((qn) => {
+      event.reply('bili-getPlayQuality-reply', qn)
+    })
+  })
+  //B站搜索
+  ipcMain.on('bili-search', (event, keyword, page) => {
+    bili.search(keyword, page).then((res) => {
+      event.reply('bili-search-reply', res)
+    })
+  })
+  //B站推荐房间
+  ipcMain.on('bili-getRecommendRooms', (event, page = 1) => {
+    bili.getRecommendRooms(page).then((res) => {
+      event.reply('bili-getRecommendRooms-reply', res)
+    })
+  })
   //抖音获取直播流
   ipcMain.on('douyin-get-play-url', (event, roomdetail, qn) => {
     douyin.getPlayUrls(roomdetail, qn).then((playurl) => {

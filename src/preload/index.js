@@ -20,6 +20,7 @@ if (process.contextIsolated) {
 }
 
 contextBridge.exposeInMainWorld('electronAPI', {
+  // 虎牙
   huya_getRoomDetail: (roomid) => ipcRenderer.send('huya-getroomDetail', roomid),
   huya_receiveRoomDetail: (callback) =>
     ipcRenderer.once('huya-getroomDetail-reply', (event, ...args) => callback(...args)),
@@ -39,7 +40,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   huya_getRecommendRooms: (page = 1) => ipcRenderer.send('huya-getRecommendRooms', page),
   huya_receiveRecommendRooms: (callback) =>
     ipcRenderer.on('huya-getRecommendRooms-reply', (event, ...args) => callback(...args)),
-  //抖音
+  // 抖音
   douyin_getRoomDetail: (roomid) => ipcRenderer.send('douyin-getroomDetail', roomid),
   douyin_receiveRoomDetail: (callback) =>
     ipcRenderer.once('douyin-getroomDetail-reply', (event, ...args) => callback(...args)),
@@ -58,7 +59,28 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
   douyin_getRecommendRooms: (page = 1) => ipcRenderer.send('douyin-getRecommendRooms', page),
   douyin_receiveRecommendRooms: (callback) =>
-    ipcRenderer.on('douyin-getRecommendRooms-reply', (event, ...args) => callback(...args))
+    ipcRenderer.on('douyin-getRecommendRooms-reply', (event, ...args) => callback(...args)),
+  // Bilibili
+  bili_getRoomDetail: (roomid) => ipcRenderer.send('bili-getroomDetail', roomid),
+  bili_receiveRoomDetail: (callback) =>
+    ipcRenderer.on('bili-getroomDetail-reply', (event, ...args) => callback(...args)),
+
+  bili_getPlayUrl: (roomDetail, qn) => ipcRenderer.send('bili-get-play-url', roomDetail, qn),
+  bili_receivePlayUrl: (callback) =>
+    ipcRenderer.on('bili-get-play-url-reply', (event, ...args) => callback(...args)),
+
+  bili_getPlayQuality: (roomDetail) => ipcRenderer.send('bili-getPlayQuality', roomDetail),
+  bili_receivePlayQuality: (callback) =>
+    ipcRenderer.on('bili-getPlayQuality-reply', (event, ...args) => callback(...args)),
+
+  bili_getSearch: (keyword, page) => ipcRenderer.send('bili-search', keyword, page),
+  bili_receiveSearch: (callback) =>
+    ipcRenderer.on('bili-search-reply', (event, ...args) => callback(...args)),
+
+  bili_getRecommendRooms: (page = 1) => ipcRenderer.send('bili-getRecommendRooms', page),
+  bili_receiveRecommendRooms: (callback) =>
+    ipcRenderer.on('bili-getRecommendRooms-reply', (event, ...args) => callback(...args)),
+
 })
 
 //contextBridge.exposeInMainWorld('electronAPI', {

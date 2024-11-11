@@ -50,6 +50,7 @@ const categories = ref([
 
 const emit = defineEmits(['update-content'])
 const sharedVariable = inject('sharedVariable') 
+const sharedPlatform = inject('sharedPlatform') 
 
 const selectedCategory = ref('huya') // 默认选中虎牙
 const page = ref(1)
@@ -74,6 +75,7 @@ function changeCategory(categoryId) {
 
 function showContent(componentName, roomid) {
   sharedVariable.value = roomid
+  sharedPlatform.value = selectedCategory.value
   emit('update-content', componentName)
 }
 
@@ -97,6 +99,7 @@ async function fetchRooms() {
           Platform: '虎牙直播'
         }))
         hasMore.value = ans.value.HasMore
+        console.log("cover:",rooms)
       })
     } else if (selectedCategory.value === 'douyu') {
       const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
@@ -107,31 +110,28 @@ async function fetchRooms() {
         Online: parseInt(item.ol, 10),
         RoomID: item.rid,
         Title: item.rn,
-        UserName: item.nn
+        UserName: item.nn,
+        Platform: '斗鱼直播'
       }))
     } else if (selectedCategory.value === 'bilibili') {
-      const response = await axios.get(`/bilibili1/room/v1/Area/getListByAreaID`, {
-        params: {
-          areaId: 0,
-          sort: 'online',
-          pageSize: 30,
-          page: page.value
-        },
-        headers: {
-          /* 这里添加你的请求头 */
-        }
+      window.electronAPI.bili_getRecommendRooms(page.value)
+      console.log('Data sent to main process for processing')
+      window.electronAPI.bili_receiveRecommendRooms(async (response) => {
+        console.log('get bili_recommand', response)
+        ans.value = response
+        console.log('ansrooms:', ans.value)
+        rooms.value = ans.value.Rooms.map(item => ({
+          Cover: item.Cover,
+          Online: item.Online,
+          RoomID: item.RoomID,
+          Title: item.Title,
+          UserName: item.UserName,
+          Platform: 'Bilibili'
+        }))
+        hasMore.value = ans.value.HasMore
+        console.log("cover:",rooms)
       })
-      const data = response.data
-      console.log('API 调用成功:', data)
-      hasMore.value = data.data.length > 0
-      rooms.value = data.data.map((item) => ({
-        Cover: item.cover,
-        Online: parseInt(item.online, 10),
-        RoomID: item.roomid,
-        Title: item.title,
-        UserName: item.uname
-      }))
-      console.log('封面', rooms.value)
+      
     } else if (selectedCategory.value === 'douyin') {
       window.electronAPI.douyin_getRecommendRooms(page.value)
       console.log('Data sent to main process for processing')

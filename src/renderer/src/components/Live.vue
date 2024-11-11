@@ -9,7 +9,8 @@
 import { ref, inject } from 'vue'
 import VideoPlayer from './videoPlayer.vue'
 
-const sharedVariable = inject('sharedVariable')
+const sharedVariable = inject('sharedVariable')   //全局roomid
+const sharedPlatform = inject('sharedPlatform') 
 
 const showPlayer = ref(false)
 const videoUrl = ref("https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-360p.mp4")
@@ -109,7 +110,9 @@ function receivePlayUrl() {
   })
 }
 
-// console.log('共享变量的值:', sharedVariable.value)
+console.log('共享变量的值:', sharedVariable.value)
+console.log('共享platform的值:', sharedPlatform.value)
+
 </script>
 
 <style scoped>

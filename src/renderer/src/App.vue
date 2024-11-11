@@ -25,8 +25,9 @@ import view3 from './components/view_test.vue'
 import view4 from './components/Live.vue'
 import view5 from './components/FollowedRooms.vue'
 
-const currentComponent = ref('Recommend')
+const currentComponent = ref('Recommand')
 const sharedVariable = ref(null)
+const sharedPlatform = ref(null)
 
 function updateContent(componentName) {
   currentComponent.value = componentName
@@ -35,6 +36,7 @@ function updateContent(componentName) {
 }
 
 provide('sharedVariable', sharedVariable)
+provide('sharedPlatform', sharedPlatform)
 
 const components = {
   Sidebar,

@@ -12,7 +12,6 @@
           <option value="douyin">抖音</option>
         </select>
       </div>
-
       <!-- 输入框 -->
       <input
         v-model="keyword"
@@ -130,21 +129,39 @@ async function search() {
       hasMore.value = rooms.value.length > 0
     } else if (selectedPlatform.value === 'bilibili') {
       // 使用Bilibili的搜索API
-      response = await axios.get(`/bilibili/api/search`, {
-        params: {
-          keyword: keyword.value,
-          page: page.value
-        }
+      // response = await axios.get(`/bilibili/api/search`, {
+      //   params: {
+      //     keyword: keyword.value,
+      //     page: page.value
+      //   }
+      // })
+      // console.log('bilibili:', response)
+      // if (response.data && response.data.rooms) {
+      //   rooms.value = response.data.rooms.map(item => ({
+      //     Cover: item.Cover,
+      //     Online: item.Online,
+      //     RoomID: item.RoomID,
+      //     Title: item.Title,
+      //     UserName: item.UserName,
+      //     Platform: '哔哩哔哩'
+      //   }))
+      // hasMore.value = rooms.value.length > 0
+
+      window.electronAPI.bili_getSearch(keyword.value, page.value)
+      console.log('Data sent to main process for processing')
+      window.electronAPI.bili_receiveSearch((response) => {
+        console.log('get research:', response)
+        ans.value = response
+        rooms.value = ans.value.Rooms.map(item => ({
+          Cover: item.Cover,
+          Online: item.Online,
+          RoomID: item.RoomID,
+          Title: item.Title,
+          UserName: item.UserName,
+          Platform: 'Bilibili'
+        }))
+        hasMore.value = ans.value.HasMore
       })
-      rooms.value = response.data.rooms.map(item => ({
-        Cover: item.Cover,
-        Online: item.Online,
-        RoomID: item.RoomID,
-        Title: item.Title,
-        UserName: item.UserName,
-        Platform: '哔哩哔哩'
-      }))
-      hasMore.value = rooms.value.length > 0
     } else if(selectedPlatform.value === 'douyin'){
       window.electronAPI.douyin_getSearch(keyword.value, page.value)
       console.log('Data sent to main process for processing')
@@ -157,12 +174,13 @@ async function search() {
           RoomID: item.RoomID,
           Title: item.Title,
           UserName: item.UserName,
-          Platform: '虎牙直播'
+          Platform: '抖音直播'
         }))
         hasMore.value = ans.value.HasMore
       })
     }
-  } catch (err) {
+  }
+  catch (err) {
     error.value = '搜索失败，请稍后重试'
     console.error('Error searching:', err)
   } finally {
