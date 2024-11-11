@@ -32,7 +32,7 @@
     <div ref="roomsContainer" class="rooms-container">
       <div v-for="room in rooms" :key="room.RoomID" class="room-item">
         <div class="room-card">
-          <div class="room-cover">
+          <div class="room-cover" @click="showContent('Live', room.RoomID)">
             <img :src="room.Cover" alt="封面" />
             <div class="room-online">在线人数: {{ room.Online }}</div>
           </div>
@@ -78,10 +78,11 @@ const page = ref(1)
 const followedRooms = ref([]) // 存储已关注的房间ID
 const emit = defineEmits(['update-content'])
 const sharedVariable = inject('sharedVariable')
+const sharedPlatform = inject('sharedPlatform') 
 
 function showContent(componentName, roomid) {
   sharedVariable.value = roomid
-  console.log('showContent:', componentName)
+  sharedPlatform.value = selectedPlatform.value
   emit('update-content', componentName)
 }
 

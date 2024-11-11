@@ -1,42 +1,63 @@
 <template>
-  <div class="view-container">
-    <video-player v-if="showPlayer" :url="videoUrl" @close="showPlayer = false" />
-    <button v-if="!showPlayer" @click="startLiveStream">开始直播</button>
-  </div>
+  <div  class="view-container" id="mse" ref="mse"></div>
 </template>
 
-<script setup>
-import { ref, inject } from 'vue'
-import VideoPlayer from './videoPlayer.vue'
 
+<script setup>
+import { ref, inject, onMounted } from 'vue'
+import Player from 'xgplayer'
+import FlvPlugin from 'xgplayer-flv'
+import 'xgplayer/dist/index.min.css'
 const sharedVariable = inject('sharedVariable')   //全局roomid
 const sharedPlatform = inject('sharedPlatform') 
 
-const showPlayer = ref(false)
-const videoUrl = ref(
-  'https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-360p.mp4'
-)
 const result = ref(null)
 const qn = ref(null)
 const url = ref(null)
+const mse = ref(null)
 
-async function startLiveStream() {
-  console.log('Starting live stream...') // 确认点击事件
+onMounted(async () => {
+  const resizeObserver = new ResizeObserver(() => {
+    if (mse.value) {
+      mse.value.style.height = document.body.clientHeight + 'px'
+    }
+  })
+  resizeObserver.observe(document.body)
   await getroomdetail()
   await getpn()
   await geturl() // 依次获取房间详情、清晰度、URL
-  // url应该传入videoUrl 待实现
+  console.log('final url:', url.value[0])
+  new Player({
+    id: 'mse',
+    isLive: true,
+    playsinline: true,
+    url: url.value[0],
+    autoplay: true,
+    height: window.innerHeight,
+    width: window.innerWidth * 0.883,
+    plugins: [FlvPlugin]
+  })
+})
 
-  showPlayer.value = true
-}
+
 
 async function getroomdetail() {
   try {
     const dataToProcess = sharedVariable.value
     console.log('roomid:', dataToProcess)
-    window.electronAPI.huya_getRoomDetail(dataToProcess)
-    console.log('Data sent to main process for huya_getRoomDetail')
-
+    if(sharedPlatform.value == 'huya'){
+      window.electronAPI.huya_getRoomDetail(dataToProcess)
+      console.log('Data sent to main process for huya_getRoomDetail')
+    }else if(sharedPlatform.value == 'douyu'){
+      window.electronAPI.douyu_getRoomDetail(dataToProcess)
+      console.log('Data sent to main process for douyu_getRoomDetail')
+    }else if(sharedPlatform.value == 'bilibili'){
+      window.electronAPI.bili_getRoomDetail(dataToProcess)
+      console.log('Data sent to main process for bili_getRoomDetail')
+    }else if(sharedPlatform.value == 'douyin'){
+      window.electronAPI.douyin_getRoomDetail(dataToProcess)
+      console.log('Data sent to main process for douyin_getRoomDetail')
+    }
     result.value = await receiveRoomDetail()
   } catch (error) {
     console.error('Error processing data:', error)
@@ -46,8 +67,20 @@ async function getroomdetail() {
 async function getpn() {
   try {
     const clonableResult = JSON.parse(JSON.stringify(result.value))
-    window.electronAPI.huya_getPlayQuality(clonableResult)
-    console.log('Data sent to main process for huya_getPlayQuality')
+
+    if(sharedPlatform.value == 'huya'){
+      window.electronAPI.huya_getPlayQuality(clonableResult)
+      console.log('Data sent to main process for huya_getPlayQuality')
+    }else if(sharedPlatform.value == 'douyu'){
+      window.electronAPI.douyu_getPlayQuality(clonableResult)
+      console.log('Data sent to main process for douyu_getPlayQuality')
+    }else if(sharedPlatform.value == 'bilibili'){
+      window.electronAPI.bili_getPlayQuality(clonableResult)
+      console.log('Data sent to main process for bili_getPlayQuality')
+    }else if(sharedPlatform.value == 'douyin'){
+      window.electronAPI.douyin_getPlayQuality(clonableResult)
+      console.log('Data sent to main process for douyin_getPlayQuality')
+    }
 
     qn.value = await receivePlayQuality()
     // qn.value.forEach((quality, index) => {   // 查看各个清晰度的url
@@ -69,8 +102,20 @@ async function geturl() {
       // 应该传入特定的清晰度，获得对应的url
       // console.log(`Quality ${index}:`, quality.Quality)
       // console.log(`Data ${index}:`, quality.Data)
-      window.electronAPI.huya_getPlayUrl(clonableResult, quality)
-      console.log('Data sent to main process for huya_getPlayUrl')
+      if(sharedPlatform.value == 'huya'){
+        window.electronAPI.huya_getPlayUrl(clonableResult, quality)
+        console.log('Data sent to main process for huya_getPlayUrl')
+      }else if(sharedPlatform.value == 'douyu'){
+        window.electronAPI.douyu_getPlayUrl(clonableResult, quality)
+        console.log('Data sent to main process for douyu_getPlayUrl')
+      }else if(sharedPlatform.value == 'bilibili'){
+        window.electronAPI.bili_getPlayUrl(clonableResult, quality)
+        console.log('Data sent to main process for bili_getPlayUrl')
+      }else if(sharedPlatform.value == 'douyin'){
+        window.electronAPI.douyin_getPlayUrl(clonableResult, quality)
+        console.log('Data sent to main process for douyin_getPlayUrl')
+      }
+      
       url.value = await receivePlayUrl()
     }
     console.log('final url:', url.value)
@@ -81,10 +126,24 @@ async function geturl() {
 
 function receiveRoomDetail() {
   return new Promise((resolve, reject) => {
-    window.electronAPI.huya_receiveRoomDetail((result) => {
-      console.log('room detail:', result)
-      resolve(result)
-    })
+    if(sharedPlatform.value == 'huya'){
+      window.electronAPI.huya_receiveRoomDetail((result) => {
+        console.log('room detail:', result)
+        resolve(result)
+      })
+    }else if(sharedPlatform.value == 'douyu'){
+    
+    }else if(sharedPlatform.value == 'bilibili'){
+      window.electronAPI.bili_receiveRoomDetail((result) => {
+        console.log('douyin room detail:', result)
+        resolve(result)
+      })
+    }else if(sharedPlatform.value == 'douyin'){
+      window.electronAPI.douyin_receiveRoomDetail((result) => {
+        console.log('douyin room detail:', result)
+        resolve(result)
+      })
+    }  
   }).catch((error) => {
     console.error('Error receiving room detail:', error)
   })
@@ -92,10 +151,24 @@ function receiveRoomDetail() {
 
 function receivePlayQuality() {
   return new Promise((resolve, reject) => {
-    window.electronAPI.huya_receivePlayQuality((response) => {
-      console.log('play quality:', response)
-      resolve(response)
-    })
+    if(sharedPlatform.value == 'huya'){
+      window.electronAPI.huya_receivePlayQuality((response) => {
+        console.log('play quality:', response)
+        resolve(response)
+      })
+    }else if(sharedPlatform.value == 'douyu'){
+    
+    }else if(sharedPlatform.value == 'bilibili'){
+      window.electronAPI.bili_receivePlayQuality((response) => {
+        console.log('douyin play quality:', response)
+        resolve(response)
+      })
+    }else if(sharedPlatform.value == 'douyin'){
+      window.electronAPI.douyin_receivePlayQuality((response) => {
+        console.log('douyin play quality:', response)
+        resolve(response)
+      })
+    }  
   }).catch((error) => {
     console.error('Error receiving play quality:', error)
   })
@@ -103,10 +176,25 @@ function receivePlayQuality() {
 
 function receivePlayUrl() {
   return new Promise((resolve, reject) => {
-    window.electronAPI.huya_receivePlayUrl((response) => {
-      console.log('play url:', response)
-      resolve(response)
-    })
+    
+    if(sharedPlatform.value == 'huya'){
+      window.electronAPI.huya_receivePlayUrl((response) => {
+        console.log('play url:', response)
+        resolve(response)
+      })
+    }else if(sharedPlatform.value == 'douyu'){
+    
+    }else if(sharedPlatform.value == 'bilibili'){
+      window.electronAPI.bili_receivePlayUrl((response) => {
+        console.log('play url:', response)
+        resolve(response)
+      })
+    }else if(sharedPlatform.value == 'douyin'){
+      window.electronAPI.douyin_receivePlayUrl((response) => {
+        console.log('play url:', response)
+        resolve(response)
+      })
+    }
   }).catch((error) => {
     console.error('Error receiving play url:', error)
   })
@@ -119,10 +207,15 @@ console.log('共享platform的值:', sharedPlatform.value)
 
 <style scoped>
 .view-container {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  background-color: #000000;
+  padding: 20px;
+  font-family: 'Nunito', sans-serif;
+  width: 95%;
+  box-sizing: border-box;
 }
 button {
   padding: 10px 20px;

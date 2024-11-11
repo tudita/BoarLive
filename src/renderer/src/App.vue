@@ -9,7 +9,7 @@
         <view2 v-if="currentComponent === 'Search'" @update-content="updateContent" />
         <view3 v-if="currentComponent === 'Test'" @update-content="updateContent" />
         <view4 v-if="currentComponent === 'Live'" />
-        <view5 v-if="currentComponent === 'FollowedRooms'" />
+        <view5 v-if="currentComponent === 'FollowedRooms'" @update-content="updateContent" />
         <view6 v-if="currentComponent === 'livetest'" @update-content="updateContent" />
         <component :is=""></component>
       </div>
@@ -20,7 +20,7 @@
 <script setup>
 import { ref, provide } from 'vue'
 import Sidebar from './components/Sidebar.vue'
-import view1 from './components/Recommand.vue'
+import view1 from './components/recommand.vue'
 import view2 from './components/Search.vue'
 import view3 from './components/view_test.vue'
 import view4 from './components/Live.vue'
