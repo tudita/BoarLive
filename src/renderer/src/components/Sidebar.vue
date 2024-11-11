@@ -5,6 +5,7 @@
     <button @click="showContent('Test')">test</button>
     <button @click="showContent('Live')">观看直播</button>
     <button @click="showContent('FollowedRooms')">关注列表</button>
+    <button @click="showContent('livetest')">livetest</button>
   </div>
 </template>
 
