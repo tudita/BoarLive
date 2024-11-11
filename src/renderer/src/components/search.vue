@@ -87,7 +87,7 @@ function showContent(componentName, roomid) {
 }
 
 async function search() {
-  console.log('page', page.value)
+  // console.log('page', page.value)
   loading.value = true
   error.value = null
   try {
@@ -130,28 +130,10 @@ async function search() {
       hasMore.value = rooms.value.length > 0
     } else if (selectedPlatform.value === 'bilibili') {
       // 使用Bilibili的搜索API
-      // response = await axios.get(`/bilibili/api/search`, {
-      //   params: {
-      //     keyword: keyword.value,
-      //     page: page.value
-      //   }
-      // })
-      // console.log('bilibili:', response)
-      // if (response.data && response.data.rooms) {
-      //   rooms.value = response.data.rooms.map(item => ({
-      //     Cover: item.Cover,
-      //     Online: item.Online,
-      //     RoomID: item.RoomID,
-      //     Title: item.Title,
-      //     UserName: item.UserName,
-      //     Platform: '哔哩哔哩'
-      //   }))
-      // hasMore.value = rooms.value.length > 0
-
       window.electronAPI.bili_getSearch(keyword.value, page.value)
       console.log('Data sent to main process for processing')
       window.electronAPI.bili_receiveSearch((response) => {
-        console.log('get research:', response)
+        console.log('get search:', response)
         ans.value = response
         rooms.value = ans.value.Rooms.map(item => ({
           Cover: "//images.weserv.nl/?url=" + item.Cover,
@@ -164,10 +146,11 @@ async function search() {
         hasMore.value = ans.value.HasMore
       })
     } else if(selectedPlatform.value === 'douyin'){
+      // 使用抖音的搜索API
       window.electronAPI.douyin_getSearch(keyword.value, page.value)
       console.log('Data sent to main process for processing')
       window.electronAPI.douyin_receiveSearch((response) => {
-        console.log('get research:', response)
+        console.log('get search:', response)
         ans.value = response
         rooms.value = ans.value.Rooms.map(item => ({
           Cover: item.Cover,

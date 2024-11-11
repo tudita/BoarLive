@@ -4,10 +4,10 @@
     <div v-if="!isCollapsed">
       <button @click="showContent('Recommand')">推荐直播</button>
       <button @click="showContent('Search')">搜索直播</button>
-      <button @click="showContent('Test')">test</button>
+      <!-- <button @click="showContent('Test')">test</button> -->
       <button @click="showContent('Live')">观看直播</button>
       <button @click="showContent('FollowedRooms')">关注列表</button>
-      <button @click="showContent('livetest')">livetest</button>
+      <!-- <button @click="showContent('livetest')">livetest</button> -->
     </div>
   </div>
 </template>

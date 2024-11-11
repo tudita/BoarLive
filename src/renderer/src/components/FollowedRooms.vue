@@ -60,8 +60,6 @@ function showContent(componentName, roomid, selectedCategory) {
     selectedCategory = 'douyin'
   }
   sharedPlatform.value = selectedCategory
-  console.log('showContent:', sharedPlatform.value)
-  console.log('showContent:', sharedVariable.value)
   emit('update-content', componentName)
 }
 

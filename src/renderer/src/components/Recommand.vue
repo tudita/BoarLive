@@ -44,7 +44,7 @@ import { defineEmits } from 'vue'
 const categories = ref([
   { id: 'huya', name: '虎牙' },
   { id: 'douyu', name: '斗鱼' },
-  { id: 'bilibili', name: 'bilibili' },
+  { id: 'bilibili', name: 'Bilibili' },
   { id: 'douyin', name: '抖音' }
 ])
 
@@ -87,9 +87,9 @@ async function fetchRooms() {
       window.electronAPI.huya_getRecommendRooms(page.value)
       console.log('Data sent to main process for processing')
       window.electronAPI.huya_receiveRecommendRooms(async (response) => {
-        console.log('get recommand', response)
+        // console.log('get recommand', response)
         ans.value = response
-        console.log('ansrooms:', ans.value)
+        // console.log('ansrooms:', ans.value)
         rooms.value = ans.value.Rooms.map(item => ({
           Cover: item.Cover,
           Online: item.Online,
@@ -99,12 +99,11 @@ async function fetchRooms() {
           Platform: '虎牙直播'
         }))
         hasMore.value = ans.value.HasMore
-        console.log("cover:",rooms)
       })
     } else if (selectedCategory.value === 'douyu') {
       const result = await axios.get(`/douyu/japi/weblist/apinc/allpage/6/${page.value}`)
       const data = result.data
-      console.log(data)
+      // console.log(data)
       rooms.value = data.data.rl.map((item) => ({
         Cover: item.rs16,
         Online: parseInt(item.ol, 10),
@@ -117,9 +116,9 @@ async function fetchRooms() {
       window.electronAPI.bili_getRecommendRooms(page.value)
       console.log('Data sent to main process for processing')
       window.electronAPI.bili_receiveRecommendRooms(async (response) => {
-        console.log('get bili_recommand', response)
+        // console.log('get bili_recommand', response)
         ans.value = response
-        console.log('ansrooms:', ans.value)
+        // console.log('ansrooms:', ans.value)
         rooms.value = ans.value.Rooms.map(item => ({
           Cover: "//images.weserv.nl/?url=" + item.Cover,
           Online: item.Online,
@@ -129,7 +128,6 @@ async function fetchRooms() {
           Platform: 'Bilibili'
         }))
         hasMore.value = ans.value.HasMore
-        console.log("cover:",rooms)
       })
       
     } else if (selectedCategory.value === 'douyin') {

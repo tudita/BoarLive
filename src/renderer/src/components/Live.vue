@@ -4,7 +4,7 @@
 
 
 <script setup>
-import { ref, inject, onMounted } from 'vue'
+import { ref, inject, onMounted, onUnmounted } from 'vue'
 import Player from 'xgplayer'
 import FlvPlugin from 'xgplayer-flv'
 import 'xgplayer/dist/index.min.css'
@@ -40,11 +40,10 @@ onMounted(async () => {
 })
 
 
-
 async function getroomdetail() {
   try {
     const dataToProcess = sharedVariable.value
-    console.log('roomid:', dataToProcess)
+    // console.log('roomid:', dataToProcess)
     if(sharedPlatform.value == 'huya'){
       window.electronAPI.huya_getRoomDetail(dataToProcess)
       console.log('Data sent to main process for huya_getRoomDetail')
@@ -96,12 +95,9 @@ async function geturl() {
   try {
     const clonableResult = JSON.parse(JSON.stringify(result.value))
     const clonebleFn = JSON.parse(JSON.stringify(qn.value))
-    console.log('get roomdetail:', clonableResult)
-    console.log('get qn:', clonebleFn)
+    // console.log('get roomdetail:', clonableResult)
+    // console.log('get qn:', clonebleFn)
     for (const quality of clonebleFn) {
-      // 应该传入特定的清晰度，获得对应的url
-      // console.log(`Quality ${index}:`, quality.Quality)
-      // console.log(`Data ${index}:`, quality.Data)
       if(sharedPlatform.value == 'huya'){
         window.electronAPI.huya_getPlayUrl(clonableResult, quality)
         console.log('Data sent to main process for huya_getPlayUrl')
@@ -128,19 +124,19 @@ function receiveRoomDetail() {
   return new Promise((resolve, reject) => {
     if(sharedPlatform.value == 'huya'){
       window.electronAPI.huya_receiveRoomDetail((result) => {
-        console.log('room detail:', result)
+        // console.log('room detail:', result)
         resolve(result)
       })
     }else if(sharedPlatform.value == 'douyu'){
     
     }else if(sharedPlatform.value == 'bilibili'){
       window.electronAPI.bili_receiveRoomDetail((result) => {
-        console.log('douyin room detail:', result)
+        // console.log('douyin room detail:', result)
         resolve(result)
       })
     }else if(sharedPlatform.value == 'douyin'){
       window.electronAPI.douyin_receiveRoomDetail((result) => {
-        console.log('douyin room detail:', result)
+        // console.log('douyin room detail:', result)
         resolve(result)
       })
     }  
@@ -153,19 +149,19 @@ function receivePlayQuality() {
   return new Promise((resolve, reject) => {
     if(sharedPlatform.value == 'huya'){
       window.electronAPI.huya_receivePlayQuality((response) => {
-        console.log('play quality:', response)
+        // console.log('play quality:', response)
         resolve(response)
       })
     }else if(sharedPlatform.value == 'douyu'){
     
     }else if(sharedPlatform.value == 'bilibili'){
       window.electronAPI.bili_receivePlayQuality((response) => {
-        console.log('douyin play quality:', response)
+        // console.log('douyin play quality:', response)
         resolve(response)
       })
     }else if(sharedPlatform.value == 'douyin'){
       window.electronAPI.douyin_receivePlayQuality((response) => {
-        console.log('douyin play quality:', response)
+        // console.log('douyin play quality:', response)
         resolve(response)
       })
     }  
@@ -179,19 +175,19 @@ function receivePlayUrl() {
     
     if(sharedPlatform.value == 'huya'){
       window.electronAPI.huya_receivePlayUrl((response) => {
-        console.log('play url:', response)
+        // console.log('play url:', response)
         resolve(response)
       })
     }else if(sharedPlatform.value == 'douyu'){
     
     }else if(sharedPlatform.value == 'bilibili'){
       window.electronAPI.bili_receivePlayUrl((response) => {
-        console.log('play url:', response)
+        // console.log('play url:', response)
         resolve(response)
       })
     }else if(sharedPlatform.value == 'douyin'){
       window.electronAPI.douyin_receivePlayUrl((response) => {
-        console.log('play url:', response)
+        // console.log('play url:', response)
         resolve(response)
       })
     }
@@ -200,7 +196,7 @@ function receivePlayUrl() {
   })
 }
 
-console.log('共享变量的值:', sharedVariable.value)
+console.log('共享roomid的值:', sharedVariable.value)
 console.log('共享platform的值:', sharedPlatform.value)
 
 </script>
