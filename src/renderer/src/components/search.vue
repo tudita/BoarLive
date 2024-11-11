@@ -154,7 +154,7 @@ async function search() {
         console.log('get research:', response)
         ans.value = response
         rooms.value = ans.value.Rooms.map(item => ({
-          Cover: item.Cover,
+          Cover: "//images.weserv.nl/?url=" + item.Cover,
           Online: item.Online,
           RoomID: item.RoomID,
           Title: item.Title,

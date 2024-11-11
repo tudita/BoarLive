@@ -1,11 +1,14 @@
 <template>
-  <div class="sidebar">
-    <button @click="showContent('Recommand')">推荐直播</button>
-    <button @click="showContent('Search')">搜索直播</button>
-    <button @click="showContent('Test')">test</button>
-    <button @click="showContent('Live')">观看直播</button>
-    <button @click="showContent('FollowedRooms')">关注列表</button>
-    <button @click="showContent('livetest')">livetest</button>
+  <div class="sidebar" :class="{ collapsed: isCollapsed }">
+    <!-- <button @click="toggleSidebar">{{ isCollapsed ? '展开' : '收起' }}</button> -->
+    <div v-if="!isCollapsed">
+      <button @click="showContent('Recommand')">推荐直播</button>
+      <button @click="showContent('Search')">搜索直播</button>
+      <button @click="showContent('Test')">test</button>
+      <button @click="showContent('Live')">观看直播</button>
+      <button @click="showContent('FollowedRooms')">关注列表</button>
+      <button @click="showContent('livetest')">livetest</button>
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,14 @@ const emit = defineEmits(['update-content'])
 
 function showContent(componentName) {
   emit('update-content', componentName)
+}
+
+import { ref } from 'vue'
+
+const isCollapsed = ref(false)
+
+function toggleSidebar() {
+  isCollapsed.value = !isCollapsed.value
 }
 </script>
 
@@ -48,5 +59,10 @@ function showContent(componentName) {
 
 .sidebar button:hover {
   background-color: #3a3d41;
+}
+
+.sidebar.collapsed {
+  width: 50px;
+  overflow: hidden;
 }
 </style>

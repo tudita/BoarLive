@@ -1,5 +1,5 @@
 <template>
-  <div  class="view-container" id="mse" ref="mse"></div>
+  <div  id="mse" ref="mse"></div>
 </template>
 
 
@@ -214,7 +214,7 @@ console.log('共享platform的值:', sharedPlatform.value)
   background-color: #000000;
   padding: 20px;
   font-family: 'Nunito', sans-serif;
-  width: 95%;
+  width: 100%;
   box-sizing: border-box;
 }
 button {

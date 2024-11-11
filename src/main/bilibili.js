@@ -140,12 +140,19 @@ class Bilibili extends LiveSite {
 
   async search(keyword, page = 1) {
     const searchResult = { Rooms: [] }
-    const result = await axios.get(
-      `https://api.bilibili.com/x/web-interface/search/type?context=&search_type=live&cover_type=user_cover&page=${page}&order=&keyword=${encodeURIComponent(
-        keyword
-      )}&category_id=&__refresh__=true&_extra=&highlight=0&single_column=0`,
-      this.getRequestHeader(true)
-    )
+    const url = 'https://api.bilibili.com/x/web-interface/search/type'
+    const params = {
+      search_type: 'live',
+      keyword: keyword,
+      order: 'totalrank',
+      duration: '0',
+      tids: '0',
+      page: '1'
+    }
+    const headers = {
+      Cookie: 'SESSDATA=xxx'
+    }
+    const result = await axios.get(url, { params, headers })
     const obj = result.data
     for (const item of obj.data.result.live_room) {
       searchResult.Rooms.push({
