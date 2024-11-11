@@ -5,11 +5,12 @@
         <Sidebar @update-content="updateContent" />
       </div>
       <div class="main-content">
-        <view1 @update-content="updateContent" v-if="currentComponent === 'Recommand'" />
-        <view2 @update-content="updateContent" v-if="currentComponent === 'Search'" />
-        <view3 @update-content="updateContent" v-if="currentComponent === 'Test'" />
+        <view1 v-if="currentComponent === 'Recommand'" @update-content="updateContent" />
+        <view2 v-if="currentComponent === 'Search'" @update-content="updateContent" />
+        <view3 v-if="currentComponent === 'Test'" @update-content="updateContent" />
         <view4 v-if="currentComponent === 'Live'" />
         <view5 v-if="currentComponent === 'FollowedRooms'" />
+        <view6 v-if="currentComponent === 'livetest'" @update-content="updateContent" />
         <component :is=""></component>
       </div>
     </div>
@@ -24,6 +25,7 @@ import view2 from './components/Search.vue'
 import view3 from './components/view_test.vue'
 import view4 from './components/Live.vue'
 import view5 from './components/FollowedRooms.vue'
+import view6 from './components/test.vue'
 
 const currentComponent = ref('Recommend')
 const sharedVariable = ref(null)
@@ -42,7 +44,8 @@ const components = {
   view2,
   view3,
   view4,
-  view5
+  view5,
+  view6
 }
 </script>
 

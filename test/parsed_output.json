@@ -1,0 +1,4074 @@
+{
+  "state": {
+    "isLiveModal": false,
+    "appStore": {
+      "store": null,
+      "needInital": false,
+      "linkMicHeartConfig": {
+        "disabled": true,
+        "whitleList": [
+          "608192707742",
+          "534000058337"
+        ]
+      },
+      "isOpenLongTask": true
+    },
+    "userStore": {
+      "store": null,
+      "userInfo": {},
+      "headerUserInfo": {
+        "isLogin": false,
+        "info": {
+          "avatarUrl": "",
+          "avatar300Url": "",
+          "followStatus": 0,
+          "awemeCount": 0,
+          "followingCount": 0,
+          "followerCount": 0,
+          "favoritingCount": 0,
+          "watchLaterCount": 0,
+          "totalFavorited": 0,
+          "userCollectCount": {
+            "logPb": {
+              "impr_id": "20241108215658D011532BC9FC24464E07"
+            },
+            "statusCode": 8
+          },
+          "secret": 0,
+          "userCanceled": false,
+          "roomData": {},
+          "shareQrcodeUrl": "",
+          "shareInfo": {},
+          "coverAndHeadImageInfo": {},
+          "viewHistoryPermission": false,
+          "needSpecialShowFollowerCount": false,
+          "continuationState": 0,
+          "accountCertInfo": {}
+        }
+      },
+      "odin": {
+        "user_id": "490806875785744",
+        "user_type": 12,
+        "user_is_auth": 0,
+        "user_is_login": 0,
+        "user_unique_id": "7434907071893636658"
+      },
+      "userHandlerPause": false
+    },
+    "homeStore": {
+      "store": null,
+      "selectedRoom": null
+    },
+    "roomStore": {
+      "store": null,
+      "roomInfo": {
+        "room": {
+          "id_str": "7434850032714631976",
+          "status": 2,
+          "status_str": "2",
+          "title": "2024无畏契约改变者全球冠军赛 ｜淘汰赛第一日",
+          "user_count_str": "3000+",
+          "cover": {
+            "url_list": [
+              "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/2bf76f06481d4cfdbf5ea52afe501c92~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast&from=webcast.room.pack&l=20241108215658D011532BC9FC24464E07&lk3s=39e7556e&s=enter_room&sc=webcast_cover&x-expires=1733666218&x-signature=W7shMSGdeFnyl3dK2EcqU%2BcxPl0%3D",
+              "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/2bf76f06481d4cfdbf5ea52afe501c92~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast&from=webcast.room.pack&l=20241108215658D011532BC9FC24464E07&lk3s=39e7556e&s=enter_room&sc=webcast_cover&x-expires=1733666218&x-signature=CoQZdsYGfmsPw3Od9xqF1mcPH9I%3D"
+            ]
+          },
+          "stream_url": {
+            "flv_pull_url": {
+              "HD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd.flv?keeptime=00015180&wsSecret=fd913ed58b2320142f01f36c70fdc6c6&wsTime=672e18aa&major_anchor_level=common",
+              "SD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld.flv?keeptime=00015180&wsSecret=aaad13d77ae951c6a26f111a7fcd76b8&wsTime=672e18aa&major_anchor_level=common",
+              "SD2": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd.flv?keeptime=00015180&wsSecret=76787d8a3ac2c1e3eb57cb08025ea760&wsTime=672e18aa&major_anchor_level=common"
+            },
+            "default_resolution": "HD1",
+            "hls_pull_url_map": {
+              "FULL_HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+              "HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+              "SD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+              "SD2": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common"
+            },
+            "hls_pull_url": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+            "stream_orientation": 2,
+            "live_core_sdk_data": {
+              "pull_data": {
+                "options": {
+                  "default_quality": {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 0,
+                    "additional_content": "",
+                    "fps": 0,
+                    "disable": 0
+                  },
+                  "qualities": [
+                    {
+                      "name": "标清",
+                      "sdk_key": "ld",
+                      "v_codec": "264",
+                      "resolution": "960x540",
+                      "level": 1,
+                      "v_bit_rate": 1000000,
+                      "additional_content": "480P",
+                      "fps": 25,
+                      "disable": 0
+                    },
+                    {
+                      "name": "高清",
+                      "sdk_key": "sd",
+                      "v_codec": "264",
+                      "resolution": "1280x720",
+                      "level": 2,
+                      "v_bit_rate": 2000000,
+                      "additional_content": "720P",
+                      "fps": 30,
+                      "disable": 0
+                    },
+                    {
+                      "name": "蓝光",
+                      "sdk_key": "hd",
+                      "v_codec": "264",
+                      "resolution": "1280x720",
+                      "level": 3,
+                      "v_bit_rate": 6000000,
+                      "additional_content": "1080P",
+                      "fps": 60,
+                      "disable": 0
+                    }
+                  ]
+                },
+                "stream_data": "$12"
+              }
+            },
+            "extra": {
+              "height": 1080,
+              "width": 1920,
+              "fps": 0,
+              "max_bitrate": 0,
+              "min_bitrate": 0,
+              "default_bitrate": 0,
+              "bitrate_adapt_strategy": 0,
+              "anchor_interact_profile": 0,
+              "audience_interact_profile": 0,
+              "hardware_encode": false,
+              "video_profile": 0,
+              "h265_enable": false,
+              "gop_sec": 0,
+              "bframe_enable": false,
+              "roi": false,
+              "sw_roi": false,
+              "bytevc1_enable": false
+            },
+            "pull_datas": {}
+          },
+          "mosaic_status": 0,
+          "mosaic_status_str": "0",
+          "admin_user_ids": [
+            1742094563283536,
+            62649481749
+          ],
+          "admin_user_ids_str": [
+            "1742094563283536",
+            "62649481749"
+          ],
+          "owner": {
+            "id_str": "3259371071216349",
+            "sec_uid": "MS4wLjABAAAAJ_0iTgqnYEDRjRyrHfEw5_JXRLuEjF6-1IauRoSs4b0cbVjrgzI4RW5_Hfgt77Co",
+            "nickname": "无畏契约电竞",
+            "avatar_thumb": {
+              "url_list": [
+                "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334",
+                "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334",
+                "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334"
+              ]
+            },
+            "follow_info": {
+              "follow_status": 0,
+              "follow_status_str": "0"
+            },
+            "subscribe": {
+              "is_member": false,
+              "level": 0,
+              "identity_type": 0,
+              "buy_type": 0,
+              "open": 0
+            },
+            "open_id_str": ""
+          },
+          "room_auth": {
+            "Chat": true,
+            "Danmaku": false,
+            "Gift": true,
+            "LuckMoney": true,
+            "Digg": true,
+            "RoomContributor": false,
+            "Props": true,
+            "UserCard": true,
+            "POI": true,
+            "MoreAnchor": 2,
+            "Banner": 1,
+            "Share": 1,
+            "UserCorner": 0,
+            "Landscape": 1,
+            "LandscapeChat": 1,
+            "PublicScreen": 1,
+            "GiftAnchorMt": 0,
+            "RecordScreen": 2,
+            "DonationSticker": 0,
+            "HourRank": 2,
+            "CommerceCard": 1,
+            "AudioChat": 1,
+            "DanmakuDefault": 0,
+            "KtvOrderSong": 2,
+            "SelectionAlbum": 2,
+            "Like": 1,
+            "MultiplierPlayback": 2,
+            "DownloadVideo": 2,
+            "Collect": 2,
+            "TimedShutdown": 2,
+            "Seek": 1,
+            "Denounce": 1,
+            "Dislike": 1,
+            "OnlyTa": 2,
+            "CastScreen": 1,
+            "CommentWall": 1,
+            "BulletStyle": 1,
+            "ShowGamePlugin": 2,
+            "VSGift": 0,
+            "VSTopic": 0,
+            "VSRank": 0,
+            "AdminCommentWall": 0,
+            "CommerceComponent": 2,
+            "DouPlus": 1,
+            "GamePointsPlaying": 1,
+            "Poster": 2,
+            "Highlights": 2,
+            "TypingCommentState": 1,
+            "StrokeUpDownGuide": 1,
+            "UpRightStatsFloatingLayer": 2,
+            "CastScreenExplicit": 1,
+            "Selection": 2,
+            "IndustryService": 0,
+            "VerticalRank": 2,
+            "EnterEffects": 0,
+            "FansClub": 1,
+            "EmojiOutside": 0,
+            "CanSellTicket": 0,
+            "DouPlusPopularityGem": 0,
+            "MissionCenter": 0,
+            "ExpandScreen": 2,
+            "FansGroup": 2,
+            "Topic": 2,
+            "AnchorMission": 0,
+            "Teleprompter": 0,
+            "LongTouch": 1,
+            "FirstFeedHistChat": 2,
+            "MoreHistChat": 2,
+            "TaskBanner": 0,
+            "SpecialStyle": {
+              "Chat": {
+                "UnableStyle": 0,
+                "Content": "主播已设置所有人可评论",
+                "OffType": 0,
+                "AnchorSwitchForPaidLive": 0,
+                "ContentForPaidLive": ""
+              },
+              "Like": {
+                "UnableStyle": 0,
+                "Content": "",
+                "OffType": 0,
+                "AnchorSwitchForPaidLive": 0,
+                "ContentForPaidLive": ""
+              }
+            },
+            "FixedChat": 2,
+            "QuizGamePointsPlaying": 1
+          },
+          "live_room_mode": 1,
+          "stats": {
+            "total_user_desp": "人次观看",
+            "like_count": 0,
+            "total_user_str": "10万+",
+            "user_count_str": "3973"
+          },
+          "has_commerce_goods": false,
+          "linker_map": {},
+          "linker_detail": {
+            "linker_play_modes": [],
+            "big_party_layout_config_version": 0,
+            "accept_audience_pre_apply": false,
+            "linker_ui_layout": 0,
+            "enable_audience_linkmic": 0,
+            "function_type": "",
+            "linker_map_str": {},
+            "ktv_lyric_mode": "",
+            "init_source": "",
+            "forbid_apply_from_other": false,
+            "ktv_exhibit_mode": 0,
+            "enlarge_guest_turn_on_source": 0,
+            "playmode_detail": {},
+            "client_ui_info": "",
+            "manual_open_ui": 0,
+            "feature_list": []
+          },
+          "episode_extra": {
+            "current_period": "",
+            "title": "2024无畏契约改变者全球冠军赛 ｜淘汰赛第一日",
+            "episode_list_h5": "",
+            "episode_id": 7434796342314194000,
+            "episode_id_str": "7434796342314193955",
+            "item_id": "",
+            "selection_url": "",
+            "relation_place_text": "",
+            "operation_place_text_list": [],
+            "toolbar_list": [
+              {
+                "toolbar_type": 1,
+                "icon": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/vs_default_vertical_topic_online_v2.png~tplv-obj.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/vs_default_vertical_topic_online_v2.png~tplv-obj.image"
+                  ],
+                  "uri": "webcast/vs_default_vertical_topic_online_v2.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#F1FFEB",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "jump_schema": "sslocal://webcast_vs_webview?url=https%3A%2F%2Fwebcast.amemv.com%2Ffalcon%2Fwebcast_douyin%2Fpage%2Fvs_topic_list%2Findex.html%3Fepisode_id%3D7434796342314193955",
+                "display_type": 1,
+                "dynamic_icon": {
+                  "url_list": [],
+                  "uri": "",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#EBCECE",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "icon_vertical": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/20220401_player_default_topic.png~tplv-obj.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/20220401_player_default_topic.png~tplv-obj.image"
+                  ],
+                  "uri": "webcast/20220401_player_default_topic.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#A3897C",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "toast_list": [],
+                "extra": ""
+              }
+            ],
+            "collected": false,
+            "season_id": 7434451954111976000,
+            "finish_url": "sslocal://webcast_lynxview/?url=https%3A%2F%2Flf-webcast-gr-sourcecdn.bytegecko.com%2Fobj%2Fbyte-gurd-source-gr%2Fwebcast%2Fmono%2Flynx%2Fvs_endpage_douyin%2Fpages%2Fendpage%2Ftemplate.js&enable_preload=all&enable_latch=1&web_bg_color=%23161823&bdhm_bid=ife_webcast_vs_fe_live&lynx_thread=2&enable_code_cache=1&episode_stage=1&need_record=false",
+            "release_time": "2024-11-08",
+            "watch_period": 0,
+            "latest_period": 0,
+            "show_name": "",
+            "current_period_raw": 0,
+            "video_code": 0,
+            "season_id_str": "7434451954111976487",
+            "watch_pv_raw": "",
+            "next_special_episode_id": 0,
+            "cover": {
+              "url_list": [
+                "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=z%2FoexbjeHuPfoAdYvd151aIAwT8%3D",
+                "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=lLLrozSICXBplHBo6sKWJfNJdTQ%3D"
+              ],
+              "uri": "tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc",
+              "height": 0,
+              "width": 0,
+              "avg_color": "#FFF1EB",
+              "image_type": 0,
+              "open_web_url": "",
+              "is_animated": false,
+              "flex_setting_list": [],
+              "text_setting_list": []
+            },
+            "cover_vertical": {
+              "url_list": [],
+              "uri": "",
+              "height": 0,
+              "width": 0,
+              "avg_color": "#BCD9E0",
+              "image_type": 0,
+              "open_web_url": "",
+              "is_animated": false,
+              "flex_setting_list": [],
+              "text_setting_list": []
+            },
+            "style": 1,
+            "gift_pannel": {
+              "background_colors": [],
+              "background": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#F1FFEB",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "selected": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#F1FFEB",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              }
+            },
+            "pannel_icon": {
+              "sp_landscape_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#607A53",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "sp_vertical_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#405237",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "landscape_vertical_switch_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#FADCDC",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "lock_screen_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#FFF1EB",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "landscape_more_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#374C52",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "vertical_more_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#DCDCFA",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "landscape_comment_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#374C52",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "vertical_comment_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#CCBEA3",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "vertical_landscape_switch_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#EBEBFF",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "vertical_lock_screen_icon": {
+                "url_list": [],
+                "uri": "",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#A3897C",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              }
+            },
+            "pannel_toolbar": [
+              {
+                "toolbar_type": 5,
+                "icon": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/ttlive_ic_gift_new.png~tplv-obj.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/ttlive_ic_gift_new.png~tplv-obj.image"
+                  ],
+                  "uri": "webcast/ttlive_ic_gift_new.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#FAF0DC",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "jump_schema": "",
+                "display_type": 0,
+                "dynamic_icon": {
+                  "url_list": [],
+                  "uri": "",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#7A536D",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "icon_vertical": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/20220401_player_default_lanscape_gift.png~tplv-obj.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/20220401_player_default_lanscape_gift.png~tplv-obj.image"
+                  ],
+                  "uri": "webcast/20220401_player_default_lanscape_gift.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#FAFAFA",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "toast_list": [],
+                "extra": ""
+              }
+            ],
+            "draw_sub_title": "",
+            "camera_infos": [],
+            "default_camera_id": 0,
+            "default_camera_id_str": 0,
+            "default_camera_id_str_v2": "",
+            "multi_season_tag": "",
+            "preview_background": {
+              "url_list": [
+                "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/f5063530f6d64f378d7f12dc6c10404d~tplv-qz53dukwul-image.image?lk3s=39e7556e&x-expires=1733666218&x-signature=XfcsfsT44zBRGD0m2X4Fr%2F4RMaQ%3D",
+                "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/f5063530f6d64f378d7f12dc6c10404d~tplv-qz53dukwul-image.image?lk3s=39e7556e&x-expires=1733666218&x-signature=sXhvpPjny4Umkw1qEkqMHG9C%2BGA%3D"
+              ],
+              "uri": "tos-cn-i-30241dr4mi/f5063530f6d64f378d7f12dc6c10404d",
+              "height": 0,
+              "width": 0,
+              "avg_color": "#7C7CA3",
+              "image_type": 0,
+              "open_web_url": "",
+              "is_animated": false,
+              "flex_setting_list": [],
+              "text_setting_list": []
+            },
+            "background": {
+              "url_list": [
+                "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/b21a5c5de1194637b92f3f99e7f8d52e~tplv-qz53dukwul-image.image?lk3s=39e7556e&x-expires=1733666218&x-signature=8uHSim%2Fcgg%2FxLHRHpW1Ix0urG9I%3D",
+                "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/b21a5c5de1194637b92f3f99e7f8d52e~tplv-qz53dukwul-image.image?lk3s=39e7556e&x-expires=1733666218&x-signature=TlHZyPYePJ2xERcUDXq2g0TCyFs%3D"
+              ],
+              "uri": "tos-cn-i-30241dr4mi/b21a5c5de1194637b92f3f99e7f8d52e",
+              "height": 0,
+              "width": 0,
+              "avg_color": "#374C52",
+              "image_type": 0,
+              "open_web_url": "",
+              "is_animated": false,
+              "flex_setting_list": [],
+              "text_setting_list": []
+            },
+            "mod": {
+              "episode_stage": 1,
+              "episode_type": 1,
+              "episode_sub_type": 1,
+              "episode_record_type": 2
+            },
+            "season_type_name": "",
+            "link_room_info": {
+              "title": "",
+              "tab_title": "",
+              "rooms": [],
+              "pattern": 0
+            },
+            "camera_infos_table_title": "多机位",
+            "episode_status": 0,
+            "match_room_info": {
+              "match_host_channel": {},
+              "match_hash_tag": "",
+              "background_image_url_list": [],
+              "im_info": {
+                "icon": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/match_im_info_icon1.png~tplv-obj.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/match_im_info_icon1.png~tplv-obj.image"
+                  ],
+                  "uri": "webcast/match_im_info_icon1.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#EBE1CE",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "title": "世界杯直播看点"
+              },
+              "match_share_background": {},
+              "theme_id": "",
+              "match_live_share_background": {
+                "vertical_img": {
+                  "url_list": [
+                    "https://p11-webcast.douyinpic.com/img/webcast/vs_match_live_share_background_v1.png~tplv-resize:0:0.image",
+                    "https://p3-webcast.douyinpic.com/img/webcast/vs_match_live_share_background_v1.png~tplv-resize:0:0.image"
+                  ],
+                  "uri": "webcast/vs_match_live_share_background_v1.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#B1CCA3",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "horizontal_img": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/vs_match_live_share_background_h1.png~tplv-resize:0:0.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/vs_match_live_share_background_h1.png~tplv-resize:0:0.image"
+                  ],
+                  "uri": "webcast/vs_match_live_share_background_h1.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#523737",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                }
+              },
+              "match_id": 0
+            },
+            "multi_camera_basic_info": {
+              "icon": {
+                "url_list": [
+                  "https://p3-webcast.douyinpic.com/img/webcast/landscape_ic_mult_camera.png~tplv-obj.image",
+                  "https://p11-webcast.douyinpic.com/img/webcast/landscape_ic_mult_camera.png~tplv-obj.image"
+                ],
+                "uri": "webcast/landscape_ic_mult_camera.png",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#53537A",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "icon_background_color": "000000",
+              "panel_background_color": "000000",
+              "icon_pad": {
+                "url_list": [
+                  "https://p3-webcast.douyinpic.com/img/webcast/multi_camera_icon_landscape.png~tplv-obj.image",
+                  "https://p11-webcast.douyinpic.com/img/webcast/multi_camera_icon_landscape.png~tplv-obj.image"
+                ],
+                "uri": "webcast/multi_camera_icon_landscape.png",
+                "height": 0,
+                "width": 0,
+                "avg_color": "#524037",
+                "image_type": 0,
+                "open_web_url": "",
+                "is_animated": false,
+                "flex_setting_list": [],
+                "text_setting_list": []
+              },
+              "ban_xgs": false,
+              "support_vs_core": false,
+              "name": "更多内容",
+              "default_display_duration": 0
+            },
+            "preview_bottom_text": "",
+            "business_configure": [],
+            "public_screen_color": "",
+            "chat_tray_color": "",
+            "main_camera_title": "",
+            "privilege_info": {},
+            "is_interact_config_exist": false,
+            "main_camera_match_info": {
+              "match_id": 0,
+              "event_ids": [],
+              "content_id": 0,
+              "league_info": {
+                "league_id": 0,
+                "cnn_name": "",
+                "enn_name": "",
+                "season": ""
+              },
+              "is_display_score_type": false,
+              "hide_tab_ids": [],
+              "match_id_str": "0",
+              "content_id_str": "0"
+            },
+            "group_id": 7434796342314194000,
+            "group_id_str": ""
+          },
+          "room_view_stats": {
+            "is_hidden": false,
+            "display_short": "30.5万",
+            "display_middle": "30.5万人看过",
+            "display_long": "30.5万人看过",
+            "display_value": 304840,
+            "display_version": 1663849727,
+            "incremental": true,
+            "display_type": 3,
+            "display_short_anchor": "30.5万",
+            "display_middle_anchor": "30.5万人看过",
+            "display_long_anchor": "30.5万人看过"
+          },
+          "scene_type_info": {
+            "is_union_live_room": false,
+            "is_life": false,
+            "is_protected_room": 0,
+            "is_lasted_goods_room": 2,
+            "is_desire_room": 2,
+            "commentary_type": false,
+            "is_sub_orientation_vertical_room": 2
+          },
+          "toolbar_data": {
+            "entrance_list": [
+              {
+                "group_id": 0,
+                "component_type": 5,
+                "op_type": 0,
+                "text": "游戏推广",
+                "schema_url": "",
+                "show_type": 3,
+                "data_status": 1,
+                "extra": "$13"
+              },
+              {
+                "group_id": 5,
+                "component_type": 24,
+                "op_type": 0,
+                "text": "更多",
+                "schema_url": "",
+                "show_type": 1,
+                "data_status": 1,
+                "extra": ""
+              },
+              {
+                "group_id": 6,
+                "component_type": 29,
+                "op_type": 0,
+                "text": "快捷送礼",
+                "schema_url": "",
+                "icon": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-resize:0:0.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-resize:0:0.image"
+                  ],
+                  "uri": "webcast/7ef47758a435313180e6b78b056dda4e.png",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#FAE6DC",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "show_type": 3,
+                "data_status": 1,
+                "extra": "{\"id\":463,\"name\":\"小心心\",\"type\":1,\"diamond_count\":1,\"combo\":true,\"image\":{\"url_list\":[\"https://p3-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.image\",\"https://p11-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.image\"],\"uri\":\"webcast/7ef47758a435313180e6b78b056dda4e.png\",\"avg_color\":\"#FFEBF8\"}}"
+              },
+              {
+                "group_id": 8,
+                "component_type": 28,
+                "op_type": 0,
+                "text": "礼物",
+                "schema_url": "",
+                "icon": {
+                  "url_list": [
+                    "https://p3-webcast.douyinpic.com/img/webcast/profit_gift_entrance_ab_v2.webp~tplv-resize:0:0.image",
+                    "https://p11-webcast.douyinpic.com/img/webcast/profit_gift_entrance_ab_v2.webp~tplv-resize:0:0.image"
+                  ],
+                  "uri": "webcast/profit_gift_entrance_ab_v2.webp",
+                  "height": 0,
+                  "width": 0,
+                  "avg_color": "#E0C8BC",
+                  "image_type": 0,
+                  "open_web_url": "",
+                  "is_animated": false,
+                  "flex_setting_list": [],
+                  "text_setting_list": []
+                },
+                "show_type": 3,
+                "data_status": 1,
+                "extra": ""
+              },
+              {
+                "group_id": 12,
+                "component_type": 35,
+                "op_type": 0,
+                "text": "清晰度",
+                "schema_url": "",
+                "show_type": 2,
+                "data_status": 1,
+                "extra": ""
+              },
+              {
+                "group_id": 18,
+                "component_type": 38,
+                "op_type": 0,
+                "text": "多Tab",
+                "schema_url": "",
+                "show_type": 2,
+                "data_status": 0,
+                "extra": ""
+              }
+            ],
+            "more_panel": [
+              {
+                "group_id": 1,
+                "component_type": 20,
+                "op_type": 0,
+                "text": "分享",
+                "schema_url": "",
+                "show_type": 1,
+                "data_status": 1,
+                "extra": "{\"ShareStory\":1}"
+              },
+              {
+                "group_id": 10,
+                "component_type": 31,
+                "op_type": 0,
+                "text": "聊天频道",
+                "schema_url": "",
+                "show_type": 1,
+                "data_status": 1,
+                "extra": ""
+              }
+            ],
+            "max_entrance_cnt": 4,
+            "landscape_up_right": [],
+            "skin_resource": {},
+            "max_entrance_cnt_landscape": 5,
+            "permutation": {
+              "general": {
+                "GroupPriority": [
+                  18,
+                  17,
+                  12,
+                  14,
+                  16,
+                  5,
+                  1,
+                  8,
+                  4,
+                  15,
+                  10,
+                  13,
+                  0,
+                  19,
+                  9,
+                  3,
+                  2,
+                  7,
+                  6
+                ],
+                "ComponentSequence": [
+                  31,
+                  33,
+                  34,
+                  37,
+                  35,
+                  38,
+                  36,
+                  26,
+                  42,
+                  23,
+                  27,
+                  32,
+                  21,
+                  2,
+                  3,
+                  1,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  22,
+                  30,
+                  25,
+                  41,
+                  29,
+                  28,
+                  20,
+                  24
+                ]
+              },
+              "on_demand_component_list": []
+            }
+          },
+          "room_cart": {
+            "contain_cart": false,
+            "total": 0,
+            "flash_total": 0,
+            "cart_icon": "",
+            "show_cart": 0
+          },
+          "AnchorABMap": {
+            "ab_admin_comment_on_wall": "0",
+            "ab_friend_chat": "4",
+            "admin_privilege_refine": "2",
+            "allow_shared_to_fans": "false",
+            "audience_linkmic_continue": "0",
+            "big_party_enable_open_camera": "2",
+            "chat_intercommunicate_multi_anchor": "2",
+            "chat_intercommunicate_pk": "2",
+            "ecom_room_disable_gift": "0",
+            "enable_enter_by_sharing": "0",
+            "enable_link_guest_enter": "0",
+            "enter_message_tip_relation": "0",
+            "enter_source_mark": "0",
+            "frequently_chat_ab_value": "2",
+            "friend_room_audio_tuning": "1",
+            "friend_room_support_ns_mode": "0",
+            "friend_share_video_feature_type": "3",
+            "game_link_entrance": "0",
+            "gift_hide_tip": "2",
+            "guest_battle_crown_upgrade": "0",
+            "guest_battle_expand": "0",
+            "guest_battle_score_expand": "0",
+            "interact_anchor_guide": "0",
+            "ktv_anchor_enable_add_all": "1",
+            "ktv_auto_mute_self": "0",
+            "ktv_challenge_minus_gift": "0",
+            "ktv_enable_avatar": "0",
+            "ktv_enable_open_camera": "0",
+            "ktv_fragment_song": "0",
+            "ktv_grab_guide_song": "0",
+            "ktv_guide_song_switch": "0",
+            "ktv_kick_when_linker_full": "0",
+            "ktv_mc_host_show_tag": "0",
+            "ktv_room_atmosphere": "0",
+            "ktv_singing_hot_rank": "0",
+            "ktv_video_stream_optimize": "0",
+            "ktv_want_listen_enable": "2",
+            "live_anchor_enable_chorus": "false",
+            "live_anchor_enable_custom_position": "0",
+            "live_anchor_hit_new_audience_linkmic": "0",
+            "live_anchor_hit_video_bid_paid": "0",
+            "live_anchor_hit_video_teamfight": "0",
+            "live_answer_on_wall": "0",
+            "live_dou_plus_enter": "0",
+            "live_ktv_enable_beat": "0",
+            "live_ktv_group": "0",
+            "live_ktv_show_singer_icon": "1",
+            "live_ktv_singing_challenge": "0",
+            "live_linkmic_battle_optimize": "0",
+            "live_linkmic_ktv_anchor_lyric_mode": "0",
+            "live_pc_helper_new_layout": "0",
+            "live_room_manage_style": "0",
+            "live_video_enable_c_position": "0",
+            "live_video_enable_self_discipline": "0",
+            "live_video_host_identity_enable": "0",
+            "live_video_share": "0",
+            "lonely_room_enter_msg_unfold": "0",
+            "mark_user": "0",
+            "merge_ktv_mode_enable": "1",
+            "opt_audience_linkmic": "3",
+            "opt_paid_link_feature_switch": "0",
+            "optran_paid_linkmic": "0",
+            "ps_use_new_panel": "0",
+            "radio_prepare_apply": "0",
+            "room_double_like": "0",
+            "social_share_video_adjust_volume": "0",
+            "support_multiple_add_price": "0",
+            "traffic_strategy": "0",
+            "video_ktv_challenge": "0",
+            "video_talk_enable_avatar": "2"
+          },
+          "like_count": 15661,
+          "owner_user_id_str": "",
+          "paid_live_data": {
+            "paid_type": 0,
+            "view_right": 0,
+            "duration": 0,
+            "delivery": 0,
+            "need_delivery_notice": false,
+            "anchor_right": 0,
+            "pay_ab_type": 0,
+            "privilege_info": {},
+            "privilege_info_map": {},
+            "max_preview_duration": 0
+          },
+          "basis": {
+            "next_ping": 30,
+            "is_customize_audio_room": false
+          },
+          "req_user": {
+            "user_share_room_score": 0,
+            "enter_user_device_type": 0
+          },
+          "others": {
+            "deco_detail": {},
+            "more_panel_info": {
+              "load_strategy": 3
+            },
+            "appointment_info": {
+              "appointment_id": 7434500016978171000,
+              "is_subscribe": false
+            },
+            "web_skin": {
+              "enable_skin": false
+            },
+            "programme": {
+              "enable_programme": false
+            },
+            "web_live_port_optimization": {
+              "strategy_config": {
+                "background": {
+                  "strategy_type": 1,
+                  "use_config_duration": false,
+                  "pause_monitor_duration": "1800"
+                },
+                "detail": {
+                  "strategy_type": 1,
+                  "use_config_duration": false,
+                  "pause_monitor_duration": "1800"
+                },
+                "tab": {
+                  "strategy_type": 1,
+                  "use_config_duration": false,
+                  "pause_monitor_duration": "1800"
+                }
+              },
+              "strategy_extra": ""
+            },
+            "lvideo_item_id": 0,
+            "recognition_containers": {
+              "recognition_candidates": []
+            },
+            "anchor_together_live": {
+              "is_together_live": 0,
+              "user_list": [],
+              "title": "",
+              "schema_url": "",
+              "scene": 1,
+              "is_show": false
+            },
+            "mosaic_version": 0
+          },
+          "admin_user_open_ids": [],
+          "admin_user_open_ids_str": [],
+          "owner_open_id_str": ""
+        },
+        "roomId": "7434850032714631976",
+        "web_rid": "27709227417",
+        "anchor": {
+          "id_str": "3259371071216349",
+          "sec_uid": "MS4wLjABAAAAJ_0iTgqnYEDRjRyrHfEw5_JXRLuEjF6-1IauRoSs4b0cbVjrgzI4RW5_Hfgt77Co",
+          "nickname": "无畏契约电竞",
+          "avatar_thumb": {
+            "url_list": [
+              "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334",
+              "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334",
+              "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0461b865a4e6071124623f2c0289981a.jpeg?from=3067671334"
+            ]
+          },
+          "follow_info": {
+            "follow_status": 0,
+            "follow_status_str": "0"
+          },
+          "open_id_str": ""
+        },
+        "roomExtra": {
+          "digg_color": "0",
+          "pay_scores": "0",
+          "is_official_channel": false,
+          "signature": ""
+        },
+        "enter_mode": 0,
+        "qrcode_url": "https://p3-pc.douyinpic.com/img/aweme-qrcode/EnmpTy7434877499286374154~c5_720x720.webp?from=746027608",
+        "partition_road_map": {
+          "partition": {
+            "id_str": "1",
+            "type": 1,
+            "title": "射击游戏"
+          },
+          "sub_partition": {
+            "partition": {
+              "id_str": "1010017",
+              "type": 1,
+              "title": ""
+            }
+          }
+        },
+        "web_stream_url": {
+          "flv_pull_url": {
+            "HD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.flv?expire=672f6a2a&sign=6024902637c737cae905fe70b7bb315b&major_anchor_level=common",
+            "SD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.flv?expire=672f6a2a&sign=d7ce5d3a92cc6143e9055a4e8d64e1fb&major_anchor_level=common",
+            "SD2": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.flv?expire=672f6a2a&sign=b4be103593c08a10d23ed522d7c3fb0c&major_anchor_level=common"
+          },
+          "default_resolution": "HD1",
+          "hls_pull_url_map": {
+            "FULL_HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+            "HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+            "SD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+            "SD2": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common"
+          },
+          "hls_pull_url": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+          "stream_orientation": 2,
+          "live_core_sdk_data": {
+            "pull_data": {
+              "options": {
+                "default_quality": {
+                  "name": "蓝光",
+                  "sdk_key": "hd",
+                  "v_codec": "bytevc1",
+                  "resolution": "1280x720",
+                  "level": 3,
+                  "v_bit_rate": 0,
+                  "additional_content": "",
+                  "fps": 0,
+                  "disable": 0
+                },
+                "qualities": [
+                  {
+                    "name": "标清",
+                    "sdk_key": "ld",
+                    "v_codec": "bytevc1",
+                    "resolution": "960x540",
+                    "level": 1,
+                    "v_bit_rate": 1000000,
+                    "additional_content": "480P",
+                    "fps": 25,
+                    "disable": 0
+                  },
+                  {
+                    "name": "高清",
+                    "sdk_key": "sd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 2,
+                    "v_bit_rate": 2000000,
+                    "additional_content": "720P",
+                    "fps": 30,
+                    "disable": 0
+                  },
+                  {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 6000000,
+                    "additional_content": "1080P",
+                    "fps": 60,
+                    "disable": 0
+                  }
+                ]
+              },
+              "stream_data": "$14"
+            }
+          },
+          "extra": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 0,
+            "max_bitrate": 0,
+            "min_bitrate": 0,
+            "default_bitrate": 0,
+            "bitrate_adapt_strategy": 0,
+            "anchor_interact_profile": 0,
+            "audience_interact_profile": 0,
+            "hardware_encode": false,
+            "video_profile": 0,
+            "h265_enable": false,
+            "gop_sec": 0,
+            "bframe_enable": false,
+            "roi": false,
+            "sw_roi": false,
+            "bytevc1_enable": false
+          },
+          "pull_datas": {}
+        }
+      },
+      "emojiList": [],
+      "emojiReflex": {},
+      "liveStatus": "normal",
+      "likeStatus": {
+        "Digg": true,
+        "SpecialStyle": {
+          "Chat": {
+            "UnableStyle": 0,
+            "Content": "主播已设置所有人可评论",
+            "OffType": 0,
+            "AnchorSwitchForPaidLive": 0,
+            "ContentForPaidLive": ""
+          },
+          "Like": {
+            "UnableStyle": 0,
+            "Content": "",
+            "OffType": 0,
+            "AnchorSwitchForPaidLive": 0,
+            "ContentForPaidLive": ""
+          }
+        }
+      },
+      "followInfo": {},
+      "isUgcLive": false,
+      "doubleScreenInfo": {},
+      "pausePop": false,
+      "hasAppointment": false,
+      "enableProgramme": false,
+      "abProgramme": false,
+      "forceEnableH265": false,
+      "notSupportReason": "unknown",
+      "longtouchList": [],
+      "longtouchShowTcc": false,
+      "usePageUrlBannerId": [],
+      "isAsianGames": false,
+      "relevantRooms": [
+        {
+          "room": {
+            "id_str": "7434894238037756681",
+            "title": "我见过龙，是李老师的对局游龙",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-116170222883570442_expuhd.flv?expire=1731679018&sign=0ff25f3f32ab29a4fefaf8eac79481fc&volcSecret=0ff25f3f32ab29a4fefaf8eac79481fc&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-116170222883570442_exphd.flv?expire=1731679018&sign=0a759f8cf5292c24e4cf7729c049b4ab&volcSecret=0a759f8cf5292c24e4cf7729c049b4ab&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-116170222883570442_expld.flv?expire=1731679018&sign=27f1a0665b104f09822cfa3b75253881&volcSecret=27f1a0665b104f09822cfa3b75253881&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-116170222883570442_expsd.flv?expire=1731679018&sign=46312c7a0b00b7307486e55cb86e0cee&volcSecret=46312c7a0b00b7307486e55cb86e0cee&volcTime=1731679018&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170222883570442_expuhd/index.m3u8?expire=1731679018&sign=9d66370a27d9225c9956adee4d606230&volcSecret=9d66370a27d9225c9956adee4d606230&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170222883570442_exphd/index.m3u8?expire=1731679018&sign=09998eb5304595b1d8a20431def489ea&volcSecret=09998eb5304595b1d8a20431def489ea&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170222883570442_expld/index.m3u8?expire=1731679018&sign=0f62a878c0ab5add84c1ed81f9487f40&volcSecret=0f62a878c0ab5add84c1ed81f9487f40&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170222883570442_expsd/index.m3u8?expire=1731679018&sign=6da5d1f21fb19e1160d61aa6594200b9&volcSecret=6da5d1f21fb19e1160d61aa6594200b9&volcTime=1731679018&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$15"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "5175",
+              "display_middle": "5175",
+              "display_long": "5175在线观众",
+              "display_value": 5175,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "5175",
+              "display_middle_anchor": "5175",
+              "display_long_anchor": "5175在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "3万+",
+              "user_count_str": "5175"
+            },
+            "owner": {
+              "nickname": "谢尔比·李（神将导师）50w女装",
+              "id_str": "2669548934300",
+              "sec_uid": "MS4wLjABAAAALJEZkfS9dHA57XLvpmPTM-oNIfmJg9x58-5ZPLI3MMg",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "83791455679",
+          "web_rid": "363531534623",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-116170222883570442_exphd.flv?expire=1731679018&sign=0a759f8cf5292c24e4cf7729c049b4ab&volcSecret=0a759f8cf5292c24e4cf7729c049b4ab&volcTime=1731679018&major_anchor_level=common",
+          "cover": "https://p11-webcast-sign.douyinpic.com/webcast-cover/7376250259619990323~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=Kkg9EsNq2uPKcY9EpEFbxhCfoNo%3D",
+          "avatar": "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_518fe32a9eba1b00fc78566834e07576.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434830863065107252",
+            "title": "FGC:FPX凤舞九天",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-692629985934181196_or4.flv?expire=1731679018&sign=cf8f0ee67d809e17add51aedac0862bf&major_anchor_level=common",
+                "HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-692629985934181196_exphd.flv?expire=1731679018&sign=0a5dd1c756c3497bd5eccaaa078ec716&major_anchor_level=common",
+                "SD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-692629985934181196_expld.flv?expire=1731679018&sign=a399bb20183fbdd7fb2c005dcf239df8&major_anchor_level=common",
+                "SD2": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-692629985934181196_expsd.flv?expire=1731679018&sign=9328773e9a4cb7aa5ac9f8ef4235188b&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-692629985934181196_or4.m3u8?expire=1731679018&sign=919d6ae482791536d32c13b53999ce3e&major_anchor_level=common",
+                "HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-692629985934181196_exphd.m3u8?expire=1731679018&sign=d61633643a199127b81da125ac5e4657&major_anchor_level=common",
+                "SD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-692629985934181196_expld.m3u8?expire=1731679018&sign=30f792947e0930059d2b3919f6175484&major_anchor_level=common",
+                "SD2": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-692629985934181196_expsd.m3u8?expire=1731679018&sign=255ecc6e7144835f09e7816df4238d35&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$16"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "4119",
+              "display_middle": "4119",
+              "display_long": "4119在线观众",
+              "display_value": 4119,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "4119",
+              "display_middle_anchor": "4119",
+              "display_long_anchor": "4119在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "10万+",
+              "user_count_str": "4119"
+            },
+            "owner": {
+              "nickname": "神枪小子丶",
+              "id_str": "70515115038",
+              "sec_uid": "MS4wLjABAAAA-H6VdYQdhqV6NOytDiXl9sxG9oBzCcAeYsG2HWrEaPw",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "shenqiang818",
+          "web_rid": "551254031717",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l11.douyincdn.com/thirdgame/stream-692629985934181196_exphd.flv?expire=1731679018&sign=0a5dd1c756c3497bd5eccaaa078ec716&major_anchor_level=common",
+          "cover": "https://p11-webcast-sign.douyinpic.com/webcast-cover/7183257351112248101~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=bUlyImEyc9NSf5hbfTDu8Fl%2BwQw%3D",
+          "avatar": "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_1203313d1a8596d3e38b5708bd485f2d.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434881569833159475",
+            "title": "FGC邀请赛",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expuhd.flv?expire=1731679018&sign=6e726b8713eb6c1d8a0093cb1772536a&volcSecret=6e726b8713eb6c1d8a0093cb1772536a&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_exphd.flv?expire=1731679018&sign=b944c17d26418b300876e931cf17506b&volcSecret=b944c17d26418b300876e931cf17506b&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expld.flv?expire=1731679018&sign=74edba2e9644728e5cac580f2dda0918&volcSecret=74edba2e9644728e5cac580f2dda0918&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expsd.flv?expire=1731679018&sign=0e722c6a9d715de90aca06cd064264ac&volcSecret=0e722c6a9d715de90aca06cd064264ac&volcTime=1731679018&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expuhd/index.m3u8?expire=1731679018&sign=a4270209e2560e03c2cd4edb63a513f1&volcSecret=a4270209e2560e03c2cd4edb63a513f1&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_exphd/index.m3u8?expire=1731679018&sign=15d5f4eaec427f0cd182506bd895317e&volcSecret=15d5f4eaec427f0cd182506bd895317e&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expld/index.m3u8?expire=1731679018&sign=e63a885f0a22a44167c00ae3e65886fd&volcSecret=e63a885f0a22a44167c00ae3e65886fd&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_expsd/index.m3u8?expire=1731679018&sign=10ffcb2243d89494801c5afbcf351ecd&volcSecret=10ffcb2243d89494801c5afbcf351ecd&volcTime=1731679018&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$17"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "984",
+              "display_middle": "984",
+              "display_long": "984在线观众",
+              "display_value": 984,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "984",
+              "display_middle_anchor": "984",
+              "display_long_anchor": "984在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "1万+",
+              "user_count_str": "984"
+            },
+            "owner": {
+              "nickname": "HaHA（无畏契约职业教练）",
+              "id_str": "3927882986161776",
+              "sec_uid": "MS4wLjABAAAASBjQrZ6lWXSkUZgfMhVU9PUya6mXYby0Pb2iEzphCnNf0KuHYwWi-EwnIcfeVT50",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "PDDSPWD",
+          "web_rid": "799834884246",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170025382707978_exphd.flv?expire=1731679018&sign=b944c17d26418b300876e931cf17506b&volcSecret=b944c17d26418b300876e931cf17506b&volcTime=1731679018&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/image-cut-tos-priv/2fbd92d95395ba5857df0acc6cf745d2~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=fszBnPDePy0uaUBraUUP6SuFmiw%3D",
+          "avatar": "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_2094bfd877c34bb3df9812c3535344e7.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434879327419861770",
+            "title": "来看我打几把",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116169990083969868_expuhd.flv?expire=1731679018&sign=b3ec1461c5641bd67881f9a91a4f0980&major_anchor_level=common",
+                "HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116169990083969868_exphd.flv?expire=1731679018&sign=471d3c3a969507ad844a1824d4267cf0&major_anchor_level=common",
+                "SD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116169990083969868_expld.flv?expire=1731679018&sign=fd8c9dd4230247a6bbae5be9aaa18c51&major_anchor_level=common",
+                "SD2": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116169990083969868_expsd.flv?expire=1731679018&sign=298f7fad7bf498d160cc1c49ce3673bd&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116169990083969868_expuhd.m3u8?expire=1731679018&sign=18cd6e0b0c03852af0a3b679955fabab&major_anchor_level=common",
+                "HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116169990083969868_exphd.m3u8?expire=1731679018&sign=f5d37c7ca21b04813ab6cc012658e9f0&major_anchor_level=common",
+                "SD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116169990083969868_expld.m3u8?expire=1731679018&sign=6218cc3a6f340cf179d1caab9a582640&major_anchor_level=common",
+                "SD2": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116169990083969868_expsd.m3u8?expire=1731679018&sign=b4db7bc3f658c0f2d29d1b73497030ed&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$18"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "938",
+              "display_middle": "938",
+              "display_long": "938在线观众",
+              "display_value": 938,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "938",
+              "display_middle_anchor": "938",
+              "display_long_anchor": "938在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "2万+",
+              "user_count_str": "938"
+            },
+            "owner": {
+              "nickname": "DRG.TvirusLuke",
+              "id_str": "2113710875227172",
+              "sec_uid": "MS4wLjABAAAAyc-890PEbQoCD9i_4l6tO4lDa6mlygCDlZG5czVR9SsiGEP2mo0ctsafoGslI_Wc",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "DRGLUKE",
+          "web_rid": "37985681487",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l11.douyincdn.com/thirdgame/stream-116169990083969868_exphd.flv?expire=1731679018&sign=471d3c3a969507ad844a1824d4267cf0&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/image-cut-tos-priv/136dd4e18e9a01e6cbd2a38ae119ae1b~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=1NTWYbLa8NKiBmNoznEA4XrUyz0%3D",
+          "avatar": "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_4f0d78545032b740ff66a5c16794c2a2.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434830111960124197",
+            "title": "FGC邀请赛",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expuhd.flv?auth_key=1731677218-0-0-6ea6fec419b135ede319478ed96bbecf&major_anchor_level=common",
+                "HD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_exphd.flv?auth_key=1731677218-0-0-b834eed127e63e2422b76a03c2ffc289&major_anchor_level=common",
+                "SD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expld.flv?auth_key=1731677218-0-0-da3b155740bcd51e0e8053453e36705c&major_anchor_level=common",
+                "SD2": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expsd.flv?auth_key=1731677218-0-0-dc2f39dbfcfad630d4fba10a92b28d28&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expuhd.m3u8?auth_key=1731677218-0-0-db79f51acc84f81132b2cc5016310a42&major_anchor_level=common",
+                "HD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_exphd.m3u8?auth_key=1731677218-0-0-90e9f65733c6a37d1251f95ddd1144ba&major_anchor_level=common",
+                "SD1": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expld.m3u8?auth_key=1731677218-0-0-25ab2d21b0462b73ad132ea2243acf68&major_anchor_level=common",
+                "SD2": "http://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_expsd.m3u8?auth_key=1731677218-0-0-55fbe579511b6c8ac38773ab39c1cd6f&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$19"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "913",
+              "display_middle": "913",
+              "display_long": "913在线观众",
+              "display_value": 913,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "913",
+              "display_middle_anchor": "913",
+              "display_long_anchor": "913在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "6万+",
+              "user_count_str": "913"
+            },
+            "owner": {
+              "nickname": "小伟TryTryz(无畏契约)",
+              "id_str": "1333045392586926",
+              "sec_uid": "MS4wLjABAAAA5BzeZd9gRVwoxG6P4PFPNvLG-4RNeuNtnaOZPYZbNtLjDWnkFw_c_du4YoAhk9pG",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "Seemytry",
+          "web_rid": "23406469421",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-t3.douyincdn.com/thirdgame/stream-116169221479596859_exphd.flv?auth_key=1731677218-0-0-b834eed127e63e2422b76a03c2ffc289&major_anchor_level=common",
+          "cover": "https://p11-webcast-sign.douyinpic.com/webcast-cover/7424877691335199539~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=ANC4ZBPGTETpmUf0s3y%2FJ5sinPk%3D",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_6f2171dfee333e4c276fbb9492301a9b.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434864209269443367",
+            "title": "300把双城之战AK，100套装Roll不停",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expuhd.flv?expire=1731679018&sign=70ab06062cd691efd372e3107e434d29&volcSecret=70ab06062cd691efd372e3107e434d29&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_exphd.flv?expire=1731679018&sign=493969c180312c85c42d91aef2cd652a&volcSecret=493969c180312c85c42d91aef2cd652a&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expld.flv?expire=1731679018&sign=ede14ad97ccbfc0696813228fa753e7c&volcSecret=ede14ad97ccbfc0696813228fa753e7c&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expsd.flv?expire=1731679018&sign=1986406c6dc2f2b98ac4c2a9aade6df9&volcSecret=1986406c6dc2f2b98ac4c2a9aade6df9&volcTime=1731679018&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expuhd/index.m3u8?expire=1731679018&sign=c1442f6975f6fe2ebc317cb88d5132be&volcSecret=c1442f6975f6fe2ebc317cb88d5132be&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_exphd/index.m3u8?expire=1731679018&sign=19b7da3f00c7e0c0859effd254cdc75a&volcSecret=19b7da3f00c7e0c0859effd254cdc75a&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expld/index.m3u8?expire=1731679018&sign=94292fcbb44c59be1477dd6012c9548c&volcSecret=94292fcbb44c59be1477dd6012c9548c&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_expsd/index.m3u8?expire=1731679018&sign=a00b0345cd22d4b0ef27f79f8280b746&volcSecret=a00b0345cd22d4b0ef27f79f8280b746&volcTime=1731679018&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1a"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "875",
+              "display_middle": "875",
+              "display_long": "875在线观众",
+              "display_value": 875,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "875",
+              "display_middle_anchor": "875",
+              "display_long_anchor": "875在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "4万+",
+              "user_count_str": "875"
+            },
+            "owner": {
+              "nickname": "7yy（歪厂技播）",
+              "id_str": "2102693996271372",
+              "sec_uid": "MS4wLjABAAAA6OqUCMWTE3akuDlo8Ns_lbydbE7zmdU-a9bwETcCBqhoHbpzFTUnpznuDK-13CXw",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "7yy2022",
+          "web_rid": "912633183991",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 2,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-t5.douyincdn.com/thirdgame/stream-404400130543059771_exphd.flv?expire=1731679018&sign=493969c180312c85c42d91aef2cd652a&volcSecret=493969c180312c85c42d91aef2cd652a&volcTime=1731679018&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/webcast-cover/1caa673d883549823cd324b82a7995d1.jpg~tplv-qz53dukwul-common-resize:360:0.image?lk3s=39e7556e&x-expires=1733666218&x-signature=MHIw8P6R2p1kFj86ibnjITDLY2Y%3D",
+          "avatar": "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0c454aa127f88d81390fbfc9eb523785.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434893738234661683",
+            "title": "第四次上黄金！",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_or4.flv?expire=1731679018&sign=1d5e7e67c5299a83bd3e78eaf12c2a66&volcSecret=1d5e7e67c5299a83bd3e78eaf12c2a66&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_exphd.flv?expire=1731679018&sign=76b7ce9445d4e57c0f3600bb653662ec&volcSecret=76b7ce9445d4e57c0f3600bb653662ec&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_expld.flv?expire=1731679018&sign=5400dfc35b0a7d124e7cf818c5a936e5&volcSecret=5400dfc35b0a7d124e7cf818c5a936e5&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_expsd.flv?expire=1731679018&sign=0ceba198399ef2ab37d0357a93624747&volcSecret=0ceba198399ef2ab37d0357a93624747&volcTime=1731679018&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_or4/index.m3u8?expire=1731679018&sign=53e810442b25416fd5a1459d4f91b2d9&volcSecret=53e810442b25416fd5a1459d4f91b2d9&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_exphd/index.m3u8?expire=1731679018&sign=c41dc4709e06e0a1fe4d1ec376ba116d&volcSecret=c41dc4709e06e0a1fe4d1ec376ba116d&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_expld/index.m3u8?expire=1731679018&sign=0e7423756978fcf7d0ce77b9bf8321ed&volcSecret=0e7423756978fcf7d0ce77b9bf8321ed&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_expsd/index.m3u8?expire=1731679018&sign=a2c446e156f8b0bcf0a56322187cb41e&volcSecret=a2c446e156f8b0bcf0a56322187cb41e&volcTime=1731679018&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1b"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "761",
+              "display_middle": "761",
+              "display_long": "761在线观众",
+              "display_value": 761,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "761",
+              "display_middle_anchor": "761",
+              "display_long_anchor": "761在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "1万+",
+              "user_count_str": "761"
+            },
+            "owner": {
+              "nickname": "俄洛伊小迷妹ee",
+              "id_str": "826435917841287",
+              "sec_uid": "MS4wLjABAAAAshurg6jJDz_utAtWyvfZVVkDQ_EvxYcnoRK_3iUcNDE",
+              "follow_info": {
+                "follow_status": 1,
+                "follow_status_str": "1"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "Kuangyiii",
+          "web_rid": "604995907609",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-116170215369212682_exphd.flv?expire=1731679018&sign=76b7ce9445d4e57c0f3600bb653662ec&volcSecret=76b7ce9445d4e57c0f3600bb653662ec&volcTime=1731679018&major_anchor_level=common",
+          "cover": "https://p11-webcast.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_40138f83a0a934854ebc5ad789f5b447~tplv-resize:360:0.image",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_40138f83a0a934854ebc5ad789f5b447.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434893609760721683",
+            "title": "进来看看顶分赋能局",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-404400589907166028_expuhd.flv?expire=1731679018&sign=e4b246b514148edf73d486450746e288&major_anchor_level=common",
+                "HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-404400589907166028_exphd.flv?expire=1731679018&sign=587c0e2e1438c5fd37ce3d350037feef&major_anchor_level=common",
+                "SD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-404400589907166028_expld.flv?expire=1731679018&sign=14bc7137c56d4dc5d765d6f67d6da6e8&major_anchor_level=common",
+                "SD2": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-404400589907166028_expsd.flv?expire=1731679018&sign=f06ac740fcc2c230aeac2bd14893c747&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-404400589907166028_expuhd.m3u8?expire=1731679018&sign=c8753de300746d171dd8489e97824759&major_anchor_level=common",
+                "HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-404400589907166028_exphd.m3u8?expire=1731679018&sign=ded7d3a5aff03762b2352f4291cace2d&major_anchor_level=common",
+                "SD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-404400589907166028_expld.m3u8?expire=1731679018&sign=d95070c112f91073c1b6881dffe3163b&major_anchor_level=common",
+                "SD2": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-404400589907166028_expsd.m3u8?expire=1731679018&sign=262c02fc938cf744baef32b101808f91&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1c"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "716",
+              "display_middle": "716",
+              "display_long": "716在线观众",
+              "display_value": 716,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "716",
+              "display_middle_anchor": "716",
+              "display_long_anchor": "716在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "6148",
+              "user_count_str": "716"
+            },
+            "owner": {
+              "nickname": "darling（无畏契约）",
+              "id_str": "1009807367093322",
+              "sec_uid": "MS4wLjABAAAAaeYuO9RbwPlik6AqTO-CVfUQnzqv8u4gG0SDJhGWGbf1UPkZa8gBuRpU09Jqx_gJ",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "darlingfps",
+          "web_rid": "849395495313",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 2,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l11.douyincdn.com/thirdgame/stream-404400589907166028_exphd.flv?expire=1731679018&sign=587c0e2e1438c5fd37ce3d350037feef&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/webcast-cover/2e95fb88343d709d85f4d1f538d708d2.jpg~tplv-qz53dukwul-common-resize:360:0.image?lk3s=39e7556e&x-expires=1733666218&x-signature=l0QDUcm2nXeCFuTqXJ5cIgyFZCo%3D",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_15536cfd37d24127509ef42acc8cd0a2.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434890624953895689",
+            "title": "咖喱鱼蛋.正在直播",
+            "stream_url": {
+              "stream_orientation": 1,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l26.douyincdn.com/stage/stream-116170166846881931_or4.flv?expire=6737532a&sign=4f7d5127df4c6d04a9c33a9d39fc207a&major_anchor_level=common",
+                "HD1": "http://pull-flv-l26.douyincdn.com/stage/stream-116170166846881931_hd.flv?expire=6737532a&sign=a3d177410934fdc6e6fe093ac7c04690&major_anchor_level=common",
+                "SD1": "http://pull-flv-l26.douyincdn.com/stage/stream-116170166846881931_ld.flv?expire=6737532a&sign=a31144b3e95393997dff00ebbb490552&major_anchor_level=common",
+                "SD2": "http://pull-flv-l26.douyincdn.com/stage/stream-116170166846881931_sd.flv?expire=6737532a&sign=93c47d90ecbdc9bf664f3d29557443e2&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l26.douyincdn.com/stage/stream-116170166846881931_or4.m3u8?expire=6737532a&sign=ca747169fed863266acaea68e8643032&major_anchor_level=common",
+                "HD1": "http://pull-hls-l26.douyincdn.com/stage/stream-116170166846881931_hd.m3u8?expire=6737532a&sign=3d4552f8b697f6bd176a18ef545acdf1&major_anchor_level=common",
+                "SD1": "http://pull-hls-l26.douyincdn.com/stage/stream-116170166846881931_ld.m3u8?expire=6737532a&sign=246427f7a60be3f916966e9e30a7339a&major_anchor_level=common",
+                "SD2": "http://pull-hls-l26.douyincdn.com/stage/stream-116170166846881931_sd.m3u8?expire=6737532a&sign=e74c54cb6b51e02ef9e9dc61a3890c60&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "origin",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1d"
+                }
+              }
+            },
+            "live_room_mode": 0,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "600",
+              "display_middle": "600",
+              "display_long": "600在线观众",
+              "display_value": 600,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "600",
+              "display_middle_anchor": "600",
+              "display_long_anchor": "600在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "3万+",
+              "user_count_str": "600"
+            },
+            "owner": {
+              "nickname": "咖喱鱼蛋",
+              "id_str": "3751999784091949",
+              "sec_uid": "MS4wLjABAAAA6xPAf-51N_EfXk0h3w1MwJe2jiRc27Y5TeWYkPuumvwp0FjMDYA50OAY3xhdPmVA",
+              "follow_info": {
+                "follow_status": 1,
+                "follow_status_str": "1"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "lcy0709R",
+          "web_rid": "48757224397",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l26.douyincdn.com/stage/stream-116170166846881931_hd.flv?expire=6737532a&sign=a3d177410934fdc6e6fe093ac7c04690&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/image-cut-tos-priv/378c00388a81e4fca787556f9e779d07~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=fiZxQ5leG9GxnZb3KK78Ahxl6c0%3D",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_2bb987fa78804d46e4ee1d8aea91e700.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434894317916850982",
+            "title": "1400小时2500场尚勃勒人柱力！赋能高分教学局！看了就有收获！",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170224494445388_expuhd.flv?expire=1731679018&sign=4650cea28ebefd622a08fa98e057436a&major_anchor_level=common",
+                "HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170224494445388_exphd.flv?expire=1731679018&sign=d1d6962186cf39a6f9ec271f3ccc5d63&major_anchor_level=common",
+                "SD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170224494445388_expld.flv?expire=1731679018&sign=9799a34c592e06fe8beab601f9053bf3&major_anchor_level=common",
+                "SD2": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170224494445388_expsd.flv?expire=1731679018&sign=a131e02652a02524f236a8072245b87a&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170224494445388_expuhd.m3u8?expire=1731679018&sign=49509eab31a150b4ab3dd633442be1fb&major_anchor_level=common",
+                "HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170224494445388_exphd.m3u8?expire=1731679018&sign=6245d862075e9094131753fddb504a20&major_anchor_level=common",
+                "SD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170224494445388_expld.m3u8?expire=1731679018&sign=bec814a5524d1d260b2924ebab5a2c3c&major_anchor_level=common",
+                "SD2": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170224494445388_expsd.m3u8?expire=1731679018&sign=8a1038bd6a82e2f2b9714935ca78c278&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1e"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "490",
+              "display_middle": "490",
+              "display_long": "490在线观众",
+              "display_value": 490,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "490",
+              "display_middle_anchor": "490",
+              "display_long_anchor": "490在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "4393",
+              "user_count_str": "490"
+            },
+            "owner": {
+              "nickname": "阿尚 (无畏契约)",
+              "id_str": "4347941631047076",
+              "sec_uid": "MS4wLjABAAAANzx2DTpqvDm_KbyrGECwDu8GE9QRURSOxmvinAj5soDNMC4DI4PNSQjVhtFWXvoJ",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "57872098345",
+          "web_rid": "82646739431",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l11.douyincdn.com/thirdgame/stream-116170224494445388_exphd.flv?expire=1731679018&sign=d1d6962186cf39a6f9ec271f3ccc5d63&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/webcast-cover/7410394922475997979~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=nm5qlZknfpYz%2Bc2pSaLdHgq2ywM%3D",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_oMI0v8AiPTcRc7QDxjAPESB6A3AYIAsBKAivZ.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434859265074236195",
+            "title": "Re：关于我转生变成猫娘这档事",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-692630428716630794_or4.flv?expire=1731679018&sign=04d541eb56be27d75b4dde87792e7870&volcSecret=04d541eb56be27d75b4dde87792e7870&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-692630428716630794_exphd.flv?expire=1731679018&sign=2d8a6855c1567365f3679927cd78842b&volcSecret=2d8a6855c1567365f3679927cd78842b&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-692630428716630794_expld.flv?expire=1731679018&sign=7f46b9aceea854c466ac59e96af4be94&volcSecret=7f46b9aceea854c466ac59e96af4be94&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-692630428716630794_expsd.flv?expire=1731679018&sign=cb53f3a7b251e5081cf2a7cb62e53172&volcSecret=cb53f3a7b251e5081cf2a7cb62e53172&volcTime=1731679018&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-692630428716630794_or4/index.m3u8?expire=1731679018&sign=a558e17970b599628d9c223752b90c0e&volcSecret=a558e17970b599628d9c223752b90c0e&volcTime=1731679018&major_anchor_level=common",
+                "HD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-692630428716630794_exphd/index.m3u8?expire=1731679018&sign=f16675a8739643947d777a37b0e5e4f0&volcSecret=f16675a8739643947d777a37b0e5e4f0&volcTime=1731679018&major_anchor_level=common",
+                "SD1": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-692630428716630794_expld/index.m3u8?expire=1731679018&sign=aceaa15b75bf69d0b11d2cb315c349ff&volcSecret=aceaa15b75bf69d0b11d2cb315c349ff&volcTime=1731679018&major_anchor_level=common",
+                "SD2": "http://pull-hs-f5.flive.douyincdn.com/thirdgame/stream-692630428716630794_expsd/index.m3u8?expire=1731679018&sign=932dcc81b4e57456a35f7f99b4ad87d9&volcSecret=932dcc81b4e57456a35f7f99b4ad87d9&volcTime=1731679018&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$1f"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "469",
+              "display_middle": "469",
+              "display_long": "469在线观众",
+              "display_value": 469,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "469",
+              "display_middle_anchor": "469",
+              "display_long_anchor": "469在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "1万+",
+              "user_count_str": "469"
+            },
+            "owner": {
+              "nickname": "Esdeath.",
+              "id_str": "2593068428303465",
+              "sec_uid": "MS4wLjABAAAA4MZXwICmSuD5CLsky8X7hA_l9z_IHBX3pXh-DhXu2F2goxFDIZgEIK3kbT8mHqQK",
+              "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "Esdeathkami.",
+          "web_rid": "93548214882",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-hs-f5-hot.flive.douyincdn.com/thirdgame/stream-692630428716630794_exphd.flv?expire=1731679018&sign=2d8a6855c1567365f3679927cd78842b&volcSecret=2d8a6855c1567365f3679927cd78842b&volcTime=1731679018&major_anchor_level=common",
+          "cover": "https://p11-webcast-sign.douyinpic.com/image-cut-tos-priv/ba21a0f93bf5c4717603b63ade271544~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=p4ZFHhpILLqJKt53hQCa0%2B4KcDU%3D",
+          "avatar": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_dcc263b83980f6127717a9d3b152eda3.jpeg?from=3067671334"
+        },
+        {
+          "room": {
+            "id_str": "7434892529197583130",
+            "title": "今日节目：神话局哨位思路讲解中（进来看吧~外面冷）",
+            "stream_url": {
+              "stream_orientation": 2,
+              "flv_pull_url": {
+                "FULL_HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170196313965388_expuhd.flv?expire=1731679018&sign=5a01b1d447f54bddefb9a03d8256d17b&major_anchor_level=common",
+                "HD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170196313965388_exphd.flv?expire=1731679018&sign=567bdd16dc080b3678164e00f7bb7e7f&major_anchor_level=common",
+                "SD1": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170196313965388_expld.flv?expire=1731679018&sign=e6ba8aa037242b3d37151028c9ac1d40&major_anchor_level=common",
+                "SD2": "http://pull-flv-l11.douyincdn.com/thirdgame/stream-116170196313965388_expsd.flv?expire=1731679018&sign=79de02420a2735d374f027d3e32d385e&major_anchor_level=common"
+              },
+              "hls_pull_url_map": {
+                "FULL_HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170196313965388_expuhd.m3u8?expire=1731679018&sign=43e58bdda7dc5a6798bfeb5e23e170d7&major_anchor_level=common",
+                "HD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170196313965388_exphd.m3u8?expire=1731679018&sign=a6b473e9505fd930bb01bfbb1206b151&major_anchor_level=common",
+                "SD1": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170196313965388_expld.m3u8?expire=1731679018&sign=675e302ddc5d37e3907297eb232b290a&major_anchor_level=common",
+                "SD2": "http://pull-hls-l11.douyincdn.com/thirdgame/stream-116170196313965388_expsd.m3u8?expire=1731679018&sign=a73cc796dfb9a607b34197a44549c157&major_anchor_level=common"
+              },
+              "default_resolution": "HD1",
+              "live_core_sdk_data": {
+                "pull_data": {
+                  "options": {
+                    "default_quality": {
+                      "name": "",
+                      "sdk_key": "hd",
+                      "v_codec": "",
+                      "resolution": "",
+                      "level": 0,
+                      "v_bit_rate": 0,
+                      "additional_content": "",
+                      "fps": 0,
+                      "disable": 0
+                    },
+                    "qualities": []
+                  },
+                  "stream_data": "$20"
+                }
+              }
+            },
+            "live_room_mode": 1,
+            "like_count": 0,
+            "room_view_stats": {
+              "is_hidden": false,
+              "display_short": "449",
+              "display_middle": "449",
+              "display_long": "449在线观众",
+              "display_value": 449,
+              "display_version": 1663849727,
+              "incremental": false,
+              "display_type": 1,
+              "display_short_anchor": "449",
+              "display_middle_anchor": "449",
+              "display_long_anchor": "449在线观众"
+            },
+            "stats": {
+              "total_user_desp": "",
+              "like_count": 0,
+              "total_user_str": "6855",
+              "user_count_str": "449"
+            },
+            "owner": {
+              "nickname": "7in（无畏契约）",
+              "id_str": "1190143787806569",
+              "sec_uid": "MS4wLjABAAAA9lqvOpyp9W2hfhyy8fMASp386jhAs0hTjrzDbnHFl6QbCP3bMLZfaQmc-af3Nmt8",
+              "follow_info": {
+                "follow_status": 1,
+                "follow_status_str": "1"
+              },
+              "subscribe": {
+                "is_member": false,
+                "level": 0,
+                "identity_type": 0,
+                "buy_type": 0,
+                "open": 0
+              }
+            },
+            "paid_live_data": {
+              "paid_type": 0,
+              "view_right": 0,
+              "duration": 0,
+              "delivery": 0,
+              "need_delivery_notice": false,
+              "anchor_right": 0,
+              "pay_ab_type": 1,
+              "privilege_info": {},
+              "privilege_info_map": {},
+              "max_preview_duration": 0
+            },
+            "strategy_config": "",
+            "strategy_extra": ""
+          },
+          "tag_name": "",
+          "uniq_id": "Sevenone1s",
+          "web_rid": "76112910063",
+          "is_recommend": 1,
+          "title_type": 2,
+          "cover_type": 1,
+          "request_id": "20241108215658D011532BC9FC24464E07",
+          "requestId": "20241108215658D011532BC9FC24464E07",
+          "streamSrc": "https://pull-flv-l11.douyincdn.com/thirdgame/stream-116170196313965388_exphd.flv?expire=1731679018&sign=567bdd16dc080b3678164e00f7bb7e7f&major_anchor_level=common",
+          "cover": "https://p3-webcast-sign.douyinpic.com/webcast-cover/7407728634339019557~tplv-qz53dukwul-common-resize:360:0.image?lk3s=7945d550&x-expires=1733666218&x-signature=DAMdQ6CgmBwoy21Kb6LC0sVA3Do%3D",
+          "avatar": "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_4a13ac2f4825a43aef14a5c2d7dce0c8.jpeg?from=3067671334"
+        }
+      ],
+      "danmakuQueue": [],
+      "danmakuQueueLength": 0,
+      "danmakuSwitch": true,
+      "foldChatroom": false,
+      "isFocus": false,
+      "imAnchorBan": false,
+      "isOlympicGame": false,
+      "isEnableOlympic4k": false
+    },
+    "linkmicStore": {
+      "store": null,
+      "applySource": "",
+      "linkMicConfig": {
+        "config": {}
+      },
+      "imLinkMicSeats": {
+        "0": {
+          "idx": 0
+        },
+        "1": {
+          "idx": 1
+        },
+        "2": {
+          "idx": 2
+        },
+        "3": {
+          "idx": 3
+        },
+        "4": {
+          "idx": 4
+        },
+        "5": {
+          "idx": 5
+        },
+        "6": {
+          "idx": 6
+        },
+        "7": {
+          "idx": 7
+        },
+        "8": {
+          "idx": 8
+        }
+      },
+      "seiLinkMicSeats": {
+        "0": {
+          "idx": 0
+        },
+        "1": {
+          "idx": 1
+        },
+        "2": {
+          "idx": 2
+        },
+        "3": {
+          "idx": 3
+        },
+        "4": {
+          "idx": 4
+        },
+        "5": {
+          "idx": 5
+        },
+        "6": {
+          "idx": 6
+        },
+        "7": {
+          "idx": 7
+        },
+        "8": {
+          "idx": 8
+        }
+      },
+      "playModes": [],
+      "orderSingSortRule": 1,
+      "choosePeopleArr": [],
+      "choosePeopleAll": false,
+      "choosePanelVisible": false,
+      "choosePeopleShowTCC": false,
+      "enlargeSeatApplyUid": null,
+      "enlargeSeatImage": "",
+      "enlargeGuestType": 0,
+      "functionType2": "",
+      "rankListShow": false,
+      "showHonorStation": false,
+      "selectedLinkMicDevices": {},
+      "linkStatus": 0,
+      "devicesModalMode": 3,
+      "audioPermission": 0,
+      "videoPermission": 0,
+      "isFansGuide": false,
+      "isCandidate": false,
+      "isPlayModeNotSupport": false,
+      "floatModal": 0,
+      "dressListInfo": {},
+      "showLinkMicApplyModal": false,
+      "devicesModalCountDown": 0,
+      "inviteFromUserId": "",
+      "linkmicModalSettings": {
+        "show": false
+      },
+      "guestBattleSettingsShow": false,
+      "dressMvpInfo": {},
+      "dressListAll": [],
+      "layoutBackgroundImg": "",
+      "isAgcAnchor": false,
+      "choosePeopleList": {},
+      "faceRecognitionShow": false,
+      "isGroupLive": 0,
+      "doubleCEnlarge": {
+        "showType": ""
+      },
+      "isCrossLink": false,
+      "crossLinkTimerStart": 0,
+      "roomBattleType": "pk"
+    },
+    "giftStore": {
+      "store": null,
+      "diyPluginIdWhiteList": [],
+      "diyCardNameWhiteList": [],
+      "hoverGiftWhiteList": [],
+      "hoverGiftWhiteListV2": [],
+      "giftBuffIdWhiteList": [],
+      "giftMessages": [],
+      "giftPages": [],
+      "effectList": [],
+      "balance": 0,
+      "effectSwitchStatus": true,
+      "giftSwitchStatus": true,
+      "giftAuthStatus": false,
+      "giftTccStatus": false,
+      "giftPanelSwitchStatus": 0,
+      "giftPanelShowFrom": "",
+      "giftExtraInfo": {},
+      "isGiftFullEffect": false,
+      "showBuffCard": true
+    },
+    "propStore": {
+      "store": null,
+      "propList": []
+    },
+    "pkStore": {
+      "store": null,
+      "pkAppData": {},
+      "pkTccStatus": false,
+      "pkEggData": null,
+      "pkCountDown": 0,
+      "usePkEgg": false,
+      "isDoubleView": false,
+      "showPKScoreBar": false,
+      "showPKContributorsTop": false,
+      "pkId": "",
+      "isVote": false,
+      "isInPK": false,
+      "pkUserIdList": []
+    },
+    "audienceStore": {
+      "store": null,
+      "audienceSwitchStatus": true,
+      "audienceAuthStatus": false,
+      "audienceTccStatus": false
+    },
+    "abStore": {
+      "store": null,
+      "layoutData": null,
+      "liveModalDynamicBg": false,
+      "liveModalWeakEntrance": false,
+      "liveModalWithoutAction": false
+    },
+    "fansClubStore": {
+      "store": null,
+      "fansClubTccStatus": false,
+      "fansClubAuthStatus": false,
+      "fansClubShowStatus": {
+        "isShow": false,
+        "source": ""
+      },
+      "fansClubJoinStatus": false,
+      "fansClubAutoLightStatus": false,
+      "fansClubButtonShowStatus": false,
+      "fansClubData": {},
+      "hasFetchDataStatus": false,
+      "fansClubEntranceBounceStatus": false
+    },
+    "layoutStore": {
+      "store": null,
+      "disableUnLoginFilter": false,
+      "rawThemeConfig": {},
+      "pathname": "/27709227417",
+      "isClient": false,
+      "navigationSelected": "live",
+      "hidehead": false,
+      "hardNavigation": 0,
+      "hardCategoryTab": -1,
+      "hardHeader": 0,
+      "hardFooter": 0,
+      "hardSideBar": 0,
+      "hardErrorStyle": 0,
+      "transparentHeader": false,
+      "specialBanner": false,
+      "hasRelevantRoom": true,
+      "immersive": false,
+      "playerMargin": 0
+    },
+    "streamStore": {
+      "store": null,
+      "leadingData": {
+        "is_login": false,
+        "level": 3,
+        "items": {
+          "label_lead": {
+            "name": "label_lead",
+            "is_leading": true,
+            "lead_content": {
+              "label": "登录即享",
+              "leading_text": "",
+              "trial_text": "",
+              "trial_end_text": "",
+              "trial_duration": 0
+            }
+          },
+          "probation_lead": {
+            "name": "probation_lead",
+            "is_leading": true,
+            "lead_content": {
+              "label": "",
+              "leading_text": "",
+              "trial_text": "蓝光可试看30s，登录可无限畅享蓝光画质",
+              "trial_end_text": "30s试看完成，已切换为标清画质",
+              "trial_duration": 30
+            }
+          },
+          "prompt_lead": {
+            "name": "prompt_lead",
+            "is_leading": true,
+            "lead_content": {
+              "label": "",
+              "leading_text": "当前观看标清画质，登录即可畅享蓝光画质",
+              "trial_text": "",
+              "trial_end_text": "",
+              "trial_duration": 0
+            }
+          }
+        },
+        "clatity_guide": 3
+      },
+      "streamData": {
+        "H265_streamData": {
+          "options": {
+            "default_quality": {
+              "name": "蓝光",
+              "sdk_key": "hd",
+              "v_codec": "bytevc1",
+              "resolution": "1280x720",
+              "level": 3,
+              "v_bit_rate": 0,
+              "additional_content": "",
+              "fps": 0,
+              "disable": 0
+            },
+            "qualities": [
+              {
+                "name": "标清",
+                "sdk_key": "ld",
+                "v_codec": "bytevc1",
+                "resolution": "960x540",
+                "level": 1,
+                "v_bit_rate": 1000000,
+                "additional_content": "480P",
+                "fps": 25,
+                "disable": 0
+              },
+              {
+                "name": "高清",
+                "sdk_key": "sd",
+                "v_codec": "bytevc1",
+                "resolution": "1280x720",
+                "level": 2,
+                "v_bit_rate": 2000000,
+                "additional_content": "720P",
+                "fps": 30,
+                "disable": 0
+              },
+              {
+                "name": "蓝光",
+                "sdk_key": "hd",
+                "v_codec": "bytevc1",
+                "resolution": "1280x720",
+                "level": 3,
+                "v_bit_rate": 6000000,
+                "additional_content": "1080P",
+                "fps": 60,
+                "disable": 0
+              }
+            ]
+          },
+          "common": {
+            "ts": "1731074218",
+            "session_id": "037-20241108215658D011532BC9FC24464E07",
+            "stream": "692630711046242998",
+            "rule_ids": "{\"ab_version_trace\":null,\"sched\":\"{\\\"result\\\":{\\\"hit\\\":\\\"default\\\",\\\"cdn\\\":1064}}\"}",
+            "common_trace": "{\"StrategyTrace\":{\"Neptune\":{\"PlayStream\":{\"ids\":null}}},\"BusinessType\":\"game_16x9\",\"SceneNames\":[\"douyin_game_tag\"],\"SceneTags\":{\"douyin_game_tag\":\"1010017\"},\"BigeventAnchorLevel\":\"\"}",
+            "app_id": "100136",
+            "major_anchor_level": "common",
+            "mode": "TopQuality",
+            "lines": {
+              "main": "line_870",
+              "backup": "line_1064"
+            },
+            "p2p_params": null,
+            "stream_data_content_encoding": "default",
+            "common_sdk_params": {
+              "main": "{}",
+              "backup": "{}"
+            }
+          },
+          "stream": {
+            "sd": {
+              "main": {
+                "flv": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.flv?expire=672f6a2a&sign=b4be103593c08a10d23ed522d7c3fb0c&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.sdp?expire=672f6a2a&sign=6e1d3e1e54525fb783529b4b56a51ca0&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":2000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":30}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd5.flv?keeptime=00015180&wsSecret=f08b06065c4032f0d0c9d306fa39dad1&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd5/playlist.m3u8?keeptime=00015180&wsSecret=443e0c35ae7d5b4a81884d3fc376eb68&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd5/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=443e0c35ae7d5b4a81884d3fc376eb68&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":2000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":30}",
+                "enableEncryption": false
+              }
+            },
+            "md": {
+              "main": {
+                "flv": "https://pull-flv-spe-l26-admin.douyincdn.com/fantasy/stream-692630711046242998_md.flv?expire=672f6a2a&sign=699a22f502a8b7dfe7b6d194f2bce89a&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_md.m3u8?expire=672f6a2a&sign=6236a6bbe74bada7280d895acbfb6404&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_md.sdp?expire=672f6a2a&sign=4af9f45c5c1ba50bc639112692245267&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_md.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=6236a6bbe74bada7280d895acbfb6404&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":800000,\"resolution\":\"640x360\",\"gop\":4,\"drType\":\"sdr\",\"fps\":15}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "https://pull-flv-spe-l1-admin.douyincdn.com/fantasy-bak/stream-692630711046242998_md.flv?keeptime=00015180&wsSecret=45fc6012b3be1cbb820e5cd951443f7a&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_md/playlist.m3u8?keeptime=00015180&wsSecret=fd567fe869c912f79ed4f26ed173a474&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_md/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=fd567fe869c912f79ed4f26ed173a474&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":800000,\"resolution\":\"640x360\",\"gop\":4,\"drType\":\"sdr\",\"fps\":15}",
+                "enableEncryption": false
+              }
+            },
+            "ao": {
+              "main": {
+                "flv": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.flv?expire=672f6a2a&sign=daca4a21013144ed3cb87a9cef043635&only_audio=1&major_anchor_level=common",
+                "hls": "",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":0,\"resolution\":\"\",\"gop\":2,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998.flv?keeptime=00015180&wsSecret=5fedeec1e4af8b6872b8109ff757594a&wsTime=672e18aa&only_audio=1&major_anchor_level=common",
+                "hls": "",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":0,\"resolution\":\"\",\"gop\":2,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              }
+            },
+            "hd": {
+              "main": {
+                "flv": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.flv?expire=672f6a2a&sign=6024902637c737cae905fe70b7bb315b&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.sdp?expire=672f6a2a&sign=f94bd62c530224ac730a915aefc86ede&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":6000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":60}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd5.flv?keeptime=00015180&wsSecret=81a03c3e93571a9e1c00ef527d269551&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd5/playlist.m3u8?keeptime=00015180&wsSecret=c82f6824559b66abf8f7193607aae274&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd5/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=c82f6824559b66abf8f7193607aae274&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":6000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":60}",
+                "enableEncryption": false
+              }
+            },
+            "origin": {
+              "main": {
+                "flv": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.flv?expire=672f6a2a&sign=daca4a21013144ed3cb87a9cef043635&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.sdp?expire=672f6a2a&sign=2fb78d985824665ab2468442e16aa29d&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":11930624,\"resolution\":\"1920x1080\",\"gop\":4,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998.flv?keeptime=00015180&wsSecret=5fedeec1e4af8b6872b8109ff757594a&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=787682b0603f161e556b1026c7be732a&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=787682b0603f161e556b1026c7be732a&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":11930624,\"resolution\":\"1920x1080\",\"gop\":4,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              }
+            },
+            "ld": {
+              "main": {
+                "flv": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.flv?expire=672f6a2a&sign=d7ce5d3a92cc6143e9055a4e8d64e1fb&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.sdp?expire=672f6a2a&sign=1cb219dda063a2b6b5d240ff1f066624&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":1000000,\"resolution\":\"960x540\",\"gop\":4,\"drType\":\"sdr\",\"fps\":25}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld5.flv?keeptime=00015180&wsSecret=6488e3001dbd226e7cc5d9c6c52cfcf1&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld5/playlist.m3u8?keeptime=00015180&wsSecret=7cdcc8cbd88b66d0fcbd2edfe32a5ac9&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld5/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=7cdcc8cbd88b66d0fcbd2edfe32a5ac9&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h265\",\"vbitrate\":1000000,\"resolution\":\"960x540\",\"gop\":4,\"drType\":\"sdr\",\"fps\":25}",
+                "enableEncryption": false
+              }
+            }
+          }
+        },
+        "H264_streamData": {
+          "options": {
+            "default_quality": {
+              "name": "蓝光",
+              "sdk_key": "hd",
+              "v_codec": "264",
+              "resolution": "1280x720",
+              "level": 3,
+              "v_bit_rate": 0,
+              "additional_content": "",
+              "fps": 0,
+              "disable": 0
+            },
+            "qualities": [
+              {
+                "name": "标清",
+                "sdk_key": "ld",
+                "v_codec": "264",
+                "resolution": "960x540",
+                "level": 1,
+                "v_bit_rate": 1000000,
+                "additional_content": "480P",
+                "fps": 25,
+                "disable": 0
+              },
+              {
+                "name": "高清",
+                "sdk_key": "sd",
+                "v_codec": "264",
+                "resolution": "1280x720",
+                "level": 2,
+                "v_bit_rate": 2000000,
+                "additional_content": "720P",
+                "fps": 30,
+                "disable": 0
+              },
+              {
+                "name": "蓝光",
+                "sdk_key": "hd",
+                "v_codec": "264",
+                "resolution": "1280x720",
+                "level": 3,
+                "v_bit_rate": 6000000,
+                "additional_content": "1080P",
+                "fps": 60,
+                "disable": 0
+              }
+            ]
+          },
+          "common": {
+            "ts": "1731074218",
+            "session_id": "037-20241108215658D011532BC9FC24464E07",
+            "stream": "692630711046242998",
+            "rule_ids": "{\"ab_version_trace\":null,\"sched\":\"{\\\"result\\\":{\\\"hit\\\":\\\"default\\\",\\\"cdn\\\":1060}}\"}",
+            "common_trace": "{\"StrategyTrace\":{\"Neptune\":{\"PlayStream\":{\"ids\":null}}},\"BusinessType\":\"game_16x9\",\"SceneNames\":[\"douyin_game_tag\"],\"SceneTags\":{\"douyin_game_tag\":\"1010017\"},\"BigeventAnchorLevel\":\"\"}",
+            "app_id": "100136",
+            "major_anchor_level": "common",
+            "mode": "TopQuality",
+            "lines": {
+              "main": "line_874",
+              "backup": "line_1060"
+            },
+            "p2p_params": null,
+            "stream_data_content_encoding": "default",
+            "common_sdk_params": {
+              "main": "{}",
+              "backup": "{}"
+            }
+          },
+          "stream": {
+            "ao": {
+              "main": {
+                "flv": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998.flv?keeptime=00015180&wsSecret=2e8669a7054d8e17d684a1f31ab6beec&wsTime=672e18aa&only_audio=1&major_anchor_level=common",
+                "hls": "",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":0,\"resolution\":\"\",\"gop\":2,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998.flv?expire=672f6a2a&sign=6a7d41f9f22a5e88b4eb7f2bf3c52e73&major_anchor_level=common&only_audio=1",
+                "hls": "",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":0,\"resolution\":\"\",\"gop\":2,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              }
+            },
+            "sd": {
+              "main": {
+                "flv": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd.flv?keeptime=00015180&wsSecret=76787d8a3ac2c1e3eb57cb08025ea760&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":2000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":30}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd.flv?expire=672f6a2a&sign=aa340a0d47d56c1bc9d1e8879cc49553&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd.m3u8?expire=672f6a2a&sign=c0e7c4e7408a153762ddf19398175233&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd.sdp?expire=672f6a2a&sign=beef062bd6183516dbef83b914859ad9&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamesd.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=c0e7c4e7408a153762ddf19398175233&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":2000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":30}",
+                "enableEncryption": false
+              }
+            },
+            "ld": {
+              "main": {
+                "flv": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld.flv?keeptime=00015180&wsSecret=aaad13d77ae951c6a26f111a7fcd76b8&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"VCodec\":\"h264\",\"EnableClosePlayRetry\":1,\"vbitrate\":1000000,\"resolution\":\"960x540\",\"gop\":4,\"drType\":\"sdr\",\"fps\":25}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld.flv?expire=672f6a2a&sign=962897235db1a757c8ac889dc99a17b0&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld.m3u8?expire=672f6a2a&sign=1b8b83d9444dd0a1bfce4874f1c6086d&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld.sdp?expire=672f6a2a&sign=85156a19c34f21058567c32a669faf77&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gameld.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=1b8b83d9444dd0a1bfce4874f1c6086d&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":1000000,\"resolution\":\"960x540\",\"gop\":4,\"drType\":\"sdr\",\"fps\":25}",
+                "enableEncryption": false
+              }
+            },
+            "hd": {
+              "main": {
+                "flv": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd.flv?keeptime=00015180&wsSecret=fd913ed58b2320142f01f36c70fdc6c6&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":6000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":60}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd.flv?expire=672f6a2a&sign=dd6eb911ef9e90c59471b2baa82657b7&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd.m3u8?expire=672f6a2a&sign=44c770553a5dfb6bba4daf7e943f83fd&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd.sdp?expire=672f6a2a&sign=0bbd9e5bbcef400ea3eb63ee691abea9&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_gamehd.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=44c770553a5dfb6bba4daf7e943f83fd&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":6000000,\"resolution\":\"1280x720\",\"gop\":4,\"drType\":\"sdr\",\"fps\":60}",
+                "enableEncryption": false
+              }
+            },
+            "md": {
+              "main": {
+                "flv": "https://pull-flv-spe-l1-admin.douyincdn.com/fantasy/stream-692630711046242998_md.flv?keeptime=00015180&wsSecret=a9ec688b3a6f7d3f3d092b7a10b8ad21&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_md/playlist.m3u8?keeptime=00015180&wsSecret=37bfa32085387e34d462e6a473656f8d&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_md/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=37bfa32085387e34d462e6a473656f8d&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":800000,\"resolution\":\"640x360\",\"gop\":4,\"drType\":\"sdr\",\"fps\":15}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "https://pull-flv-spe-l26-admin.douyincdn.com/fantasy-bak/stream-692630711046242998_md.flv?expire=672f6a2a&sign=cd45b96c5cefb8976be312a1f37649f9&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_md.m3u8?expire=672f6a2a&sign=ed8e50810932329a2f9af698f20b2f5e&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_md.sdp?expire=672f6a2a&sign=bfac3a1716829f8a570ed1d615a66e49&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998_md.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=ed8e50810932329a2f9af698f20b2f5e&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":800000,\"resolution\":\"640x360\",\"gop\":4,\"drType\":\"sdr\",\"fps\":15}",
+                "enableEncryption": false
+              }
+            },
+            "origin": {
+              "main": {
+                "flv": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998.flv?keeptime=00015180&wsSecret=2e8669a7054d8e17d684a1f31ab6beec&wsTime=672e18aa&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "",
+                "tsl": "http://pull-tsl-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?TimeShiftFormat=offset&keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":11930624,\"resolution\":\"1920x1080\",\"gop\":4,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              },
+              "backup": {
+                "flv": "http://pull-flv-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998.flv?expire=672f6a2a&sign=6a7d41f9f22a5e88b4eb7f2bf3c52e73&major_anchor_level=common",
+                "hls": "http://pull-hls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998.m3u8?expire=672f6a2a&sign=b7258bc3ea3b4f1382a287eacbb11929&major_anchor_level=common",
+                "cmaf": "",
+                "dash": "",
+                "lls": "http://pull-lls-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998.sdp?expire=672f6a2a&sign=00bdb47a99f99cb7c02229835bc74cb5&major_anchor_level=common",
+                "tsl": "http://pull-tsl-spe-l26.douyinliving.com/fantasy-bak/stream-692630711046242998.m3u8?TimeShiftFormat=offset&expire=672f6a2a&sign=b7258bc3ea3b4f1382a287eacbb11929&major_anchor_level=common",
+                "tile": "",
+                "http_ts": "",
+                "ll_hls": "",
+                "sdk_params": "{\"EnableClosePlayRetry\":1,\"VCodec\":\"h264\",\"vbitrate\":11930624,\"resolution\":\"1920x1080\",\"gop\":4,\"drType\":\"sdr\",\"fps\":70}",
+                "enableEncryption": false
+              }
+            }
+          }
+        },
+        "UGC_streamData": {
+          "options": null,
+          "common": null,
+          "stream": null
+        }
+      },
+      "leadingShow": false,
+      "renderTime": 1731074218656,
+      "singleControlTime": 86400000,
+      "singleControlMaxShowTime": 15552000000,
+      "isUseVVC": false,
+      "isH265": false,
+      "isH265Error": false,
+      "videoInit": false
+    },
+    "cameraStore": {
+      "store": null,
+      "cameraInfo": {
+        "id": "7434850032714631976",
+        "title": "2024无畏契约改变者全球冠军赛 ｜淘汰赛第一日",
+        "cover": {
+          "url_list": [
+            "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=z%2FoexbjeHuPfoAdYvd151aIAwT8%3D",
+            "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=lLLrozSICXBplHBo6sKWJfNJdTQ%3D"
+          ],
+          "uri": "tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc",
+          "height": 0,
+          "width": 0,
+          "avg_color": "#FFF1EB",
+          "image_type": 0,
+          "open_web_url": "",
+          "is_animated": false,
+          "flex_setting_list": [],
+          "text_setting_list": []
+        },
+        "isMainCamera": true,
+        "h264Stream": {
+          "flv_pull_url": {
+            "HD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd.flv?keeptime=00015180&wsSecret=fd913ed58b2320142f01f36c70fdc6c6&wsTime=672e18aa&major_anchor_level=common",
+            "SD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld.flv?keeptime=00015180&wsSecret=aaad13d77ae951c6a26f111a7fcd76b8&wsTime=672e18aa&major_anchor_level=common",
+            "SD2": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd.flv?keeptime=00015180&wsSecret=76787d8a3ac2c1e3eb57cb08025ea760&wsTime=672e18aa&major_anchor_level=common"
+          },
+          "default_resolution": "HD1",
+          "hls_pull_url_map": {
+            "FULL_HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+            "HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+            "SD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+            "SD2": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common"
+          },
+          "hls_pull_url": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+          "stream_orientation": 2,
+          "live_core_sdk_data": {
+            "pull_data": {
+              "options": {
+                "default_quality": {
+                  "name": "蓝光",
+                  "sdk_key": "hd",
+                  "v_codec": "264",
+                  "resolution": "1280x720",
+                  "level": 3,
+                  "v_bit_rate": 0,
+                  "additional_content": "",
+                  "fps": 0,
+                  "disable": 0
+                },
+                "qualities": [
+                  {
+                    "name": "标清",
+                    "sdk_key": "ld",
+                    "v_codec": "264",
+                    "resolution": "960x540",
+                    "level": 1,
+                    "v_bit_rate": 1000000,
+                    "additional_content": "480P",
+                    "fps": 25,
+                    "disable": 0
+                  },
+                  {
+                    "name": "高清",
+                    "sdk_key": "sd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 2,
+                    "v_bit_rate": 2000000,
+                    "additional_content": "720P",
+                    "fps": 30,
+                    "disable": 0
+                  },
+                  {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 6000000,
+                    "additional_content": "1080P",
+                    "fps": 60,
+                    "disable": 0
+                  }
+                ]
+              },
+              "stream_data": "$21"
+            }
+          },
+          "extra": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 0,
+            "max_bitrate": 0,
+            "min_bitrate": 0,
+            "default_bitrate": 0,
+            "bitrate_adapt_strategy": 0,
+            "anchor_interact_profile": 0,
+            "audience_interact_profile": 0,
+            "hardware_encode": false,
+            "video_profile": 0,
+            "h265_enable": false,
+            "gop_sec": 0,
+            "bframe_enable": false,
+            "roi": false,
+            "sw_roi": false,
+            "bytevc1_enable": false
+          },
+          "pull_datas": {}
+        },
+        "h265Stream": {
+          "flv_pull_url": {
+            "HD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.flv?expire=672f6a2a&sign=6024902637c737cae905fe70b7bb315b&major_anchor_level=common",
+            "SD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.flv?expire=672f6a2a&sign=d7ce5d3a92cc6143e9055a4e8d64e1fb&major_anchor_level=common",
+            "SD2": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.flv?expire=672f6a2a&sign=b4be103593c08a10d23ed522d7c3fb0c&major_anchor_level=common"
+          },
+          "default_resolution": "HD1",
+          "hls_pull_url_map": {
+            "FULL_HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+            "HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+            "SD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+            "SD2": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common"
+          },
+          "hls_pull_url": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+          "stream_orientation": 2,
+          "live_core_sdk_data": {
+            "pull_data": {
+              "options": {
+                "default_quality": {
+                  "name": "蓝光",
+                  "sdk_key": "hd",
+                  "v_codec": "bytevc1",
+                  "resolution": "1280x720",
+                  "level": 3,
+                  "v_bit_rate": 0,
+                  "additional_content": "",
+                  "fps": 0,
+                  "disable": 0
+                },
+                "qualities": [
+                  {
+                    "name": "标清",
+                    "sdk_key": "ld",
+                    "v_codec": "bytevc1",
+                    "resolution": "960x540",
+                    "level": 1,
+                    "v_bit_rate": 1000000,
+                    "additional_content": "480P",
+                    "fps": 25,
+                    "disable": 0
+                  },
+                  {
+                    "name": "高清",
+                    "sdk_key": "sd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 2,
+                    "v_bit_rate": 2000000,
+                    "additional_content": "720P",
+                    "fps": 30,
+                    "disable": 0
+                  },
+                  {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 6000000,
+                    "additional_content": "1080P",
+                    "fps": 60,
+                    "disable": 0
+                  }
+                ]
+              },
+              "stream_data": "$22"
+            }
+          },
+          "extra": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 0,
+            "max_bitrate": 0,
+            "min_bitrate": 0,
+            "default_bitrate": 0,
+            "bitrate_adapt_strategy": 0,
+            "anchor_interact_profile": 0,
+            "audience_interact_profile": 0,
+            "hardware_encode": false,
+            "video_profile": 0,
+            "h265_enable": false,
+            "gop_sec": 0,
+            "bframe_enable": false,
+            "roi": false,
+            "sw_roi": false,
+            "bytevc1_enable": false
+          },
+          "pull_datas": {}
+        },
+        "matchId": "0",
+        "cameraId": "7434796342314193955",
+        "groupId": "",
+        "hasMatchStats": false
+      },
+      "mainCameraInfo": {
+        "id": "7434850032714631976",
+        "title": "2024无畏契约改变者全球冠军赛 ｜淘汰赛第一日",
+        "cover": {
+          "url_list": [
+            "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=z%2FoexbjeHuPfoAdYvd151aIAwT8%3D",
+            "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=lLLrozSICXBplHBo6sKWJfNJdTQ%3D"
+          ],
+          "uri": "tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc",
+          "height": 0,
+          "width": 0,
+          "avg_color": "#FFF1EB",
+          "image_type": 0,
+          "open_web_url": "",
+          "is_animated": false,
+          "flex_setting_list": [],
+          "text_setting_list": []
+        },
+        "isMainCamera": true,
+        "h264Stream": {
+          "flv_pull_url": {
+            "HD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd.flv?keeptime=00015180&wsSecret=fd913ed58b2320142f01f36c70fdc6c6&wsTime=672e18aa&major_anchor_level=common",
+            "SD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld.flv?keeptime=00015180&wsSecret=aaad13d77ae951c6a26f111a7fcd76b8&wsTime=672e18aa&major_anchor_level=common",
+            "SD2": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd.flv?keeptime=00015180&wsSecret=76787d8a3ac2c1e3eb57cb08025ea760&wsTime=672e18aa&major_anchor_level=common"
+          },
+          "default_resolution": "HD1",
+          "hls_pull_url_map": {
+            "FULL_HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+            "HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+            "SD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+            "SD2": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common"
+          },
+          "hls_pull_url": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+          "stream_orientation": 2,
+          "live_core_sdk_data": {
+            "pull_data": {
+              "options": {
+                "default_quality": {
+                  "name": "蓝光",
+                  "sdk_key": "hd",
+                  "v_codec": "264",
+                  "resolution": "1280x720",
+                  "level": 3,
+                  "v_bit_rate": 0,
+                  "additional_content": "",
+                  "fps": 0,
+                  "disable": 0
+                },
+                "qualities": [
+                  {
+                    "name": "标清",
+                    "sdk_key": "ld",
+                    "v_codec": "264",
+                    "resolution": "960x540",
+                    "level": 1,
+                    "v_bit_rate": 1000000,
+                    "additional_content": "480P",
+                    "fps": 25,
+                    "disable": 0
+                  },
+                  {
+                    "name": "高清",
+                    "sdk_key": "sd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 2,
+                    "v_bit_rate": 2000000,
+                    "additional_content": "720P",
+                    "fps": 30,
+                    "disable": 0
+                  },
+                  {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 6000000,
+                    "additional_content": "1080P",
+                    "fps": 60,
+                    "disable": 0
+                  }
+                ]
+              },
+              "stream_data": "$23"
+            }
+          },
+          "extra": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 0,
+            "max_bitrate": 0,
+            "min_bitrate": 0,
+            "default_bitrate": 0,
+            "bitrate_adapt_strategy": 0,
+            "anchor_interact_profile": 0,
+            "audience_interact_profile": 0,
+            "hardware_encode": false,
+            "video_profile": 0,
+            "h265_enable": false,
+            "gop_sec": 0,
+            "bframe_enable": false,
+            "roi": false,
+            "sw_roi": false,
+            "bytevc1_enable": false
+          },
+          "pull_datas": {}
+        },
+        "h265Stream": {
+          "flv_pull_url": {
+            "HD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.flv?expire=672f6a2a&sign=6024902637c737cae905fe70b7bb315b&major_anchor_level=common",
+            "SD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.flv?expire=672f6a2a&sign=d7ce5d3a92cc6143e9055a4e8d64e1fb&major_anchor_level=common",
+            "SD2": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.flv?expire=672f6a2a&sign=b4be103593c08a10d23ed522d7c3fb0c&major_anchor_level=common"
+          },
+          "default_resolution": "HD1",
+          "hls_pull_url_map": {
+            "FULL_HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+            "HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+            "SD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+            "SD2": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common"
+          },
+          "hls_pull_url": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+          "stream_orientation": 2,
+          "live_core_sdk_data": {
+            "pull_data": {
+              "options": {
+                "default_quality": {
+                  "name": "蓝光",
+                  "sdk_key": "hd",
+                  "v_codec": "bytevc1",
+                  "resolution": "1280x720",
+                  "level": 3,
+                  "v_bit_rate": 0,
+                  "additional_content": "",
+                  "fps": 0,
+                  "disable": 0
+                },
+                "qualities": [
+                  {
+                    "name": "标清",
+                    "sdk_key": "ld",
+                    "v_codec": "bytevc1",
+                    "resolution": "960x540",
+                    "level": 1,
+                    "v_bit_rate": 1000000,
+                    "additional_content": "480P",
+                    "fps": 25,
+                    "disable": 0
+                  },
+                  {
+                    "name": "高清",
+                    "sdk_key": "sd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 2,
+                    "v_bit_rate": 2000000,
+                    "additional_content": "720P",
+                    "fps": 30,
+                    "disable": 0
+                  },
+                  {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 6000000,
+                    "additional_content": "1080P",
+                    "fps": 60,
+                    "disable": 0
+                  }
+                ]
+              },
+              "stream_data": "$24"
+            }
+          },
+          "extra": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 0,
+            "max_bitrate": 0,
+            "min_bitrate": 0,
+            "default_bitrate": 0,
+            "bitrate_adapt_strategy": 0,
+            "anchor_interact_profile": 0,
+            "audience_interact_profile": 0,
+            "hardware_encode": false,
+            "video_profile": 0,
+            "h265_enable": false,
+            "gop_sec": 0,
+            "bframe_enable": false,
+            "roi": false,
+            "sw_roi": false,
+            "bytevc1_enable": false
+          },
+          "pull_datas": {}
+        },
+        "matchId": "0",
+        "cameraId": "7434796342314193955",
+        "groupId": "",
+        "hasMatchStats": false
+      },
+      "cameraInfoList": [
+        {
+          "id": "7434850032714631976",
+          "title": "2024无畏契约改变者全球冠军赛 ｜淘汰赛第一日",
+          "cover": {
+            "url_list": [
+              "https://p3-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=z%2FoexbjeHuPfoAdYvd151aIAwT8%3D",
+              "https://p11-webcast-sign.douyinpic.com/tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc~tplv-qz53dukwul-common-resize:375:221.image?lk3s=39e7556e&x-expires=1733666218&x-signature=lLLrozSICXBplHBo6sKWJfNJdTQ%3D"
+            ],
+            "uri": "tos-cn-i-30241dr4mi/32d8cbd26d3c4e5e8e7d509714054ccc",
+            "height": 0,
+            "width": 0,
+            "avg_color": "#FFF1EB",
+            "image_type": 0,
+            "open_web_url": "",
+            "is_animated": false,
+            "flex_setting_list": [],
+            "text_setting_list": []
+          },
+          "isMainCamera": true,
+          "h264Stream": {
+            "flv_pull_url": {
+              "HD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd.flv?keeptime=00015180&wsSecret=fd913ed58b2320142f01f36c70fdc6c6&wsTime=672e18aa&major_anchor_level=common",
+              "SD1": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld.flv?keeptime=00015180&wsSecret=aaad13d77ae951c6a26f111a7fcd76b8&wsTime=672e18aa&major_anchor_level=common",
+              "SD2": "http://pull-flv-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd.flv?keeptime=00015180&wsSecret=76787d8a3ac2c1e3eb57cb08025ea760&wsTime=672e18aa&major_anchor_level=common"
+            },
+            "default_resolution": "HD1",
+            "hls_pull_url_map": {
+              "FULL_HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998/playlist.m3u8?keeptime=00015180&wsSecret=36120a94bdc63af63d2cb83815882a36&wsTime=672e18aa&major_anchor_level=common",
+              "HD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+              "SD1": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gameld/playlist.m3u8?keeptime=00015180&wsSecret=592343bd8e64c0bc8f5d879d449b0361&wsTime=672e18aa&major_anchor_level=common",
+              "SD2": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamesd/playlist.m3u8?keeptime=00015180&wsSecret=1b1d91b8dfd0dea84489aa3ac1edc745&wsTime=672e18aa&major_anchor_level=common"
+            },
+            "hls_pull_url": "http://pull-hls-spe-l1.douyincdn.com/fantasy/stream-692630711046242998_gamehd/playlist.m3u8?keeptime=00015180&wsSecret=daec5f4ad8df5df81a18a08d78082eaf&wsTime=672e18aa&major_anchor_level=common",
+            "stream_orientation": 2,
+            "live_core_sdk_data": {
+              "pull_data": {
+                "options": {
+                  "default_quality": {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "264",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 0,
+                    "additional_content": "",
+                    "fps": 0,
+                    "disable": 0
+                  },
+                  "qualities": [
+                    {
+                      "name": "标清",
+                      "sdk_key": "ld",
+                      "v_codec": "264",
+                      "resolution": "960x540",
+                      "level": 1,
+                      "v_bit_rate": 1000000,
+                      "additional_content": "480P",
+                      "fps": 25,
+                      "disable": 0
+                    },
+                    {
+                      "name": "高清",
+                      "sdk_key": "sd",
+                      "v_codec": "264",
+                      "resolution": "1280x720",
+                      "level": 2,
+                      "v_bit_rate": 2000000,
+                      "additional_content": "720P",
+                      "fps": 30,
+                      "disable": 0
+                    },
+                    {
+                      "name": "蓝光",
+                      "sdk_key": "hd",
+                      "v_codec": "264",
+                      "resolution": "1280x720",
+                      "level": 3,
+                      "v_bit_rate": 6000000,
+                      "additional_content": "1080P",
+                      "fps": 60,
+                      "disable": 0
+                    }
+                  ]
+                },
+                "stream_data": "$25"
+              }
+            },
+            "extra": {
+              "height": 1080,
+              "width": 1920,
+              "fps": 0,
+              "max_bitrate": 0,
+              "min_bitrate": 0,
+              "default_bitrate": 0,
+              "bitrate_adapt_strategy": 0,
+              "anchor_interact_profile": 0,
+              "audience_interact_profile": 0,
+              "hardware_encode": false,
+              "video_profile": 0,
+              "h265_enable": false,
+              "gop_sec": 0,
+              "bframe_enable": false,
+              "roi": false,
+              "sw_roi": false,
+              "bytevc1_enable": false
+            },
+            "pull_datas": {}
+          },
+          "h265Stream": {
+            "flv_pull_url": {
+              "HD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.flv?expire=672f6a2a&sign=6024902637c737cae905fe70b7bb315b&major_anchor_level=common",
+              "SD1": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.flv?expire=672f6a2a&sign=d7ce5d3a92cc6143e9055a4e8d64e1fb&major_anchor_level=common",
+              "SD2": "http://pull-flv-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.flv?expire=672f6a2a&sign=b4be103593c08a10d23ed522d7c3fb0c&major_anchor_level=common"
+            },
+            "default_resolution": "HD1",
+            "hls_pull_url_map": {
+              "FULL_HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998.m3u8?expire=672f6a2a&sign=7a33ff66893b941680ae615710f6193d&major_anchor_level=common",
+              "HD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+              "SD1": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gameld5.m3u8?expire=672f6a2a&sign=860801ec0c52d365fc880dcd8aaa0313&major_anchor_level=common",
+              "SD2": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamesd5.m3u8?expire=672f6a2a&sign=e9c2ab9ddbb4132f2a7631bf054c7cad&major_anchor_level=common"
+            },
+            "hls_pull_url": "http://pull-hls-spe-l26.douyincdn.com/fantasy/stream-692630711046242998_gamehd5.m3u8?expire=672f6a2a&sign=fc461b6e6c870fa05d9763f02ee0bed0&major_anchor_level=common",
+            "stream_orientation": 2,
+            "live_core_sdk_data": {
+              "pull_data": {
+                "options": {
+                  "default_quality": {
+                    "name": "蓝光",
+                    "sdk_key": "hd",
+                    "v_codec": "bytevc1",
+                    "resolution": "1280x720",
+                    "level": 3,
+                    "v_bit_rate": 0,
+                    "additional_content": "",
+                    "fps": 0,
+                    "disable": 0
+                  },
+                  "qualities": [
+                    {
+                      "name": "标清",
+                      "sdk_key": "ld",
+                      "v_codec": "bytevc1",
+                      "resolution": "960x540",
+                      "level": 1,
+                      "v_bit_rate": 1000000,
+                      "additional_content": "480P",
+                      "fps": 25,
+                      "disable": 0
+                    },
+                    {
+                      "name": "高清",
+                      "sdk_key": "sd",
+                      "v_codec": "bytevc1",
+                      "resolution": "1280x720",
+                      "level": 2,
+                      "v_bit_rate": 2000000,
+                      "additional_content": "720P",
+                      "fps": 30,
+                      "disable": 0
+                    },
+                    {
+                      "name": "蓝光",
+                      "sdk_key": "hd",
+                      "v_codec": "bytevc1",
+                      "resolution": "1280x720",
+                      "level": 3,
+                      "v_bit_rate": 6000000,
+                      "additional_content": "1080P",
+                      "fps": 60,
+                      "disable": 0
+                    }
+                  ]
+                },
+                "stream_data": "$26"
+              }
+            },
+            "extra": {
+              "height": 1080,
+              "width": 1920,
+              "fps": 0,
+              "max_bitrate": 0,
+              "min_bitrate": 0,
+              "default_bitrate": 0,
+              "bitrate_adapt_strategy": 0,
+              "anchor_interact_profile": 0,
+              "audience_interact_profile": 0,
+              "hardware_encode": false,
+              "video_profile": 0,
+              "h265_enable": false,
+              "gop_sec": 0,
+              "bframe_enable": false,
+              "roi": false,
+              "sw_roi": false,
+              "bytevc1_enable": false
+            },
+            "pull_datas": {}
+          },
+          "matchId": "0",
+          "cameraId": "7434796342314193955",
+          "groupId": "",
+          "hasMatchStats": false
+        }
+      ]
+    },
+    "hourRankListStore": {
+      "store": null,
+      "isFirstLoad": true,
+      "isShowHourRankList": false,
+      "openType": 0
+    },
+    "feedStore": {
+      "store": null,
+      "isActive": true,
+      "hasPre": false,
+      "hasNext": false
+    },
+    "singletonStore": {
+      "store": null,
+      "message": null,
+      "container": null,
+      "playerHandler": null,
+      "audioPower": null,
+      "player": null,
+      "paidLiveQRCodeVisible": false
+    },
+    "wishListStore": {
+      "store": null,
+      "isShowWishList": false
+    },
+    "hybridStore": {
+      "store": null,
+      "containerList": [],
+      "longtouchList": [],
+      "commonList": []
+    },
+    "eventStore": {
+      "store": null,
+      "slardarEvent": null,
+      "chatEvent": null,
+      "basicEvent": null,
+      "ecomEvent": null,
+      "fansclubEvent": null,
+      "giftBaseEvent": null,
+      "giftEvent": null,
+      "linkmicBaseEvent": null,
+      "linkmicEvent": null,
+      "loginEvent": null,
+      "pkEvent": null,
+      "playerEvent": null,
+      "ranklistEvent": null,
+      "reportEvent": null,
+      "rtcEvent": null,
+      "tabEvent": null,
+      "userEvent": null,
+      "vsEvent": null,
+      "redPacketEvent": null,
+      "vipEvent": null,
+      "giftGuideEvent": null,
+      "wishListEvent": null,
+      "giftExhibitionEvent": null,
+      "lotteryEvent": null
+    },
+    "paidLiveStore": {
+      "store": null,
+      "paidLiveData": {
+        "paid_type": 0,
+        "view_right": 0,
+        "duration": 0,
+        "delivery": 0,
+        "need_delivery_notice": false,
+        "anchor_right": 0,
+        "pay_ab_type": 0,
+        "privilege_info": {},
+        "privilege_info_map": {},
+        "max_preview_duration": 0
+      },
+      "retType": 1,
+      "viewType": 0,
+      "paidLiveAuth": {
+        "MultiCamera": 1,
+        "FansClub": 1,
+        "Link": 1,
+        "Chat": 1,
+        "DANMU": 1,
+        "SendGift": 1,
+        "FullScreen": 1,
+        "PIP": 1
+      },
+      "qrcodeVisible": false
+    },
+    "lotteryStore": {
+      "store": null,
+      "landingPageType": "userMain",
+      "participatedLotterys": [],
+      "currentLottery": {},
+      "leftTimeFromShortTouch": 0,
+      "candidateState": 0,
+      "isFirstLoad": true
+    },
+    "rechargeStore": {
+      "store": null,
+      "rechargeAuthStatus": false,
+      "showGiftRechargeContainer": false
+    },
+    "ecomStore": {
+      "store": null,
+      "showAgreement": false,
+      "cartVisible": false
+    },
+    "activityIndicatorStore": {
+      "store": null,
+      "actCarbonInstance": null,
+      "taskCarbonInstance": null,
+      "JSBInstance": null,
+      "bannerList": [],
+      "currentLandPage": []
+    },
+    "redpacketStore": {
+      "store": null,
+      "isFirstLoad": true
+    },
+    "shareStore": {
+      "store": null,
+      "showShare": false,
+      "shareFrom": "lottery"
+    },
+    "vipStore": {
+      "store": null,
+      "isShowVipPanel": false,
+      "vipEmojiConfig": null,
+      "emojiPanelRef": null,
+      "isVip": false,
+      "vipLiveStatus": "",
+      "vipInfoLoaded": false,
+      "vipSource": "icon"
+    },
+    "giftGuideStore": {
+      "store": null,
+      "giftExhibitionGuideStatus": false,
+      "wishListGuideStatus": false
+    },
+    "detailExtra": {
+      "store": null,
+      "errorPrompts": "",
+      "logId": "20241108215658D011532BC9FC24464E07",
+      "status_code": "0",
+      "messageFrom": "live",
+      "isSpider": false
+    },
+    "rightPanelStore": {
+      "store": null,
+      "eventBus": {},
+      "actStore": {
+        "store": null,
+        "actCarbonInstance": null,
+        "taskCarbonInstance": null,
+        "JSBInstance": null,
+        "bannerList": [],
+        "currentLandPage": []
+      },
+      "itemList": [],
+      "renderItemList": [],
+      "rootEl": null,
+      "frameRootEl": null,
+      "width": 375,
+      "frameItemList": [],
+      "frameRenderItemList": [],
+      "frameWidth": 0
+    }
+  },
+  "children": [
+    "$",
+    "$L27",
+    null,
+    {
+      "detailPage": true
+    }
+  ]
+}
