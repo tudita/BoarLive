@@ -32,14 +32,28 @@ onMounted(async () => {
   await getpn()
   await geturl() // 依次获取房间详情、清晰度、URL
   console.log('final url:', url.value[0])
-  new Player({
+  let player = new Player({
     id: 'mse',
     isLive: true,
     playsinline: true,
     url: url.value[0],
     autoplay: true,
     fluid: true,
-    plugins: [FlvPlugin]
+    plugins: [FlvPlugin],
+    definitionActive: 'click',
+    el: document.querySelector('#mse'),
+  })
+
+  const resources = all_qn.value.map(q => ({
+    name: q.Quality,
+    url: q.Data[0]
+  }))
+  player.emit('resourceReady', resources)
+
+  player.on('definitionChange', (item) => {
+    console.log('switch')
+    player.switchURL(item.url)
+    console.log(`Switched to quality: ${item.name}, URL: ${item.url}`)
   })
 })
 
@@ -67,6 +81,7 @@ async function getroomdetail() {
   }
 }
 
+
 async function getpn() {
   try {
     const clonableResult = JSON.parse(JSON.stringify(result.value))
@@ -91,7 +106,7 @@ async function getpn() {
     } else {
       qn.value = all_qn.value[all_qn.value.length - 1]
     }
-    console.log('all play quality:', all_qn.value)
+    console.log('all play quality:', all_qn.value[0].Quality, all_qn.value[0].Data[0])
     // qn.value.forEach((quality, index) => {   // 查看各个清晰度的url
     //   console.log(`Quality ${index}:`, quality.Quality)
     //   console.log(`Data ${index}:`, quality.Data)
