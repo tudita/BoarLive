@@ -13,13 +13,18 @@ const sharedPlatform = inject('sharedPlatform')
 
 const result = ref(null)
 const qn = ref(null)
+const all_qn = ref(null)
 const url = ref(null)
 const mse = ref(null)
+let resizeObserver = null
 
 onMounted(async () => {
-  const resizeObserver = new ResizeObserver(() => {
+  resizeObserver = new ResizeObserver(() => {
     if (mse.value) {
-      mse.value.style.height = document.body.clientHeight + 'px'
+      Player.resize({
+        height: window.innerHeight,
+        width: window.innerWidth * 0.883
+      })
     }
   })
   resizeObserver.observe(document.body)
@@ -33,8 +38,7 @@ onMounted(async () => {
     playsinline: true,
     url: url.value[0],
     autoplay: true,
-    height: window.innerHeight,
-    width: window.innerWidth * 0.883,
+    fluid: true,
     plugins: [FlvPlugin]
   })
 })
@@ -81,7 +85,13 @@ async function getpn() {
       console.log('Data sent to main process for douyin_getPlayQuality')
     }
 
-    qn.value = await receivePlayQuality()
+    all_qn.value = await receivePlayQuality()
+    if (all_qn.value && all_qn.value.length >= 2) {
+      qn.value = all_qn.value[all_qn.value.length - 2]
+    } else {
+      qn.value = all_qn.value[all_qn.value.length - 1]
+    }
+    console.log('all play quality:', all_qn.value)
     // qn.value.forEach((quality, index) => {   // 查看各个清晰度的url
     //   console.log(`Quality ${index}:`, quality.Quality)
     //   console.log(`Data ${index}:`, quality.Data)
@@ -97,23 +107,40 @@ async function geturl() {
     const clonebleFn = JSON.parse(JSON.stringify(qn.value))
     // console.log('get roomdetail:', clonableResult)
     // console.log('get qn:', clonebleFn)
-    for (const quality of clonebleFn) {
-      if(sharedPlatform.value == 'huya'){
-        window.electronAPI.huya_getPlayUrl(clonableResult, quality)
+
+    if(sharedPlatform.value == 'huya'){
+        window.electronAPI.huya_getPlayUrl(clonableResult, clonebleFn)
         console.log('Data sent to main process for huya_getPlayUrl')
       }else if(sharedPlatform.value == 'douyu'){
-        window.electronAPI.douyu_getPlayUrl(clonableResult, quality)
+        window.electronAPI.douyu_getPlayUrl(clonableResult, clonebleFn)
         console.log('Data sent to main process for douyu_getPlayUrl')
       }else if(sharedPlatform.value == 'bilibili'){
-        window.electronAPI.bili_getPlayUrl(clonableResult, quality)
+        window.electronAPI.bili_getPlayUrl(clonableResult, clonebleFn)
         console.log('Data sent to main process for bili_getPlayUrl')
       }else if(sharedPlatform.value == 'douyin'){
-        window.electronAPI.douyin_getPlayUrl(clonableResult, quality)
+        window.electronAPI.douyin_getPlayUrl(clonableResult, clonebleFn)
         console.log('Data sent to main process for douyin_getPlayUrl')
       }
       
       url.value = await receivePlayUrl()
-    }
+
+    // for (const quality of clonebleFn) {
+    //   if(sharedPlatform.value == 'huya'){
+    //     window.electronAPI.huya_getPlayUrl(clonableResult, quality)
+    //     console.log('Data sent to main process for huya_getPlayUrl')
+    //   }else if(sharedPlatform.value == 'douyu'){
+    //     window.electronAPI.douyu_getPlayUrl(clonableResult, quality)
+    //     console.log('Data sent to main process for douyu_getPlayUrl')
+    //   }else if(sharedPlatform.value == 'bilibili'){
+    //     window.electronAPI.bili_getPlayUrl(clonableResult, quality)
+    //     console.log('Data sent to main process for bili_getPlayUrl')
+    //   }else if(sharedPlatform.value == 'douyin'){
+    //     window.electronAPI.douyin_getPlayUrl(clonableResult, quality)
+    //     console.log('Data sent to main process for douyin_getPlayUrl')
+    //   }
+      
+    //   url.value = await receivePlayUrl()
+    // }
     console.log('final url:', url.value)
   } catch (error) {
     console.error('Error getting URL:', error)

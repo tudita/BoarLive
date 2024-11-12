@@ -25,6 +25,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
   huya_receiveRoomDetail: (callback) =>
     ipcRenderer.once('huya-getroomDetail-reply', (event, ...args) => callback(...args)),
 
+  huya_getLiveStatus: (roomid) => ipcRenderer.send('huya-getLiveStatus', roomid),
+  huya_receiveLiveStatus: (callback) =>
+    ipcRenderer.once('huya-getLiveStatus-reply', (event, ...args) => callback(...args)),
+
   huya_getPlayUrl: (roomDetail, qn) => ipcRenderer.send('huya-get-play-url', roomDetail, qn),
   huya_receivePlayUrl: (callback) =>
     ipcRenderer.on('huya-get-play-url-reply', (event, ...args) => callback(...args)),
@@ -45,6 +49,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
   douyin_receiveRoomDetail: (callback) =>
     ipcRenderer.once('douyin-getroomDetail-reply', (event, ...args) => callback(...args)),
 
+  douyin_getLiveStatus: (roomid) => ipcRenderer.send('douyin-getLiveStatus', roomid),
+  douyin_receiveLiveStatus: (callback) =>
+    ipcRenderer.once('douyin-getLiveStatus-reply', (event, ...args) => callback(...args)),
+
   douyin_getPlayUrl: (roomDetail, qn) => ipcRenderer.send('douyin-get-play-url', roomDetail, qn),
   douyin_receivePlayUrl: (callback) =>
     ipcRenderer.on('douyin-get-play-url-reply', (event, ...args) => callback(...args)),
@@ -64,6 +72,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
   bili_getRoomDetail: (roomid) => ipcRenderer.send('bili-getroomDetail', roomid),
   bili_receiveRoomDetail: (callback) =>
     ipcRenderer.on('bili-getroomDetail-reply', (event, ...args) => callback(...args)),
+
+  bili_getLiveStatus: (roomid) => ipcRenderer.send('bili-getLiveStatus', roomid),
+  bili_receiveLiveStatus: (callback) =>
+    ipcRenderer.once('bili-getLiveStatus-reply', (event, ...args) => callback(...args)),
 
   bili_getPlayUrl: (roomDetail, qn) => ipcRenderer.send('bili-get-play-url', roomDetail, qn),
   bili_receivePlayUrl: (callback) =>
