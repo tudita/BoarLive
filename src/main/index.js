@@ -3,9 +3,8 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import Huya from './huya'
-import  Douyin  from './douyin'
+import Douyin from './douyin'
 import Bili from './bilibili'
-
 
 const huya = new Huya()
 const douyin = new Douyin()
@@ -148,6 +147,24 @@ app.whenReady().then(() => {
   ipcMain.on('huya-getRecommendRooms', (event, page = 1) => {
     huya.getRecommendRooms(page).then((res) => {
       event.reply('huya-getRecommendRooms-reply', res)
+    })
+  })
+  //直播状态
+  ipcMain.on('huya-getLiveStatus', (event, roomID) => {
+    huya.getLiveStatus(roomID).then((res) => {
+      event.reply('huya-getLiveStatus-reply', res)
+    })
+  })
+  //直播状态
+  ipcMain.on('douyin-getLiveStatus', (event, roomID) => {
+    douyin.getLiveStatus(roomID).then((res) => {
+      event.reply('douyin-getLiveStatus-reply', res)
+    })
+  })
+  //直播状态
+  ipcMain.on('bili-getLiveStatus', (event, roomID) => {
+    bili.getLiveStatus(roomID).then((res) => {
+      event.reply('bili-getLiveStatus-reply', res)
     })
   })
   createWindow()
