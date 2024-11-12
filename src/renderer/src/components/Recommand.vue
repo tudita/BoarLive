@@ -43,7 +43,7 @@ import { defineEmits } from 'vue'
 
 const categories = ref([
   { id: 'huya', name: '虎牙' },
-  { id: 'douyu', name: '斗鱼' },
+  // { id: 'douyu', name: '斗鱼' },
   { id: 'bilibili', name: 'Bilibili' },
   { id: 'douyin', name: '抖音' }
 ])

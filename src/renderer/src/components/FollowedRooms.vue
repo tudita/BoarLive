@@ -10,7 +10,7 @@
             <img :src="room.Cover" alt="room.cover" />
             <div class="room-online">在线人数: {{ room.Online }}</div>
             <div class="room-platform">{{ room.Platform }}</div> <!-- 添加平台信息 -->
-            <div class="room-status">{{ room.onlive ? '已开播' : '未开播' }}</div> <!-- 添加开播状态信息 -->
+            <!-- <div class="room-status">{{ room.onlive ? '已开播' : '未开播' }}</div> 添加开播状态信息 -->
           </div>
           <div class="room-info">
             <div class="room-title">{{ room.Title }}</div>
@@ -46,7 +46,7 @@ onMounted(async () => {
   if (storedRooms) {
     followedRooms.value = JSON.parse(storedRooms)
     console.log('storedRooms:', storedRooms)
-    await checkRoomDetails()
+    // await checkRoomDetails()
     console.log('followedRooms:', followedRooms.value)
   }
 })

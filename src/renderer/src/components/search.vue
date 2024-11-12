@@ -7,7 +7,7 @@
         <label for="platform" class="search-range-label">搜索平台：</label>
         <select id="platform" v-model="selectedPlatform" class="search-range-select">
           <option value="huya">虎牙</option>
-          <option value="douyu">斗鱼</option>
+          <!-- <option value="douyu">斗鱼</option> -->
           <option value="bilibili">Bilibili</option>
           <option value="douyin">抖音</option>
         </select>
